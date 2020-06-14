@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xsz.product.dao.DishesMapper">
+    <resultMap id="BaseResultMap" type="com.xsz.product.domain.Dishes">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="spare_id" jdbcType="BIGINT" property="spareId"/>
+        <result column="spare_code" jdbcType="VARCHAR" property="spareCode"/>
+        <result column="spare_name" jdbcType="VARCHAR" property="spareName"/>
+        <result column="spare_name_en" jdbcType="VARCHAR" property="spareNameEn"/>
+        <result column="spare_kind" jdbcType="VARCHAR" property="spareKind"/>
+        <result column="spare_model" jdbcType="VARCHAR" property="spareModel"/>
+        <result column="spare_price" jdbcType="VARCHAR" property="sparePrice"/>
+        <result column="spare_status" property="spareStatus"/>
+        <result column="spare_createtime" jdbcType="DATE" property="spareCreatetime"/>
+        <result column="spare_updatetime" jdbcType="DATE" property="spareUpdatetime"/>
+        <result column="spare_createman" jdbcType="BIGINT" property="spareCreateman"/>
+        <result column="spare_updateman" jdbcType="BIGINT" property="spareUpdateman"/>
+        <result column="spare_photo" jdbcType="VARCHAR" property="sparePhoto"/>
+        <result column="photo_path" jdbcType="VARCHAR" property="photoPath"/>
+        <result column="remark" jdbcType="LONGVARCHAR" property="remark"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    spare_id,spare_code,spare_name,spare_name_en,spare_kind,spare_price,spare_status,spare_photo
+  </sql>
+
+
+    <select id="findDishesPage" resultType="com.xsz.product.dto.DishesDTO"
+            parameterType="com.xsz.product.dto.DishesDTO">
+        select
+        td.spare_id as spareId,td.spare_code as spareCode,td.spare_name as spareName,td.spare_name_en as spareNameEn,td.spare_price as sparePrice,
+        td.spare_status as spareStatus,td.spare_photo as sparePhoto,td.photo_path as photoPath
+        from tb_category_dishes as cd
+        right join tb_dishes as td on (cd.spare_id = td.spare_id)
+        where 1=1
+        <if test="categoryId != null and categoryId != ''">
+            AND cd.category_id = #{categoryId}
+        </if>
+        <if test="spareCode != null and spareCode != ''">
+            AND td.spare_code like concat('%',#{spareCode},'%')
+        </if>
+        <if test="spareName != null and spareName != ''">
+            AND td.spare_name like concat('%',#{spareName},'%')
+        </if>
+        <if test="spareNameEn != null and spareNameEn != ''">
+            AND td.spare_name_en like concat('%',#{spareNameEn},'%')
+        </if>
+        <if test="spareStatus != null">
+            AND td.spare_status = #{spareStatus}
+        </if>
+        <if test="beginDate != null and beginDate != ''">
+            <![CDATA[  and DATE_FORMAT(td.spare_Createtime, '%Y-%m-%d') >= DATE_FORMAT(#{beginDate}, '%Y-%m-%d')    ]]>
+        </if>
+        <if test="endDate != null and endDate != ''">
+            <![CDATA[  and DATE_FORMAT(td.spare_Createtime, '%Y-%m-%d') <= DATE_FORMAT(#{endDate}, '%Y-%m-%d')    ]]>
+        </if>
+    </select>
+
+    <!-- 插入数据:返回记录主键id值 -->
+    <insert id="addDishesReturnKey" parameterType="com.xsz.product.domain.Dishes" useGeneratedKeys="true" keyProperty="spareId" >
+		insert  into tb_dishes (spare_id,spare_code,spare_name,spare_name_en,spare_kind,spare_model,spare_price,spare_status,spare_createtime,spare_updatetime,spare_createman,spare_updateman,spare_photo,photo_path,remark)
+		values (#{spareId},#{spareCode},#{spareName},#{spareNameEn},#{spareKind},#{spareModel},#{sparePrice},#{spareStatus},#{spareCreatetime},#{spareUpdatetime},#{spareCreateman},#{spareUpdateman},#{sparePhoto},#{photoPath},#{remark})
+    </insert>
+</mapper>

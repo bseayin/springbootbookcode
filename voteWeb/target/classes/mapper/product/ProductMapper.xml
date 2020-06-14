@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xsz.product.dao.ProductMapper">
+  <resultMap id="BaseResultMap" type="com.xsz.product.domain.Product">
+    <id column="product_id" jdbcType="BIGINT" property="productId" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    product_id, product_name
+  </sql>
+
+
+  <select id="findProduct" resultType="com.xsz.product.domain.Product" parameterType="com.xsz.product.domain.Product">
+    select
+    <include refid="Base_Column_List" />
+    from t_product
+    where 1=1
+    <if test="productName != null and productName != ''">
+      AND product_name = #{productName}
+    </if>
+
+  </select>
+
+</mapper>

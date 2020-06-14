@@ -1,0 +1,215 @@
+<div class="modal fade" id="dishes-add" data-keyboard="false" data-backdrop="static" tabindex="-1"
+     xmlns:shiro="http://www.w3.org/1999/xhtml">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title pull-left" id="dishes-add-modal-title">新增用户</h3>
+            </div>
+            <div class="modal-body">
+                <form id="dishes-add-form">
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 菜品编号：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="spareCode" class="form-control">
+                                    <input type="text" hidden name="spareId" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 菜品名：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="spareName" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 菜品英文名：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="spareNameEn" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 菜品描述：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="spareModel" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    展示单价：
+					             </span>
+                                <div class="form-group">
+                                    <input type="text" name="sparePrice" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="display: none" name="spareStatusDiv">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon"> 状态： </span>
+                                <div class="form-group">
+                                    <select class="form-control" name="spareStatus" id="spareStatus">
+                                        <option value="SHELVES">已上架</option>
+                                        <option value="SELLOUT">已售罄</option>
+                                        <option value="UNSHELVES" disabled>已下架</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon"> 菜品规格： </span>
+
+                                <div class="form-group">
+                                    <div id="toolbar">
+                                        <button id="modelAddBtn" type="button" class="btn btn-outline-primary btn-sm"
+                                                shiro:hasPermission="dishes:add">添加规格
+                                        </button>
+                                    </div>
+                                    <table id="dishesModelTable" data-mobile-responsive="true"
+                                           class="mb-bootstrap-table text-nowrap"></table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    菜品分类：
+					             </span>
+                                <div class="form-group">
+                                    <select multiple="multiple" name="categorySelect"></select>
+                                    <input name="categoryIds" id="categoryIds" hidden/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!--                    <div class="row">-->
+<!--                        <div class="col-sm-11">-->
+<!--                            <div class="input-group">-->
+<!--                                <span class="input-group-addon">-->
+<!--                                    菜品图片：-->
+<!--					             </span>-->
+<!--                                <div class="file-container" id="wrapper">-->
+<!--                                    <input id="dishesFileUpload" type="file"/><br/>-->
+<!--                                    <div id="dishesImage-holder"></div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <div class="row">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    备注：
+					             </span>
+                                <div class="form-group">
+                                    <input type="text" name="remark" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="display:none;" name="createmandiv">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 创建人：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="createman" readonly class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="display:none;" name="createtimediv">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 创建时间：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="createtime" readonly class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="display:none;" name="updatemandiv">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 修改人：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="updateman" readonly class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="display:none;" name="updatetimediv">
+                        <div class="col-sm-11">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+					               	 修改时间：
+					            </span>
+                                <div class="form-group">
+                                    <input type="text" name="updatetime" readonly class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-save" id="dishes-add-button" name="save" style="display:none;">保存
+                </button>
+                <button type="button" class="btn btn-save" id="dishes-update-button" name="update"
+                        style="display:none;">保存
+                </button>
+                <button type="button" class="btn btn-secondary btn-close">关闭</button>
+                <button class="btn-hide"></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script data-th-src="@{js/app/product/dishesAdd.js}"></script>
+
+<style>
+    .file-container {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 1em;
+        margin-bottom: 15px;
+        border: 1px solid #e2e2e2;
+        overflow: hidden;
+    }
+</style>
