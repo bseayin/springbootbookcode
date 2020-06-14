@@ -26,13 +26,15 @@ import com.xsz.system.service.UserRoleService;
 import com.xsz.system.service.UserService;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.annotation.Resource;
+
 @Service("userService")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
 public class UserServiceImpl extends BaseService<User> implements UserService {
 
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Autowired

@@ -19,32 +19,43 @@
         <!-- 数据库链接地址账号密码 -->
         <jdbcConnection 
         	driverClass="com.mysql.jdbc.Driver" 
-        	connectionURL="jdbc:mysql://47.92.0.22:3306/db_user_basic"
-        	userId="xsz2019"
-        	password="xsz2019PWD">
+        	connectionURL="jdbc:mysql://localhost:3306/vote_db?useSSL=false"
+        	userId="root"
+        	password="XSZ202006a">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
             <property name="useJSR310Types" value="true"/>
         </javaTypeResolver>
         <!-- 生成Model类存放位置 -->
-        <javaModelGenerator targetPackage="com.xsz.order.domain" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.xsz.vote.domain" targetProject="C:\bseawp\springbootbookcode\voteWeb\src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
         <!-- 生成映射文件存放位置 -->
-        <sqlMapGenerator targetPackage="mapper.order" targetProject="src/main/resources">
+        <sqlMapGenerator targetPackage="mapper.vote" targetProject="C:\bseawp\springbootbookcode\voteWeb\src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!-- 生成Dao类存放位置 -->
         <!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件的代码
             type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
             type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xsz.order.dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.xsz.vote.dao" targetProject="C:\bseawp\springbootbookcode\voteWeb\src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 配置需要生成的表 -->
-        <table tableName="tb_order" domainObjectName="Order" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        <table tableName="tb_d_vote" domainObjectName="Vote" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+    </table>
+
+        <table tableName="tb_d_vote_topic" domainObjectName="VoteTopic" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+        <table tableName="tb_d_vote_topic_options" domainObjectName="VoteTopicOption" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <table tableName="tb_d_vote_result" domainObjectName="VoteResult" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
     </context>
