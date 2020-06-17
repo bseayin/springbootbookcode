@@ -19,7 +19,7 @@ public interface VoteService extends IService<Vote> {
     List<Vote> findAllVotes(Vote vote, QueryRequest request);
 
     @CacheEvict(allEntries = true)
-    void addVote(Vote Vote, Long[] roles);
+    public void addVote(Vote vote);
 
     @CacheEvict(key = "#p0", allEntries = true)
     void updateVote(Vote Vote, Long[] roles);

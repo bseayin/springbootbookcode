@@ -59,8 +59,8 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
 
 
     @Override
-    public void addVote(Vote Vote, Long[] roles) {
-
+    public void addVote(Vote vote) {
+        save(vote);
     }
 
     @Override

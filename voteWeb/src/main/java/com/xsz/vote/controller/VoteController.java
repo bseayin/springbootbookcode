@@ -130,16 +130,12 @@ public class VoteController extends BaseController {
     }
 
     @Log("新增投票项目")
-    @RequiresPermissions("user:add")
-    @RequestMapping("user/add")
+    @RequiresPermissions("vote:add")
+    @RequestMapping("add")
     @ResponseBody
-    public ResponseBo addUser(User user, Long[] roles) {
+    public ResponseBo addVote(Vote vote) {
         try {
-            if (ON.equalsIgnoreCase(user.getStatus()))
-                user.setStatus(User.STATUS_VALID);
-            else
-                user.setStatus(User.STATUS_LOCK);
-            this.userService.addUser(user, roles);
+            this.voteService.addVote(vote);
             return ResponseBo.ok("新增投票项目成功！");
         } catch (Exception e) {
             log.error("新增投票项目失败", e);

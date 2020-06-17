@@ -1,11 +1,12 @@
 var validator;
-var $roleAddForm = $("#role-add-form");
+var $voteAddForm = $("#vote-add-form");
+var $statusSelect = $voteAddForm.find("select[name='status']");
 
 $(function () {
-    validateRule();
-    createMenuTree();
+    initStatus();
 
-    $("#role-add .btn-save").click(function () {
+
+    $("#vote-add .btn-save").click(function () {
         var name = $(this).attr("name");
         getMenu();
         var validator = $roleAddForm.validate();
@@ -32,18 +33,18 @@ $(function () {
         }
     });
 
-    $("#role-add .btn-close").click(function () {
+    $("#vote-add .btn-close").click(function () {
         closeModal();
     });
 
 });
 
 function closeModal() {
-    $("#role-add-button").attr("name", "save");
-    $("#role-add-modal-title").html('新增角色');
+    $("#vote-add-button").attr("name", "save");
+    $("#vote-add-modal-title").html('新增投票');
     validator.resetForm();
     $MB.resetJsTree("menuTree");
-    $MB.closeAndRestModal("role-add");
+    $MB.closeAndRestModal("vote-add");
 }
 
 function validateRule() {
@@ -77,11 +78,11 @@ function validateRule() {
         },
         messages: {
             roleName: {
-                required: icon + "请输入角色名称",
-                minlength: icon + "角色名称长度3到10个字符",
-                remote: icon + "该角色名已经存在"
+                required: icon + "请输入投票名称",
+                minlength: icon + "投票名称长度3到10个字符",
+                remote: icon + "该投票名已经存在"
             },
-            remark: icon + "角色描述不能超过50个字符",
+            remark: icon + "投票描述不能超过50个字符",
             menuId: icon + "请选择相应菜单权限"
         }
     });
@@ -118,4 +119,17 @@ function getMenu() {
         menuIds.push($(element).closest('.jstree-node').attr("id"));
     });
     $("[name='menuId']").val(menuIds);
+}
+
+
+function initStatus() {
+    $.post(ctx + "dict/list", {tableName:"fieldName",fieldName:"STATUS"}, function (r) {
+        var data = r.rows;
+        var option = "";
+        for (var i = 0; i < data.length; i++) {
+            option += "<option value='" + data[i].keyy + "'>" + data[i].valuee + "</option>"
+        }
+        $statusSelect.html("").append(option);
+
+    });
 }

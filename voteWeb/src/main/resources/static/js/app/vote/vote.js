@@ -6,7 +6,7 @@ $(function () {
             return {
                 pageSize: params.limit,
                 pageNum: params.offset / params.limit + 1,
-                roleName: $(".role-table-form").find("input[name='title']").val().trim()
+                title: $(".role-table-form").find("input[name='title']").val().trim()
             };
         },
         columns: [{

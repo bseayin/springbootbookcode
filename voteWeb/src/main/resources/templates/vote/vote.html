@@ -1,4 +1,4 @@
-<div data-th-include="system/role/roleAdd"></div>
+<div data-th-include="vote/voteAdd"></div>
 <div class="card">
     <div class="card-block">
         <div class="table-responsive">
@@ -21,9 +21,9 @@
                     <div class="dropdown actions__item" shiro:hasAnyPermissions="vote:add,vote:delete,vote:update">
                         <i data-toggle="dropdown" class="zmdi zmdi-more-vert"></i>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#role-add" shiro:hasPermission="vote:add">新增角色</a>
-                            <a href="javascript:void(0)" class="dropdown-item" onclick="updateRole()" shiro:hasPermission="vote:update">修改角色</a>
-                            <a href="javascript:void(0)" class="dropdown-item" onclick="deleteRoles()" shiro:hasPermission="vote:delete">删除角色</a>
+                            <a href="javascript:void(0)" class="dropdown-item" data-toggle="modal" data-target="#vote-add" shiro:hasPermission="vote:add">新增投票项目</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="updateRole()" shiro:hasPermission="vote:update">修改投票项目</a>
+                            <a href="javascript:void(0)" class="dropdown-item" onclick="deleteRoles()" shiro:hasPermission="vote:delete">删除投票项目</a>
                         </div>
                     </div>
                 </div>
