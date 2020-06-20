@@ -5,6 +5,7 @@ import com.xsz.common.service.impl.BaseService;
 import com.xsz.common.util.MD5Utils;
 
 import com.xsz.system.domain.Dict;
+import com.xsz.system.domain.User;
 import com.xsz.vote.dao.VoteMapper;
 import com.xsz.vote.domain.Vote;
 import com.xsz.vote.service.VoteService;
@@ -64,12 +65,18 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
     }
 
     @Override
-    public void updateVote(Vote Vote, Long[] roles) {
-
+    public void updateVote(Vote Vote) {
+        this.updateNotNull(Vote);
     }
 
     @Override
     public void deleteVotes(String VoteIds) {
+        List<String> list = Arrays.asList(VoteIds.split(","));
+        this.batchDelete(list, "dictId", Vote.class);
+    }
 
+    @Override
+    public Vote findById(Long id) {
+        return this.selectByKey(id);
     }
 }

@@ -46,22 +46,14 @@ public class VoteController extends BaseController {
         return "vote/vote";
     }
 
-    @RequestMapping("checkUserName")
-    @ResponseBody
-    public boolean checkUserName(String username, String oldusername) {
-        if (StringUtils.isNotBlank(oldusername) && username.equalsIgnoreCase(oldusername)) {
-            return true;
-        }
-        User result = this.userService.findByName(username);
-        return result == null;
-    }
+
 
     @RequestMapping("getVote")
     @ResponseBody
-    public ResponseBo getVote(Long userId) {
+    public ResponseBo getVote(Long id) {
         try {
-            User user = this.userService.findById(userId);
-            return ResponseBo.ok(user);
+            Vote vote = this.voteService.findById(id);
+            return ResponseBo.ok(vote);
         } catch (Exception e) {
             log.error("获取投票项目失败", e);
             return ResponseBo.error("获取投票项目失败，请联系网站管理员！");
@@ -136,7 +128,7 @@ public class VoteController extends BaseController {
     public ResponseBo updateUser(Vote vote) {
         try {
 
-            this.voteService.save(vote);
+            this.voteService.updateVote(vote);
             return ResponseBo.ok("修改投票项目成功！");
         } catch (Exception e) {
             log.error("修改投票项目失败", e);
@@ -148,7 +140,7 @@ public class VoteController extends BaseController {
     @RequiresPermissions("vote:delete")
     @RequestMapping("delete")
     @ResponseBody
-    public ResponseBo deleteUsers(String ids) {
+    public ResponseBo deleteVotes(String ids) {
         try {
             this.voteService.deleteVotes(ids);
             return ResponseBo.ok("删除投票项目成功！");

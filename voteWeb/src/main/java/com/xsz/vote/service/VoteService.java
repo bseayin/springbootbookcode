@@ -22,10 +22,13 @@ public interface VoteService extends IService<Vote> {
     public void addVote(Vote vote);
 
     @CacheEvict(key = "#p0", allEntries = true)
-    void updateVote(Vote Vote, Long[] roles);
+    void updateVote(Vote vote);
 
     @CacheEvict(key = "#p0", allEntries = true)
     void deleteVotes(String VoteIds);
+
+    @Cacheable(key = "#p0")
+    Vote findById(Long id);
 
 
 }
