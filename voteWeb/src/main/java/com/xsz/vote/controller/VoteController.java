@@ -46,7 +46,7 @@ public class VoteController extends BaseController {
         return "vote/vote";
     }
 
-    @RequestMapping("user/checkUserName")
+    @RequestMapping("checkUserName")
     @ResponseBody
     public boolean checkUserName(String username, String oldusername) {
         if (StringUtils.isNotBlank(oldusername) && username.equalsIgnoreCase(oldusername)) {
@@ -56,9 +56,9 @@ public class VoteController extends BaseController {
         return result == null;
     }
 
-    @RequestMapping("user/getUser")
+    @RequestMapping("getVote")
     @ResponseBody
-    public ResponseBo getUser(Long userId) {
+    public ResponseBo getVote(Long userId) {
         try {
             User user = this.userService.findById(userId);
             return ResponseBo.ok(user);
@@ -76,7 +76,7 @@ public class VoteController extends BaseController {
         return super.selectByPageNumSize(request, () -> this.voteService.findAllVotes(vote, request));
     }
 
-    @RequestMapping("user/excel")
+    @RequestMapping("excel")
     @ResponseBody
     public ResponseBo userExcel(User user) {
         try {
@@ -88,7 +88,7 @@ public class VoteController extends BaseController {
         }
     }
 
-    @RequestMapping("user/csv")
+    @RequestMapping("csv")
     @ResponseBody
     public ResponseBo userCsv(User user) {
         try {
@@ -100,24 +100,10 @@ public class VoteController extends BaseController {
         }
     }
 
-    @RequestMapping("user/regist")
-    @ResponseBody
-    public ResponseBo regist(User user) {
-        try {
-            User result = this.userService.findByName(user.getUsername());
-            if (result != null) {
-                return ResponseBo.warn("该投票项目名已被使用！");
-            }
-            this.userService.registUser(user);
-            return ResponseBo.ok();
-        } catch (Exception e) {
-            log.error("注册失败", e);
-            return ResponseBo.error("注册失败，请联系网站管理员！");
-        }
-    }
+    
 
     @Log("更换主题")
-    @RequestMapping("user/theme")
+    @RequestMapping("theme")
     @ResponseBody
     public ResponseBo updateTheme(User user) {
         try {
@@ -144,16 +130,13 @@ public class VoteController extends BaseController {
     }
 
     @Log("修改投票项目")
-    @RequiresPermissions("user:update")
-    @RequestMapping("user/update")
+    @RequiresPermissions("vote:update")
+    @RequestMapping("update")
     @ResponseBody
-    public ResponseBo updateUser(User user, Long[] rolesSelect) {
+    public ResponseBo updateUser(Vote vote) {
         try {
-            if (ON.equalsIgnoreCase(user.getStatus()))
-                user.setStatus(User.STATUS_VALID);
-            else
-                user.setStatus(User.STATUS_LOCK);
-            this.userService.updateUser(user, rolesSelect);
+
+            this.voteService.save(vote);
             return ResponseBo.ok("修改投票项目成功！");
         } catch (Exception e) {
             log.error("修改投票项目失败", e);
@@ -162,12 +145,12 @@ public class VoteController extends BaseController {
     }
 
     @Log("删除投票项目")
-    @RequiresPermissions("user:delete")
-    @RequestMapping("user/delete")
+    @RequiresPermissions("vote:delete")
+    @RequestMapping("delete")
     @ResponseBody
     public ResponseBo deleteUsers(String ids) {
         try {
-            this.userService.deleteUsers(ids);
+            this.voteService.deleteVotes(ids);
             return ResponseBo.ok("删除投票项目成功！");
         } catch (Exception e) {
             log.error("删除投票项目失败", e);
@@ -175,7 +158,7 @@ public class VoteController extends BaseController {
         }
     }
 
-    @RequestMapping("user/checkPassword")
+    @RequestMapping("checkPassword")
     @ResponseBody
     public boolean checkPassword(String password) {
         User user = getCurrentUser();
@@ -183,7 +166,7 @@ public class VoteController extends BaseController {
         return user.getPassword().equals(encrypt);
     }
 
-    @RequestMapping("user/updatePassword")
+    @RequestMapping("updatePassword")
     @ResponseBody
     public ResponseBo updatePassword(String newPassword) {
         try {
@@ -195,7 +178,7 @@ public class VoteController extends BaseController {
         }
     }
 
-    @RequestMapping("user/profile")
+    @RequestMapping("profile")
     public String profileIndex(Model model) {
         User user = super.getCurrentUser();
         user = this.userService.findUserProfile(user);
@@ -211,7 +194,7 @@ public class VoteController extends BaseController {
         return "system/user/profile";
     }
 
-    @RequestMapping("user/getUserProfile")
+    @RequestMapping("getUserProfile")
     @ResponseBody
     public ResponseBo getUserProfile(Long userId) {
         try {
@@ -224,7 +207,7 @@ public class VoteController extends BaseController {
         }
     }
 
-    @RequestMapping("user/updateUserProfile")
+    @RequestMapping("updateUserProfile")
     @ResponseBody
     public ResponseBo updateUserProfile(User user) {
         try {
@@ -236,7 +219,7 @@ public class VoteController extends BaseController {
         }
     }
 
-    @RequestMapping("user/changeAvatar")
+    @RequestMapping("changeAvatar")
     @ResponseBody
     public ResponseBo changeAvatar(String imgName) {
         try {

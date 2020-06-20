@@ -41,6 +41,7 @@ $(function () {
                         if (value === '1') return '<span class="badge badge-primary">已发布</span>';
                         if (value === '2') return '<span class="badge badge-warning">结束</span>';
          }
+         }
 
         ]
     };
