@@ -1,0 +1,22 @@
+server:
+  port: 9030
+  servlet:
+    context-path: /vote
+#数据库(我使用的是mysql8)
+spring:
+  datasource:
+    #    mysql5.7用下面这个驱动
+    #    driver-class-name: com.mysql.jdbc.Driver
+    #    mysql8用下面的这个驱动
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: XSZ202006a
+    url: jdbc:mysql://localhost/vote_db?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
+
+#日志级别
+logging:
+  level:
+    com.xinzuo.lvyou.dao: debug
+#mybatis plusxml路径配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml

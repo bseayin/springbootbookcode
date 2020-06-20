@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springbootbookcode.iml" filepath="$PROJECT_DIR$/springbootbookcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/voteWeb/voteWeb.iml" filepath="$PROJECT_DIR$/voteWeb/voteWeb.iml" />
     </modules>
   </component>
