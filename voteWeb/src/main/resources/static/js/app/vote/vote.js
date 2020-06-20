@@ -9,15 +9,20 @@ $(function () {
                 title: $(".role-table-form").find("input[name='title']").val().trim()
             };
         },
-        columns: [{
-            checkbox: true
-        }, {
+        columns: [
+        {
+                 checkbox: true
+             }, 
+             {
+                 field: 'id',
+                 visible: false
+             },
+         {
             field: 'title',
             title: '标题'
-        }, {
-            field: 'status',
-            title: '状态'
-        }, {
+        },
+
+        {
             field: 'votecount',
             title: '投票次数'
          }, {
@@ -27,7 +32,17 @@ $(function () {
             
             field: 'createtime',
             title: '创建时间'
-        }]
+        },
+        {
+                    field: 'status',
+                    title: '状态',
+                    formatter: function (value, row, index) {
+                        if (value === '0') return '<span class="badge badge-success">草稿</span>';
+                        if (value === '1') return '<span class="badge badge-primary">已发布</span>';
+                        if (value === '2') return '<span class="badge badge-warning">结束</span>';
+         }
+
+        ]
     };
 
     $MB.initTable('voteTable', settings);
@@ -42,24 +57,24 @@ function refresh() {
     search();
 }
 
-function deleteRoles() {
+function deleteVote() {
     var selected = $("#voteTable").bootstrapTable('getSelections');
     var selected_length = selected.length;
     if (!selected_length) {
-        $MB.n_warning('请勾选需要删除的角色！');
+        $MB.n_warning('请勾选需要删除的投票项目！');
         return;
     }
     var ids = "";
     for (var i = 0; i < selected_length; i++) {
-        ids += selected[i].roleId;
+        ids += selected[i].id;
         if (i !== (selected_length - 1)) ids += ",";
     }
 
     $MB.confirm({
-        text: "删除选中角色将导致该角色对应账户失去相应的权限，确定删除？",
+        text: "删除选中投票项目将导致该投票项目对应账户失去相应的权限，确定删除？",
         confirmButtonText: "确定删除"
     }, function () {
-        $.post(ctx + 'role/delete', {"ids": ids}, function (r) {
+        $.post(ctx + 'vote/delete', {"ids": ids}, function (r) {
             if (r.code === 0) {
                 $MB.n_success(r.msg);
                 refresh();

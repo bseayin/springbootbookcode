@@ -1,33 +1,28 @@
-function updateRole() {
-    var selected = $("#roleTable").bootstrapTable('getSelections');
+function updateVote() {
+    var selected = $("#voteTable").bootstrapTable('getSelections');
     var selected_length = selected.length;
     if (!selected_length) {
-        $MB.n_warning('请勾选需要修改的角色！');
+        $MB.n_warning('请勾选需要修改的投票项目！');
         return;
     }
     if (selected_length > 1) {
-        $MB.n_warning('一次只能修改一个角色！');
+        $MB.n_warning('一次只能修改一个投票项目！');
         return;
     }
-    var roleId = selected[0].roleId;
-    $.post(ctx + "role/getRole", {"roleId": roleId}, function (r) {
+    var voteId = selected[0].id;
+    $.post(ctx + "vote/getvote", {"id": voteId}, function (r) {
         if (r.code === 0) {
-            var $form = $('#role-add');
+            var $form = $('#vote-add');
             var $menuTree = $('#menuTree');
             $form.modal();
-            var role = r.msg;
-            $("#role-add-modal-title").html('修改角色');
-            $form.find("input[name='roleName']").val(role.roleName);
-            $form.find("input[name='oldRoleName']").val(role.roleName);
-            $form.find("input[name='roleId']").val(role.roleId);
-            $form.find("input[name='remark']").val(role.remark);
-            var menuArr = [];
-            for (var i = 0; i < role.menuIds.length; i++) {
-                menuArr.push(role.menuIds[i]);
-            }
-            $menuTree.jstree('select_node', menuArr, true);
-            $menuTree.jstree().close_all();
-            $("#role-add-button").attr("name", "update");
+            var vote = r.msg;
+            $("#vote-add-modal-title").html('修改投票项目');
+            $form.find("input[name='title']").val(vote.title);
+            $form.find("input[name='status']").val(vote.status);
+
+            $form.find("input[name='remark']").val(vote.remark);
+
+            $("#vote-add-button").attr("name", "update");
         } else {
             $MB.n_danger(r.msg);
         }

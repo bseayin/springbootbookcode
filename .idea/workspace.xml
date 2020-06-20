@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="054cc914-5ed5-488c-a1d9-1e4578f247d5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/log/error/error.2020-06-19.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/info/info.2020-06-19.log" afterDir="false" />
+    <list default="true" id="054cc914-5ed5-488c-a1d9-1e4578f247d5" name="Default" comment="vote">
+      <change afterPath="$PROJECT_DIR$/log/error/error.2020-06-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/info/info.2020-06-20.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteAdd.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/vote/voteAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/vote/voteAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error/error.2020-06-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error/error.2020-06-19.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/info/info.2020-06-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/info/info.2020-06-19.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/vote.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/vote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteEdit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/vote/vote.html" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/vote/vote.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -430,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592413805237</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="vote">
+      <created>1592575142281</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1592575142281</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
