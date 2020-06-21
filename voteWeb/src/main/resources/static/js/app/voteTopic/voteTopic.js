@@ -27,10 +27,16 @@ $(function () {
             title: '标题'
         },
 
-        {
+ {
             field: 'kinds',
-            title: '类型'
+            title: '类型',
+            formatter: function (value, row, index) {
+                if (value == '0') return '<span class="badge badge-success">单选</span>';
+                if (value == '1') return '<span class="badge badge-primary">多选</span>';
+
+            }
          },
+
           {
                      field: 'optioncount',
                      title: '选项个数'
@@ -43,18 +49,10 @@ $(function () {
             
             field: 'createtime',
             title: '修改时间'
-        },
+        }
 
 
-        {
-            field: 'status',
-            title: '状态',
-            formatter: function (value, row, index) {
-                if (value == '0') return '<span class="badge badge-success">草稿</span>';
-                if (value == '1') return '<span class="badge badge-primary">已发布</span>';
-                if (value == '2') return '<span class="badge badge-warning">结束</span>';
-            }
-         }
+
 
         ]
     };

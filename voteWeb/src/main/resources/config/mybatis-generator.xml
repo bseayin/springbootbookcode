@@ -44,19 +44,14 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 配置需要生成的表 -->
-        <table tableName="tb_d_vote" domainObjectName="Vote" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-        <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-    </table>
 
-        <table tableName="tb_d_vote_topic" domainObjectName="VoteTopic" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+
+
+        <table tableName="tb_option_user" domainObjectName="OptionUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
 
-        <table tableName="tb_d_vote_topic_options" domainObjectName="VoteTopicOption" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
-        <table tableName="tb_d_vote_result" domainObjectName="VoteResult" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
+
+
     </context>
 </generatorConfiguration>

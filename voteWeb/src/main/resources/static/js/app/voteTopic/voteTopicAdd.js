@@ -52,7 +52,9 @@ function createVoteTree() {
             var data = r.msg;
             $('#voteTree').jstree({
                 "core": {
-                    'data': data.children
+                    'data': data.children,
+                    // 单选
+                     'multiple': false
 
                 },
                 "state": {

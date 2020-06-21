@@ -102,6 +102,7 @@ public class TbDVoteTopicController  extends BaseController {
     @ResponseBody
     public ResponseBo addVoteTopic(VoteTopic VoteTopic) {
         try {
+
             this.VoteTopicService.addVoteTopic(VoteTopic);
             return ResponseBo.ok("新增投票项目成功！");
         } catch (Exception e) {

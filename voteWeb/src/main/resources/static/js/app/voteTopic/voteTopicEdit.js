@@ -1,5 +1,5 @@
 function updateVoteTopic() {
-    var selected = $("#VoteTopicTable").bootstrapTable('getSelections');
+    var selected = $("#voteTopicTable").bootstrapTable('getSelections');
     var selected_length = selected.length;
     if (!selected_length) {
         $MB.n_warning('请勾选需要修改的投票主题！');
@@ -12,19 +12,18 @@ function updateVoteTopic() {
     var VoteTopicId = selected[0].id;
     $.post(ctx + "voteTopic/getVoteTopic", {"id": VoteTopicId}, function (r) {
         if (r.code === 0) {
-            var $form = $('#VoteTopic-add');
+            var $form = $('#voteTopic-add');
 
             $form.modal();
             var VoteTopic = r.msg;
-            $("#VoteTopic-add-modal-title").html('修改投票主题');
+            $("#voteTopic-add-modal-title").html('修改投票主题');
             // 这个地方一定要给主键赋值，否则不能修改成功
             $form.find("input[name='id']").val(VoteTopic.id);
             $form.find("input[name='title']").val(VoteTopic.title);
-            $form.find("input[name='status']").val(VoteTopic.status);
-
-            $form.find("input[name='remarks']").val(VoteTopic.remarks);
-
-            $("#VoteTopic-add-button").attr("name", "update");
+            $form.find("input[name='kinds']").val(VoteTopic.kinds);
+            $form.find("input[name='kinds']").val(VoteTopic.kinds);
+            $form.find("input[name='voteid']").val(VoteTopic.voteid);
+            $("#voteTopic-add-button").attr("name", "update");
         } else {
             $MB.n_danger(r.msg);
         }
