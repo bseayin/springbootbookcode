@@ -70,10 +70,10 @@ public class VoteController extends BaseController {
 
     @RequestMapping("excel")
     @ResponseBody
-    public ResponseBo userExcel(User user) {
+    public ResponseBo voteExcel(Vote vote) {
         try {
-            List<User> list = this.userService.findUserWithDept(user, null);
-            return FileUtil.createExcelByPOIKit("投票项目表", list, User.class);
+            List<Vote> list = this.voteService.findAllVotes(vote, null);
+            return FileUtil.createExcelByPOIKit("投票项目表", list, Vote.class);
         } catch (Exception e) {
             log.error("导出投票项目信息Excel失败", e);
             return ResponseBo.error("导出Excel失败，请联系网站管理员！");
@@ -82,10 +82,10 @@ public class VoteController extends BaseController {
 
     @RequestMapping("csv")
     @ResponseBody
-    public ResponseBo userCsv(User user) {
+    public ResponseBo voteCsv(Vote vote) {
         try {
-            List<User> list = this.userService.findUserWithDept(user, null);
-            return FileUtil.createCsv("投票项目表", list, User.class);
+            List<Vote> list = this.voteService.findAllVotes(vote, null);
+            return FileUtil.createCsv("投票项目表", list, Vote.class);
         } catch (Exception e) {
             log.error("导出投票项目信息Csv失败", e);
             return ResponseBo.error("导出Csv失败，请联系网站管理员！");
@@ -94,18 +94,7 @@ public class VoteController extends BaseController {
 
     
 
-    @Log("更换主题")
-    @RequestMapping("theme")
-    @ResponseBody
-    public ResponseBo updateTheme(User user) {
-        try {
-            this.userService.updateTheme(user.getTheme(), user.getUsername());
-            return ResponseBo.ok();
-        } catch (Exception e) {
-            log.error("修改主题失败", e);
-            return ResponseBo.error();
-        }
-    }
+
 
     @Log("新增投票项目")
     @RequiresPermissions("vote:add")
@@ -150,80 +139,7 @@ public class VoteController extends BaseController {
         }
     }
 
-    @RequestMapping("checkPassword")
-    @ResponseBody
-    public boolean checkPassword(String password) {
-        User user = getCurrentUser();
-        String encrypt = MD5Utils.encrypt(user.getUsername().toLowerCase(), password);
-        return user.getPassword().equals(encrypt);
-    }
 
-    @RequestMapping("updatePassword")
-    @ResponseBody
-    public ResponseBo updatePassword(String newPassword) {
-        try {
-            this.userService.updatePassword(newPassword);
-            return ResponseBo.ok("更改密码成功！");
-        } catch (Exception e) {
-            log.error("修改密码失败", e);
-            return ResponseBo.error("更改密码失败，请联系网站管理员！");
-        }
-    }
 
-    @RequestMapping("profile")
-    public String profileIndex(Model model) {
-        User user = super.getCurrentUser();
-        user = this.userService.findUserProfile(user);
-        String ssex = user.getSsex();
-        if (User.SEX_MALE.equals(ssex)) {
-            user.setSsex("性别：男");
-        } else if (User.SEX_FEMALE.equals(ssex)) {
-            user.setSsex("性别：女");
-        } else {
-            user.setSsex("性别：保密");
-        }
-        model.addAttribute("user", user);
-        return "system/user/profile";
-    }
 
-    @RequestMapping("getUserProfile")
-    @ResponseBody
-    public ResponseBo getUserProfile(Long userId) {
-        try {
-            User user = new User();
-            user.setUserId(userId);
-            return ResponseBo.ok(this.userService.findUserProfile(user));
-        } catch (Exception e) {
-            log.error("获取投票项目信息失败", e);
-            return ResponseBo.error("获取投票项目信息失败，请联系网站管理员！");
-        }
-    }
-
-    @RequestMapping("updateUserProfile")
-    @ResponseBody
-    public ResponseBo updateUserProfile(User user) {
-        try {
-            this.userService.updateUserProfile(user);
-            return ResponseBo.ok("更新个人信息成功！");
-        } catch (Exception e) {
-            log.error("更新投票项目信息失败", e);
-            return ResponseBo.error("更新投票项目信息失败，请联系网站管理员！");
-        }
-    }
-
-    @RequestMapping("changeAvatar")
-    @ResponseBody
-    public ResponseBo changeAvatar(String imgName) {
-        try {
-            String[] img = imgName.split("/");
-            String realImgName = img[img.length - 1];
-            User user = getCurrentUser();
-            user.setAvatar(realImgName);
-            this.userService.updateNotNull(user);
-            return ResponseBo.ok("更新头像成功！");
-        } catch (Exception e) {
-            log.error("更换头像失败", e);
-            return ResponseBo.error("更新头像失败，请联系网站管理员！");
-        }
-    }
 }

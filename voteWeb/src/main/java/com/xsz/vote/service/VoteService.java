@@ -13,7 +13,7 @@ import java.util.List;
 
 @CacheConfig(cacheNames = "VoteService")
 public interface VoteService extends IService<Vote> {
-    Vote findByName(String VoteName);
+
 
     @Cacheable(key = "#p0.toString() + (#p1 != null ? #p1.toString() : '')")
     List<Vote> findAllVotes(Vote vote, QueryRequest request);

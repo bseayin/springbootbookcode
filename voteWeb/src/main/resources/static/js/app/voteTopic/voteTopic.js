@@ -1,12 +1,12 @@
 $(function () {
     var settings = {
-        url: ctx + "vote/list",
+        url: ctx + "voteTopic/list",
         pageSize: 10,
         queryParams: function (params) {
             return {
                 pageSize: params.limit,
                 pageNum: params.offset / params.limit + 1,
-                title: $(".vote-table-form").find("input[name='title']").val().trim()
+                title: $(".voteTopic-table-form").find("input[name='title']").val().trim()
             };
         },
         columns: [
@@ -46,23 +46,23 @@ $(function () {
         ]
     };
 
-    $MB.initTable('voteTable', settings);
+    $MB.initTable('voteTopicTable', settings);
 });
 
 function search() {
-    $MB.refreshTable('voteTable');
+    $MB.refreshTable('voteTopicTable');
 }
 
 function refresh() {
-    $(".vote-table-form")[0].reset();
+    $(".voteTopic-table-form")[0].reset();
     search();
 }
 
 function deleteVote() {
-    var selected = $("#voteTable").bootstrapTable('getSelections');
+    var selected = $("#voteTopicTable").bootstrapTable('getSelections');
     var selected_length = selected.length;
     if (!selected_length) {
-        $MB.n_warning('请勾选需要删除的投票项目！');
+        $MB.n_warning('请勾选需要删除的投票主题！');
         return;
     }
     var ids = "";
@@ -72,10 +72,10 @@ function deleteVote() {
     }
 
     $MB.confirm({
-        text: "删除选中投票项目将导致该投票项目对应账户失去相应的权限，确定删除？",
+        text: "删除选中投票主题将导致该投票主题对应账户失去相应的权限，确定删除？",
         confirmButtonText: "确定删除"
     }, function () {
-        $.post(ctx + 'vote/delete', {"ids": ids}, function (r) {
+        $.post(ctx + 'voteTopic/delete', {"ids": ids}, function (r) {
             if (r.code === 0) {
                 $MB.n_success(r.msg);
                 refresh();
@@ -87,7 +87,7 @@ function deleteVote() {
 }
 
 function exportVoteExcel() {
-    $.post(ctx + "vote/excel", $(".vote-table-form").serialize(), function (r) {
+    $.post(ctx + "voteTopic/excel", $(".voteTopic-table-form").serialize(), function (r) {
         if (r.code === 0) {
             window.location.href = "common/download?fileName=" + r.msg + "&delete=" + true;
         } else {
@@ -97,7 +97,7 @@ function exportVoteExcel() {
 }
 
 function exportVoteCsv() {
-    $.post(ctx + "vote/csv", $(".vote-table-form").serialize(), function (r) {
+    $.post(ctx + "voteTopic/csv", $(".voteTopic-table-form").serialize(), function (r) {
         if (r.code === 0) {
             window.location.href = "common/download?fileName=" + r.msg + "&delete=" + true;
         } else {

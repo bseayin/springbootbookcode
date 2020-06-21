@@ -1,16 +1,16 @@
 
 $(function () {
-    var $voteAddForm = $("#vote-add-form");
+    var $voteAddForm = $("#voteTopic-add-form");
 
 
-    $("#vote-add .btn-save").click(function () {
+    $("#voteTopic-add .btn-save").click(function () {
      var name = $(this).attr("name");
      console.log("click save button "+name);
 
             var flag=true;
             if (flag) {
                 if (name === "save") {
-                    $.post(ctx + "vote/add", $voteAddForm.serialize(), function (r) {
+                    $.post(ctx + "voteTopic/add", $voteAddForm.serialize(), function (r) {
                         if (r.code === 0) {
                             closeModal();
                             $MB.n_success(r.msg);
@@ -19,7 +19,7 @@ $(function () {
                     });
                 }
                 if (name === "update") {
-                    $.post(ctx + "vote/update", $voteAddForm.serialize(), function (r) {
+                    $.post(ctx + "voteTopic/update", $voteAddForm.serialize(), function (r) {
                         if (r.code === 0) {
                             closeModal();
                             $MB.n_success(r.msg);
@@ -30,15 +30,15 @@ $(function () {
             }
         });
 
-    $("#vote-add .btn-close").click(function () {
+    $("#voteTopic-add .btn-close").click(function () {
         console.log("click close button ");
-          $("#vote-add-button").attr("name", "save");
+          $("#voteTopic-add-button").attr("name", "save");
         closeModal();
     });
 
     function closeModal() {
 
-        $MB.closeAndRestModal("vote-add");
+        $MB.closeAndRestModal("voteTopic-add");
     }
 
 });

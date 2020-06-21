@@ -2,15 +2,12 @@ package com.xsz.vote.service.impl;
 
 import com.xsz.common.domain.QueryRequest;
 import com.xsz.common.service.impl.BaseService;
-import com.xsz.common.util.MD5Utils;
-
-import com.xsz.system.domain.Dict;
-import com.xsz.system.domain.User;
-import com.xsz.vote.dao.VoteMapper;
+import com.xsz.vote.dao.VoteTopicMapper;
 import com.xsz.vote.domain.Vote;
+import com.xsz.vote.domain.VoteTopic;
+import com.xsz.vote.service.TbDVoteTopicService;
 import com.xsz.vote.service.VoteService;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,27 +20,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
-@Service("voteService")
+@Service("voteTopicService")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
-public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
+public class VoteTopicServiceImpl extends BaseService<VoteTopic> implements TbDVoteTopicService {
 
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private VoteMapper voteMapper;
-
-
+    private VoteTopicMapper voteTopicMapper;
 
 
     @Override
-    public List<Vote> findAllVotes(Vote vote, QueryRequest request) {
+    public List<VoteTopic> findAllVoteTopics(VoteTopic voteTopic, QueryRequest request) {
         try {
             Example example = new Example(Vote.class);
             Example.Criteria criteria = example.createCriteria();
-            if (StringUtils.isNotBlank(vote.getTitle())) {
-                criteria.andCondition("title=",vote.getTitle());
+            if (StringUtils.isNotBlank(voteTopic.getTitle())) {
+                criteria.andCondition("title=",voteTopic.getTitle());
             }
 
             example.setOrderByClause("CREATETIME");
@@ -54,28 +48,26 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
         }
     }
 
-
-
     @Override
-    public void addVote(Vote vote) {
-        vote.setCreatetime(new Date());
-        save(vote);
+    public void addVoteTopic(VoteTopic voteTopic) {
+        voteTopic.setCreatetime(new Date());
+        save(voteTopic);
     }
 
     @Override
-    public void updateVote(Vote vote) {
-        vote.setCreatetime(new Date());
-        this.updateNotNull(vote);
+    public void updateVoteTopic(VoteTopic voteTopic) {
+        voteTopic.setCreatetime(new Date());
+        this.updateNotNull(voteTopic);
     }
 
     @Override
-    public void deleteVotes(String VoteIds) {
-        List<String> list = Arrays.asList(VoteIds.split(","));
-        this.batchDelete(list, "id", Vote.class);
+    public void deleteVoteTopics(String voteTopicIds) {
+        List<String> list = Arrays.asList(voteTopicIds.split(","));
+        this.batchDelete(list, "id", VoteTopic.class);
     }
 
     @Override
-    public Vote findById(Long id) {
+    public VoteTopic findById(Long id) {
         return this.selectByKey(id);
     }
 }
