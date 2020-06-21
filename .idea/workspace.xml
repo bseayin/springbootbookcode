@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="054cc914-5ed5-488c-a1d9-1e4578f247d5" name="Default" comment="vote">
-      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteTopicServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteTopic/voteTopic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteTopic/voteTopicAdd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteTopic/voteTopicEdit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/voteTopic/voteTopic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/voteTopic/voteTopicAdd.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/error/error.2020-06-21.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error/error.2020-06-21.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/info/info.2020-06-21.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/info/info.2020-06-21.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteTopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteTopicController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/VoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/TbDVoteTopicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/TbDVoteTopicService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/VoteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/vote.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/vote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteAdd.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteEdit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/system/user/userAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/system/user/userAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/vote/vote.html" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/vote/vote.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/vote/voteAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/vote/voteAdd.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/templates/system/user/userAdd.html" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/templates/system/user/userAdd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteTopic/voteTopic.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteTopic/voteTopic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteTopic/voteTopicAdd.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteTopic/voteTopicAdd.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteTopic" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/voteWeb/src/main/resources/templates/voteTopic" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -72,11 +66,11 @@
       <recent name="com.xsz.vote.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\bseawp\springbootbookcode\voteWeb\src\main\resources\templates\voteTopic" />
       <recent name="C:\bseawp\springbootbookcode\voteWeb\src\main\resources\static\js\app\voteTopic" />
       <recent name="C:\bseawp\springbootbookcode\voteWeb\src\main\java\com\xsz\vote\service" />
       <recent name="C:\bseawp\springbootbookcode\voteWeb\src\main\java\com\xsz\vote\controller" />
       <recent name="C:\bseawp\springbootbookcode\voteWeb\src\main\resources\static\js\app\vote" />
-      <recent name="C:\bseawp\springbootbookcode\voteWeb\src\main\resources\templates\vote" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -472,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592675891956</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="vote">
+      <created>1592725215631</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1592725215631</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">

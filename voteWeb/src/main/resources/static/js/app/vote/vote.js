@@ -15,7 +15,7 @@ $(function () {
              }, 
              {
                  field: 'id',
-                 visible: false
+                  title: '序号'
              },
          {
             field: 'title',

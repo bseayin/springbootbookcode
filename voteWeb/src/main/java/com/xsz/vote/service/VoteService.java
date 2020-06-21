@@ -1,9 +1,11 @@
 package com.xsz.vote.service;
 
 import com.xsz.common.domain.QueryRequest;
+import com.xsz.common.domain.Tree;
 import com.xsz.common.service.IService;
 
 import com.xsz.system.domain.Dict;
+import com.xsz.system.domain.Menu;
 import com.xsz.vote.domain.Vote;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -29,6 +31,8 @@ public interface VoteService extends IService<Vote> {
 
     @Cacheable(key = "#p0")
     Vote findById(Long id);
+
+    Tree<Vote> getVoteButtonTree();
 
 
 }

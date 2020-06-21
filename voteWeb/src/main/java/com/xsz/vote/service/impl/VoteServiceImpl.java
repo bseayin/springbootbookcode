@@ -1,10 +1,13 @@
 package com.xsz.vote.service.impl;
 
 import com.xsz.common.domain.QueryRequest;
+import com.xsz.common.domain.Tree;
 import com.xsz.common.service.impl.BaseService;
 import com.xsz.common.util.MD5Utils;
 
+import com.xsz.common.util.TreeUtils;
 import com.xsz.system.domain.Dict;
+import com.xsz.system.domain.Menu;
 import com.xsz.system.domain.User;
 import com.xsz.vote.dao.VoteMapper;
 import com.xsz.vote.domain.Vote;
@@ -77,5 +80,24 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
     @Override
     public Vote findById(Long id) {
         return this.selectByKey(id);
+    }
+
+    @Override
+    public Tree<Vote> getVoteButtonTree() {
+        List<Tree<Vote>> trees = new ArrayList<>();
+        List<Vote> voteList = this.findAllVotes(new Vote(),null);
+        log.debug("voteList--size---"+voteList.size());
+        buildTrees(trees, voteList);
+        return TreeUtils.build(trees);
+    }
+
+    private void buildTrees(List<Tree<Vote>> trees, List<Vote> voteList) {
+        voteList.forEach(vote -> {
+            Tree<Vote> tree = new Tree<>();
+            tree.setId(vote.getId().toString());
+//            tree.setParentId("");
+            tree.setText(vote.getTitle());
+            trees.add(tree);
+        });
     }
 }

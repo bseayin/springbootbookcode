@@ -5,8 +5,10 @@ import com.xsz.common.annotation.Log;
 import com.xsz.common.controller.BaseController;
 import com.xsz.common.domain.QueryRequest;
 import com.xsz.common.domain.ResponseBo;
+import com.xsz.common.domain.Tree;
 import com.xsz.common.util.FileUtil;
 import com.xsz.common.util.MD5Utils;
+import com.xsz.system.domain.Menu;
 import com.xsz.system.domain.User;
 import com.xsz.system.service.UserService;
 import com.xsz.vote.domain.Vote;
@@ -140,6 +142,16 @@ public class VoteController extends BaseController {
     }
 
 
-
+    @RequestMapping("voteButtonTree")
+    @ResponseBody
+    public ResponseBo getVoteButtonTree() {
+        try {
+            Tree<Vote> tree = this.voteService.getVoteButtonTree();
+            return ResponseBo.ok(tree);
+        } catch (Exception e) {
+            log.error("获取投票项目表失败", e);
+            return ResponseBo.error("获取投票项目列表失败！");
+        }
+    }
 
 }

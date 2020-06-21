@@ -15,17 +15,28 @@ $(function () {
              }, 
              {
                  field: 'id',
-                 visible: false
+                 title: '序号'
              },
+
+              {
+                         field: 'voteid',
+                         title: '投票项目'
+                     },
          {
             field: 'title',
             title: '标题'
         },
 
         {
-            field: 'votecount',
-            title: '投票次数'
-         }, {
+            field: 'kinds',
+            title: '类型'
+         },
+          {
+                     field: 'optioncount',
+                     title: '选项个数'
+                  },
+
+         {
         field: 'remarks',
             title: '备注'
         }, {
@@ -33,6 +44,8 @@ $(function () {
             field: 'createtime',
             title: '修改时间'
         },
+
+
         {
             field: 'status',
             title: '状态',
@@ -86,7 +99,7 @@ function deleteVote() {
     });
 }
 
-function exportVoteExcel() {
+function exportvoteTopicExcel() {
     $.post(ctx + "voteTopic/excel", $(".voteTopic-table-form").serialize(), function (r) {
         if (r.code === 0) {
             window.location.href = "common/download?fileName=" + r.msg + "&delete=" + true;
@@ -96,7 +109,7 @@ function exportVoteExcel() {
     });
 }
 
-function exportVoteCsv() {
+function exportvoteTopicCsv() {
     $.post(ctx + "voteTopic/csv", $(".voteTopic-table-form").serialize(), function (r) {
         if (r.code === 0) {
             window.location.href = "common/download?fileName=" + r.msg + "&delete=" + true;

@@ -43,7 +43,7 @@ public class TbDVoteTopicController  extends BaseController {
     public String index(Model model) {
         User user = super.getCurrentUser();
         model.addAttribute("user", user);
-        return "VoteTopic/VoteTopic";
+        return "voteTopic/voteTopic";
     }
 
 
@@ -64,8 +64,8 @@ public class TbDVoteTopicController  extends BaseController {
     @RequestMapping("list")
     @RequiresPermissions("voteTopic:list")
     @ResponseBody
-    public Map<String, Object> VoteTopicList(QueryRequest request, VoteTopic VoteTopic) {
-        return super.selectByPageNumSize(request, () -> this.VoteTopicService.findAllVoteTopics(VoteTopic, request));
+    public Map<String, Object> VoteTopicList(QueryRequest request, VoteTopic voteTopic) {
+        return super.selectByPageNumSize(request, () -> this.VoteTopicService.findAllVoteTopics(voteTopic, request));
     }
 
     @RequestMapping("excel")
