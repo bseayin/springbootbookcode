@@ -5,9 +5,11 @@ import com.xsz.common.annotation.Log;
 import com.xsz.common.controller.BaseController;
 import com.xsz.common.domain.QueryRequest;
 import com.xsz.common.domain.ResponseBo;
+import com.xsz.common.domain.Tree;
 import com.xsz.common.util.FileUtil;
 import com.xsz.system.domain.User;
 import com.xsz.system.service.UserService;
+import com.xsz.vote.domain.Vote;
 import com.xsz.vote.domain.VoteTopic;
 import com.xsz.vote.service.TbDVoteTopicService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -115,10 +117,10 @@ public class TbDVoteTopicController  extends BaseController {
     @RequiresPermissions("voteTopic:update")
     @RequestMapping("update")
     @ResponseBody
-    public ResponseBo updateUser(VoteTopic VoteTopic) {
+    public ResponseBo updateUser(VoteTopic voteTopic) {
         try {
 
-            this.VoteTopicService.updateVoteTopic(VoteTopic);
+            this.VoteTopicService.updateVoteTopic(voteTopic);
             return ResponseBo.ok("修改投票项目成功！");
         } catch (Exception e) {
             log.error("修改投票项目失败", e);
@@ -137,6 +139,19 @@ public class TbDVoteTopicController  extends BaseController {
         } catch (Exception e) {
             log.error("删除投票项目失败", e);
             return ResponseBo.error("删除投票项目失败，请联系网站管理员！");
+        }
+    }
+
+
+    @RequestMapping("voteTopicButtonTree")
+    @ResponseBody
+    public ResponseBo getVoteButtonTree() {
+        try {
+            Tree<VoteTopic> tree = this.VoteTopicService.getVoteTopicButtonTree();
+            return ResponseBo.ok(tree);
+        } catch (Exception e) {
+            log.error("获取投票项目表失败", e);
+            return ResponseBo.error("获取投票项目列表失败！");
         }
     }
 

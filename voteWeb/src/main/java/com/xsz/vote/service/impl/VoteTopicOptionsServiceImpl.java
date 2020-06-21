@@ -28,7 +28,8 @@ public class VoteTopicOptionsServiceImpl extends BaseService<VoteTopicOption> im
 
     private Logger log = LoggerFactory.getLogger(this.getClass());
 
-
+    @Autowired
+    private TbDVoteTopicService VoteTopicService;
 
     @Override
     public List<VoteTopicOption> findAllVoteTopicOptions(VoteTopicOption voteTopicOption, QueryRequest request) {
@@ -49,7 +50,7 @@ public class VoteTopicOptionsServiceImpl extends BaseService<VoteTopicOption> im
 
     @Override
     public void addVoteTopicOption(VoteTopicOption voteTopicOption) {
-        voteTopicOption.setCreatetime(new Date());
+
         save(voteTopicOption);
 
     }

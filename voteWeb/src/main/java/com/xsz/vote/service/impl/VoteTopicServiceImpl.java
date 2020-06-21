@@ -1,7 +1,9 @@
 package com.xsz.vote.service.impl;
 
 import com.xsz.common.domain.QueryRequest;
+import com.xsz.common.domain.Tree;
 import com.xsz.common.service.impl.BaseService;
+import com.xsz.common.util.TreeUtils;
 import com.xsz.vote.dao.VoteTopicMapper;
 import com.xsz.vote.domain.Vote;
 import com.xsz.vote.domain.VoteTopic;
@@ -69,5 +71,24 @@ public class VoteTopicServiceImpl extends BaseService<VoteTopic> implements TbDV
     @Override
     public VoteTopic findById(Long id) {
         return this.selectByKey(id);
+    }
+
+    @Override
+    public Tree<VoteTopic> getVoteTopicButtonTree() {
+        List<Tree<VoteTopic>> trees = new ArrayList<>();
+        List<VoteTopic> voteList = this.findAllVoteTopics(new VoteTopic(),null);
+
+        buildTrees(trees, voteList);
+        return TreeUtils.build(trees);
+    }
+
+    private void buildTrees(List<Tree<VoteTopic>> trees, List<VoteTopic> voteList) {
+        voteList.forEach(vote -> {
+            Tree<VoteTopic> tree = new Tree<>();
+            tree.setId(vote.getId().toString());
+//            tree.setParentId("");
+            tree.setText(vote.getTitle());
+            trees.add(tree);
+        });
     }
 }
