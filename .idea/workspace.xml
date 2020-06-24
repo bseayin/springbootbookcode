@@ -1,177 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="054cc914-5ed5-488c-a1d9-1e4578f247d5" name="Default" comment="vote">
-      <change afterPath="$PROJECT_DIR$/log/error/error.2020-06-22.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/error/error.2020-06-24.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/info/info.2020-06-23.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/info/info.2020-06-24.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voteWeb/sql/Dump20200624.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteVO/voteResultVO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/voteVO/voteResultVO.html" afterDir="false" />
+    <list default="true" id="f6b3b0af-1a52-4625-aa67-3c3df3819768" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/wp2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/dao/VoteMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/dao/VoteResultMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/dao/VoteTopicMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/dao/VoteTopicOptionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/domain/Vote.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/domain/VoteResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/domain/VoteTopic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/domain/VoteTopicOption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/mapper/vote/VoteMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/mapper/vote/VoteResultMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/mapper/vote/VoteTopicMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/mapper/vote/VoteTopicOptionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/info/info.2020-06-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/info/info.2020-06-22.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/VoteVOController.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/VoteVOController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/error/error.2020-06-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/error/error.2020-06-24.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/info/info.2020-06-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/info/info.2020-06-24.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssm/ssm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ssm/ssm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteTopicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteTopicController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteTopicOptionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteTopicOptionsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/TbDVoteResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/TbDVoteResultService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/VoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/VoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteResultServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteResultServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/vo/VoteVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/vo/VoteVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/TbDVoteTopicOptionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/TbDVoteTopicOptionsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/TbDVoteTopicService.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/TbDVoteTopicService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteVO/voteVO.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/voteVO/voteVO.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/voteVO/voteVO.html" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/templates/voteVO/voteVO.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/GeneratorCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/GeneratorCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/aspect/LimitAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/aspect/LimitAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/aspect/LogAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/aspect/LogAspect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/FastJsonRedisSerializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/FastJsonRedisSerializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/FebsProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/FebsProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/MyWebAppConfigurer.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/MyWebAppConfigurer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/RedisConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/RedisConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/controller/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/controller/BaseController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/controller/CommonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/controller/CommonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/LimitType.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/LimitType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/QueryRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/QueryRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/RedisInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/RedisInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/ResponseBo.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/ResponseBo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/Tree.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/Tree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/ValidateCodeProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/domain/ValidateCodeProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/exception/ControllerExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/exception/ControllerExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/exception/FileDownloadException.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/exception/FileDownloadException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/exception/LimitAccessException.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/exception/LimitAccessException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/handler/ExportHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/handler/ExportHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/handler/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/handler/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/interceptor/SqlStatementInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/interceptor/SqlStatementInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/listener/ShiroSessionListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/listener/ShiroSessionListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/runner/ApplicationStartupRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/runner/ApplicationStartupRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/service/IService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/service/IService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/service/RedisService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/service/RedisService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/service/impl/BaseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/service/impl/BaseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/service/impl/RedisServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/service/impl/RedisServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/shiro/CustomUserFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/shiro/CustomUserFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/shiro/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/shiro/ShiroConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/shiro/ShiroProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/shiro/ShiroProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/shiro/ShiroRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/shiro/ShiroRealm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/AddressUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/AddressUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/DateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/DateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/ExcelUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/ExcelUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/ExcelUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/ExcelUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/FileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/HttpUtils$TrustAnyHostnameVerifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/HttpUtils$TrustAnyHostnameVerifier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/HttpUtils$TrustAnyTrustManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/HttpUtils$TrustAnyTrustManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/HttpUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/HttpUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/IPUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/IPUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/JsoupUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/JsoupUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/MD5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/MD5Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/POIUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/POIUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/SpringContextUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/SpringContextUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/TreeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/TreeUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/enums/BaseEnumTypeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/enums/BaseEnumTypeHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/enums/EnumTypeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/enums/EnumTypeHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/poi/convert/ExportConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/poi/convert/ExportConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/poi/convert/TimeConvert.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/poi/convert/TimeConvert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/poi/pojo/ExportItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/poi/pojo/ExportItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/Captcha.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/Captcha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/Encoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/Encoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/GifCaptcha.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/GifCaptcha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/GifEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/GifEncoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/Quant.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/Quant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/Randoms.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/Randoms.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/SpecCaptcha.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/SpecCaptcha.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/xss/XssFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/xss/XssFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/xss/XssHttpServletRequestWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/xss/XssHttpServletRequestWrapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/config/ScheduleConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/config/ScheduleConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/controller/JobController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/controller/JobController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/controller/JobLogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/controller/JobLogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/domain/Job$ScheduleStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/domain/Job$ScheduleStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/domain/Job.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/domain/Job.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/domain/JobLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/domain/JobLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/service/JobLogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/service/JobLogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/service/JobService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/service/JobService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/service/impl/JobLogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/service/impl/JobLogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/service/impl/JobServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/service/impl/JobServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/task/TestTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/task/TestTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/util/ScheduleJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/util/ScheduleJob.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/util/ScheduleRunnable.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/util/ScheduleRunnable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/util/ScheduleUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/util/ScheduleUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/DishesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/DishesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/DishesModelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/DishesModelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dao/CategoryDishesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dao/CategoryDishesMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dao/CategoryMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dao/CategoryMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dao/DishesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dao/DishesMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dao/ProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dao/ProductMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/CategoryDishes.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/CategoryDishes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/Dishes.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/Dishes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/DishesModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/DishesModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/domain/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dto/CategoryDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dto/CategoryDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dto/DishesDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/dto/DishesDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/enums/DishesEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/enums/DishesEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/form/CategoryForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/form/CategoryForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/form/DishesForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/form/DishesForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/CategoryDishesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/CategoryDishesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/DishesModelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/DishesModelService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/DishesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/DishesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/CategoryDishesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/CategoryDishesServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/DishesModelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/DishesModelServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/DishesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/DishesServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/service/impl/ProductServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/DeptController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/DictController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/DictController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/LogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/LogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/MenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/RedisController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/RedisController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/RoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/SessionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/SessionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/dao/DeptMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/dao/DeptMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/dao/MenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/dao/MenuMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/dao/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/dao/RoleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/dao/UserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/Dept.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/Dept.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/Dict.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/Dict.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/RoleMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/RoleMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/RoleWithMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/RoleWithMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/SysLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/SysLog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/UserOnline.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/UserOnline.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/UserRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/UserWithRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/domain/UserWithRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/DeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/DeptService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/DictService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/DictService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/LogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/LogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/MenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/MenuService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/RoleMenuServie.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/RoleMenuServie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/RoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/SessionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/SessionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/UserRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/UserRoleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/DeptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/DeptServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/DictServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/DictServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/LogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/LogServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/MenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/MenuServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/RoleMenuServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/RoleMenuServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/RoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/SessionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/SessionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/UserRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/UserRoleServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/system/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/controller/MovieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/controller/MovieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/controller/OneIsAllController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/controller/OneIsAllController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/controller/WeatherController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/controller/WeatherController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/domain/IdList.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/web/domain/IdList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/voteWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/voteWeb.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,63 +39,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="InvalidFacetManager">
-    <ignored-facets>
-      <facet id="voteWeb/invalid/Spring" />
-    </ignored-facets>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1dTSri5AzvMYLUJBq1AmnwoqF2s" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectId" id="1dlvwmSBSu4NqD3VWSzY7xV1RWY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/voteWeb/sql" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.validation" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.xsz.vote.service.impl" />
-      <recent name="com.xsz.vote.controller" />
-      <recent name="com.xsz.vote.service" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\bseawp\wp\springbootbookcode\voteWeb\sql" />
-      <recent name="C:\bseawp\wp\springbootbookcode\voteWeb\doc" />
-      <recent name="C:\bseawp\wp\springbootbookcode\voteWeb\src\main\resources\templates\voteVO" />
-      <recent name="C:\bseawp\wp\springbootbookcode\voteWeb\src\main\resources\static\js\app\voteVO" />
-      <recent name="C:\bseawp\springbootbookcode\voteWeb\src\main\resources\static\js\app\voteVO" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -249,200 +65,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="passParentEnv" value="true" />
-      <setting name="launchBrowser" value="true" />
-      <setting name="launchBrowserUrl" value="" />
-      <setting name="depsClasspath" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
-      <method />
-    </configuration>
-    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xsz.Application" />
       <module name="voteWeb" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.xsz.*" />
@@ -453,121 +79,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GeneratorCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xsz.GeneratorCode" />
-      <module name="voteWeb" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xsz.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MD5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xsz.common.util.MD5Utils" />
-      <module name="voteWeb" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xsz.common.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="false" name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.xsz.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xsz.Application" />
-      <module name="voteWeb" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.GeneratorCode" />
-      <item itemvalue="Application.MD5Utils" />
-      <item itemvalue="Application.Application" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
-        <item itemvalue="Application.GeneratorCode" />
-        <item itemvalue="Application.MD5Utils" />
       </list>
     </recent_temporary>
   </component>
@@ -576,105 +90,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="054cc914-5ed5-488c-a1d9-1e4578f247d5" name="Default" comment="" />
-      <created>1592024863056</created>
+      <changelist id="f6b3b0af-1a52-4625-aa67-3c3df3819768" name="Default Changelist" comment="" />
+      <created>1593012734989</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1592024863056</updated>
-      <workItem from="1592024866837" duration="666000" />
-      <workItem from="1592120349696" duration="5118000" />
-      <workItem from="1592144900619" duration="9195000" />
-      <workItem from="1592191153957" duration="5215000" />
-      <workItem from="1592204772875" duration="5969000" />
-      <workItem from="1592401703148" duration="6821000" />
+      <updated>1593012734989</updated>
     </task>
-    <task id="LOCAL-00001" summary="vote">
-      <created>1592151752419</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1592151752419</updated>
-    </task>
-    <task id="LOCAL-00002" summary="vote">
-      <created>1592413805237</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1592413805237</updated>
-    </task>
-    <task id="LOCAL-00003" summary="vote">
-      <created>1592575142281</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1592575142281</updated>
-    </task>
-    <task id="LOCAL-00004" summary="vote">
-      <created>1592666445913</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1592666445913</updated>
-    </task>
-    <task id="LOCAL-00005" summary="vote">
-      <created>1592668719380</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1592668719380</updated>
-    </task>
-    <task id="LOCAL-00006" summary="vote">
-      <created>1592675891956</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1592675891956</updated>
-    </task>
-    <task id="LOCAL-00007" summary="vote">
-      <created>1592725215631</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1592725215631</updated>
-    </task>
-    <task id="LOCAL-00008" summary="vote">
-      <created>1592734618577</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1592734618577</updated>
-    </task>
-    <task id="LOCAL-00009" summary="vote">
-      <created>1592740492884</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1592740492884</updated>
-    </task>
-    <task id="LOCAL-00010" summary="vote">
-      <created>1592758481692</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1592758481692</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32984000" />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -682,110 +111,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="vote" />
-    <option name="LAST_COMMIT_MESSAGE" value="vote" />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>springbootbookcode</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

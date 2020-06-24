@@ -8,12 +8,9 @@ spring:
       # 数据库访问配置, 使用druid数据源 
       db-type: com.alibaba.druid.pool.DruidDataSource
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://47.92.0.22:3306/db_vote?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
-      username: xsz2019
-      password: xsz2019PWD
-#      url: jdbc:mysql://localhost:3306/db_vote?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
-#      username: root
-#      password: XSZ202006a
+      url: jdbc:mysql://localhost:3306/db_vote?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: XSZ202006a
       # 连接池配置
       initial-size: 5
       min-idle: 5
@@ -96,36 +93,9 @@ spring:
     type:
       redis
 
-# spring boot admin配置开始
-#  boot:
-#    admin:
-#      client:
-#        url: http://localhost:8081
-#        username: XSZ
-#        password: 123456
-#  application:
-#    name: febs
-#
-#info:
-#  app:
-#    name: "febs"
-#    description: "spring boot&shiro 权限管理系统"
-#    version: "2.0"
-#    spring-boot-version: "2.0.4.RELEASE"
-#
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: '*'
-#  endpoint:
-#    health:
-#      show-details: ALWAYS
-# spring boot admin配置结束
 
-jasypt:
-  encryptor:
-    password: febs
+
+
 
 mybatis:
   # type-aliases扫描路径
