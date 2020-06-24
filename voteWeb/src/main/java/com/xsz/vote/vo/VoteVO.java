@@ -21,4 +21,9 @@ public class VoteVO implements Serializable {
     private Byte status;
     //创建日期
     private Date createtime;
+    private Integer voteId;
+    private Integer voteTopicId;
+    private Integer optionId;
+    //每个选项被投票的数量
+    private Integer voteoptioncount;
 }

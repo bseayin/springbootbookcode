@@ -7,6 +7,7 @@ import com.xsz.common.service.IService;
 import com.xsz.system.domain.Dict;
 import com.xsz.system.domain.Menu;
 import com.xsz.vote.domain.Vote;
+import com.xsz.vote.vo.VoteVO;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -33,6 +34,10 @@ public interface VoteService extends IService<Vote> {
     Vote findById(Long id);
 
     Tree<Vote> getVoteButtonTree();
+
+    public List<VoteVO> findVoteVOs(Integer status);
+
+    public List<VoteVO> findResultVoteVOs();
 
 
 }

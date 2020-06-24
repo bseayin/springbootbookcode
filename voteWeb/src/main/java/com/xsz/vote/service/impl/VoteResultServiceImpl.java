@@ -60,9 +60,16 @@ public class VoteResultServiceImpl extends BaseService<VoteResult> implements Tb
     }
 
     @Override
-    public void deleteVoteResults(String voteResultIds) {
+    public void submitVoteResults(String voteResultIds,Integer userId) {
         List<String> list = Arrays.asList(voteResultIds.split(","));
-        this.batchDelete(list, "id", VoteResult.class);
+        list.forEach(e->{
+            VoteResult voteResult=new VoteResult();
+            voteResult.setOptionid(Integer.parseInt(e));
+            voteResult.setVoteuserid(userId);
+
+            addVoteResult(voteResult);
+        });
+
     }
 
     @Override

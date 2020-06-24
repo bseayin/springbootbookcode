@@ -12,6 +12,7 @@ import com.xsz.system.domain.User;
 import com.xsz.vote.dao.VoteMapper;
 import com.xsz.vote.domain.Vote;
 import com.xsz.vote.service.VoteService;
+import com.xsz.vote.vo.VoteVO;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
@@ -89,6 +90,16 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
         log.debug("voteList--size---"+voteList.size());
         buildTrees(trees, voteList);
         return TreeUtils.build(trees);
+    }
+
+    @Override
+    public List<VoteVO> findVoteVOs(Integer status) {
+        return voteMapper.findVoteVOs(status);
+    }
+
+    @Override
+    public List<VoteVO> findResultVoteVOs() {
+        return voteMapper.findResultVoteVOs();
     }
 
     private void buildTrees(List<Tree<Vote>> trees, List<Vote> voteList) {

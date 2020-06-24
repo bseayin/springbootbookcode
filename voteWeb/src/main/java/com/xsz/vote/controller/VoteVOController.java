@@ -3,11 +3,13 @@ package com.xsz.vote.controller;
 import com.xsz.common.annotation.Log;
 import com.xsz.common.controller.BaseController;
 import com.xsz.common.domain.QueryRequest;
+import com.xsz.common.domain.ResponseBo;
 import com.xsz.system.domain.User;
 import com.xsz.system.service.UserService;
 import com.xsz.vote.domain.Vote;
 import com.xsz.vote.domain.VoteTopic;
 import com.xsz.vote.domain.VoteTopicOption;
+import com.xsz.vote.service.TbDVoteResultService;
 import com.xsz.vote.service.TbDVoteTopicOptionsService;
 import com.xsz.vote.service.TbDVoteTopicService;
 import com.xsz.vote.service.VoteService;
@@ -37,7 +39,9 @@ public class VoteVOController extends BaseController {
     @Autowired
     private VoteService voteService;
 
-
+    @Autowired
+    private TbDVoteResultService voteResultService;
+    
     @Autowired
     private TbDVoteTopicOptionsService voteTopicOptionsService;
 
@@ -53,43 +57,49 @@ public class VoteVOController extends BaseController {
     }
 
 
+    @RequestMapping("result")
+    @RequiresPermissions("voteVO:list")
+    public String voteResultIndex(Model model) {
+        User user = super.getCurrentUser();
+        model.addAttribute("user", user);
+        return "voteVO/voteResultVO";
+    }
+
+
     @Log("获取投票项目信息")
     @RequestMapping("list")
     @RequiresPermissions("voteVO:list")
     @ResponseBody
     public Map<String, Object> voteList(QueryRequest request, Vote vote) {
 
-        vote.setStatus(new Byte("1"));
-        List<VoteVO> voteVOList=new ArrayList<>();
-        List<Vote> voteList=voteService.findAllVotes(vote, request);
-        voteList.forEach(vote1 -> {
-            VoteTopic voteTopic=new VoteTopic();
-            voteTopic.setVoteid(vote1.getId());
-
-            List<VoteTopic>  voteTopicList=VoteTopicService.findAllVoteTopics(voteTopic,request);
-            voteTopicList.forEach(voteTopic1 -> {
-                VoteTopicOption  voteTopicOption=new VoteTopicOption();
-                voteTopicOption.setTopicid(voteTopic1.getId());
-                List<VoteTopicOption>  voteTopicOptionList=voteTopicOptionsService.findAllVoteTopicOptions(voteTopicOption,request);
-                voteTopicOptionList.forEach(voteTopicOption1 -> {
-                    VoteVO  votevo1=new VoteVO();
-                            votevo1.setKinds(voteTopic1.getKinds());
-                            votevo1.setOption(voteTopicOption1.getOptions());
-                            votevo1.setStatus(vote1.getStatus());
-                            votevo1.setCreatetime(vote1.getCreatetime());
-                            votevo1.setTopicName(voteTopic1.getTitle());
-                            votevo1.setVoteName(vote1.getTitle());
-                            voteVOList.add(votevo1);
-
-                }
 
 
 
-                );
-            });
 
-        });
-
-        return super.selectByPageNumSize(request, () -> voteVOList);
+        return super.selectByPageNumSize(request, () -> voteService.findVoteVOs(1));
     }
+
+    @Log("获取投票项目信息")
+    @RequestMapping("listResult")
+    @RequiresPermissions("voteVO:list")
+    @ResponseBody
+    public Map<String, Object> voteResultList(QueryRequest request, Vote vote) {
+        return super.selectByPageNumSize(request, () -> voteService.findResultVoteVOs());
+    }
+
+    @Log("提交投票项目")
+    @RequestMapping("submitvote")
+    @ResponseBody
+    public ResponseBo submitvote(String ids) {
+        try {
+            User user = super.getCurrentUser();
+            this.voteResultService.submitVoteResults(ids,user.getUserId().intValue());
+            return ResponseBo.ok("提交投票项目成功！");
+        } catch (Exception e) {
+            log.error("提交投票项目失败", e);
+            return ResponseBo.error("提交投票项目失败，请联系网站管理员！");
+        }
+    }
+    
+    
 }

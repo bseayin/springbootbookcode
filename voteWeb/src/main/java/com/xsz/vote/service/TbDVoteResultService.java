@@ -31,7 +31,7 @@ public interface TbDVoteResultService extends IService<VoteResult> {
     void updateVoteResult(VoteResult VoteResult);
 
     @CacheEvict(key = "#p0", allEntries = true)
-    void deleteVoteResults(String VoteResultIds);
+    public void submitVoteResults(String voteResultIds,Integer userId);
 
     @Cacheable(key = "#p0")
     VoteResult findById(Long id);

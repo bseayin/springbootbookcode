@@ -12,7 +12,11 @@ $(function () {
         columns: [
         {
                  checkbox: true
-             }, 
+             },
+              {
+                  field: 'optionId',
+                   title: '选项序号'
+              },
              {
                  field: 'voteName',
                  title: '投票项目'
@@ -100,6 +104,31 @@ function deleteVote() {
             }
         });
     });
+}
+
+
+function submitVote() {
+    var selected = $("#voteVOTable").bootstrapTable('getSelections');
+    var selected_length = selected.length;
+    if (!selected_length) {
+        $MB.n_warning('请勾选需要的投票！');
+        return;
+    }
+    var ids = "";
+    for (var i = 0; i < selected_length; i++) {
+        ids += selected[i].optionId;
+        if (i !== (selected_length - 1)) ids += ",";
+    }
+
+        $.post(ctx + 'voteVO/submitvote', {"ids": ids}, function (r) {
+            if (r.code === 0) {
+                $MB.n_success(r.msg);
+                refresh();
+            } else {
+                $MB.n_danger(r.msg);
+            }
+        });
+
 }
 
 function exportvoteVOExcel() {
