@@ -8,11 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="voteWeb" />
-        <module name="reportWeb" />
         <module name="ssm" />
+        <module name="blogWeb" />
+        <module name="reportWeb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="blogWeb" target="1.5" />
       <module name="reportWeb" target="1.8" />
       <module name="ssm" target="1.8" />
       <module name="voteWeb" target="1.8" />

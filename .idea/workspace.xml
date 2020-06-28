@@ -2,193 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6b3b0af-1a52-4625-aa67-3c3df3819768" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_03.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcmail_jdk14_1_60.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk14_1_60.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk14_1_60.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bctsp_jdk14_1_46.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_29.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_17_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_2_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_0_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_0_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_0_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_0_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xhtmlrenderer_flying_saucer_core_9_1_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xhtmlrenderer_flying_saucer_pdf_9_1_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/error/error.2020-06-25.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/error/error.2020-06-27.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/info/info.2020-06-25.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/info/info.2020-06-27.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/doc/报表管理功能架构图 (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/doc/报表管理功能架构图.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/reportWeb.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/ReportApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/controller/FileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/controller/MeetingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/controller/PdfController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/controller/TemplateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/controller/WordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/dto/TemplateDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/entity/Meeting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/entity/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/entity/Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/enums/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/enums/StatusEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/enums/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/enums/TypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/excetion/DataValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/excetion/Demo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/excetion/Demo2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/excetion/Demo3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/excetion/GlobExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/excetion/MyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/excetion/UserCheckinException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/excetion/UserNotExistException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/filter/DruidStatFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/form/MessageForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/form/OrderForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/handler/ControllerExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/repository/MeetingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/repository/TemplateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/service/MeetingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/service/PDFService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/service/TemplateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/service/WordService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/servlet/DruidStatViewServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/util/Java8Tester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/util/Java8tTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/util/KeyUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/util/PDFDataTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/util/PDFTemplateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/util/ResultVOUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/util/TemplateConvert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/java/com/xsz/vo/ResultVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/static/js/meeting.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/static/js/template.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/static/meeting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/static/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/static/template2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/static/word/A83441586350744845个人简历3.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/Nirmala.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/NirmalaB.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/NirmalaS.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/SIMSUN.TTC" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/Sitka.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/SitkaB.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/SitkaI.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/SitkaZ.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/modern.fon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/monbaiti.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/msgothic.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/msjh.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/msjhbd.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/msjhl.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/msyh.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/msyhbd.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/msyhl.ttc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/msyi.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/mtextra.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/mvboli.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/pala.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/palab.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/palabi.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/palai.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/phagspa.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/phagspab.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/pkmndp.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/pkmnem.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/pkmnemn.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/pkmnems.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/pkmnfl.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/pkmnrs.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/roman.fon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/script.fon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segmdl2.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoepr.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoeprb.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoesc.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoescb.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoeui.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoeuib.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoeuii.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoeuil.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoeuisl.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/segoeuiz.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguibl.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguibli.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguiemj.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguihis.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguili.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguisb.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguisbi.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguisli.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/seguisym.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/serife.fon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/simfang.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/simhei.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/simkai.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/simsunb.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/smalle.fon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/sserife.fon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/font/svgasys.fon" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/hello.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/pdf.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/templates/t1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/new/m1.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/new/m1.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/new/test.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template1/m2.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template1/m2.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template1/个人简历.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template2/m3.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template2/m3.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template2/个人简历2.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template3/m4.doc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template3/m4.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reportWeb/wordTemplate/template3/个人简历3.doc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/doc/投票系统数据库设计" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/doc/投票系统数据库设计" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/aspect/LimitAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/aspect/LimitAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/config/MyWebAppConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/config/MyWebAppConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/controller/TestLimiterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/exception/ControllerExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/exception/ControllerExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteTopicOptionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/controller/TbDVoteTopicOptionsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/dao/VoteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/dao/VoteMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteResultServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteResultServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/vote/service/impl/VoteServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/resources/static/js/app/vote/voteEdit.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -229,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ReportApp">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xsz.Application" />
       <module name="voteWeb" />
@@ -243,8 +57,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReportApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xsz.ReportApp" />
+      <module name="reportWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xsz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReportApp" />
         <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
@@ -267,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593013209591</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="vote">
+      <created>1593316796389</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593316796389</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/blogWeb/blogWeb.iml" filepath="$PROJECT_DIR$/blogWeb/blogWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/reportWeb/reportWeb.iml" filepath="$PROJECT_DIR$/reportWeb/reportWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
       <module fileurl="file://$PROJECT_DIR$/voteWeb/voteWeb.iml" filepath="$PROJECT_DIR$/voteWeb/voteWeb.iml" />
