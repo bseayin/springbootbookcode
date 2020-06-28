@@ -29,6 +29,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Bsea
+ * @date 2020.06.25
+ */
 @Service("voteService")
 @Transactional(propagation = Propagation.SUPPORTS, readOnly = true, rollbackFor = Exception.class)
 public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
@@ -39,8 +43,12 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
     private VoteMapper voteMapper;
 
 
-
-
+    /**
+     *  查询所有需要投票的选项
+     * @param vote
+     * @param request
+     * @return
+     */
     @Override
     public List<Vote> findAllVotes(Vote vote, QueryRequest request) {
         try {
@@ -57,8 +65,6 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
             return new ArrayList<>();
         }
     }
-
-
 
     @Override
     public void addVote(Vote vote) {
@@ -83,6 +89,10 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
         return this.selectByKey(id);
     }
 
+    /**
+     * 获取投票项目列表
+     * @return
+     */
     @Override
     public Tree<Vote> getVoteButtonTree() {
         List<Tree<Vote>> trees = new ArrayList<>();
@@ -91,7 +101,10 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
         buildTrees(trees, voteList);
         return TreeUtils.build(trees);
     }
-
+    /**
+     * 获取投票结果列表
+     * @return
+     */
     @Override
     public List<VoteVO> findVoteVOs(Integer status) {
         return voteMapper.findVoteVOs(status);
@@ -101,6 +114,7 @@ public class VoteServiceImpl extends BaseService<Vote> implements VoteService {
     public List<VoteVO> findResultVoteVOs() {
         return voteMapper.findResultVoteVOs();
     }
+
 
     private void buildTrees(List<Tree<Vote>> trees, List<Vote> voteList) {
         voteList.forEach(vote -> {

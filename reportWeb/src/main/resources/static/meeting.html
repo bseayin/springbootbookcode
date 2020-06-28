@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>会议管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>会议管理</h2>
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加会议</button>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>会议标题</th>
+                <th>地点</th>
+                <th>开始时间</th>
+
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="meetingdatabody">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<!-- 添加会员 -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">创建会议</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <div class="container">
+
+                    <form>
+                        <div class="form-group">
+                            <label >会议标题:</label>
+                            <input type="text" class="form-control" id="titleinput" placeholder="会议标题">
+                        </div>
+                        <div class="form-group">
+                            <label >会议地点:</label>
+                            <textarea class="form-control" rows="5" id="addressinput"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label >会议开始时间:</label>
+                            <input type="datetime-local" class="form-control" id="starttimeinut" placeholder="会议开始时间">
+                        </div>
+                    </form>
+                </div>
+
+
+
+            </div>
+
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="addbtn">提交</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 选择报表模板模态框 -->
+<div class="modal fade bd-example-modal-lg" id="templateModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">选择模板</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <div class="container">
+
+
+                    <form class="form-inline"  style="margin-top:10px">
+                        <label >模板名字:</label>
+                        <input type="text" class="form-control" id="byName">
+                        <label >&nbsp&nbsp类型:</label>
+                        <select class="form-control" id="byType">
+                            <option value="0">Word</option>
+                            <option value="1">PDF</option>
+
+                        </select>
+
+                        &nbsp&nbsp<a  class="btn btn-primary" id="searchbtn">搜索</a>
+                    </form>
+                    <div class="table-responsive" style="margin-top:10px">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>名字</th>
+                                <th>类型</th>
+                                <th>创建日期</th>
+                                <th>状态</th>
+
+                            </tr>
+                            </thead>
+                            <tbody id="databody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-10">
+                            <ul class="pagination">
+
+                            </ul>
+
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="submittempbtn">提交</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="/report/js/meeting.js"></script>
+
+</body>
+</html>

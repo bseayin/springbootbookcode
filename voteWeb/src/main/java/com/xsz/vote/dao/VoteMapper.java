@@ -7,9 +7,14 @@ import com.xsz.vote.vo.VoteVO;
 
 import java.util.List;
 
+/**
+ * Bsea
+ * 2020/06/27
+ */
 public interface VoteMapper extends MyMapper<Vote> {
-
+    /**投票管理主页查询**/
     public List<VoteVO> findVoteVOs(Integer status);
+    /**投票结果主页查询**/
     public List<VoteVO> findResultVoteVOs();
 
 }

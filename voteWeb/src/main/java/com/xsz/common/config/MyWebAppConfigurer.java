@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * @Description: 资源映射路径
- * @Author: llf
+ * @Author: Bsea
  * @CreateDate: 2020/6/6 22:23
  */
 @Configuration

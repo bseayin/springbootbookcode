@@ -118,16 +118,13 @@ public class TbDVoteTopicOptionsController extends BaseController {
             voteTopicOption.setVoteid(voteTopic.getVoteid());
             //更新主题的选项数量
             int optcount=voteTopic.getOptioncount()==null?0:voteTopic.getOptioncount();
-            if(voteTopic.getKinds()==0&&optcount==1){
-                log.error("新增投票选项失败");
-                return ResponseBo.error("新增投票选项失败，单选主题，选项不能超过1个！");
-            }else{
+
                 optcount++;
                 voteTopic.setOptioncount(optcount);
                 VoteTopicService.updateVoteTopic(voteTopic);
                 this.voteTopicOptionsService.addVoteTopicOption(voteTopicOption);
                 return ResponseBo.ok("新增投票选项成功！");
-            }
+
            
         } catch (Exception e) {
             log.error("新增投票选项失败", e);

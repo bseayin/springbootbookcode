@@ -72,6 +72,9 @@ public class VoteResultServiceImpl extends BaseService<VoteResult> implements Tb
 
     }
 
+
+
+
     @Override
     public VoteResult findById(Long id) {
         return this.selectByKey(id);

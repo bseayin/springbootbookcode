@@ -28,7 +28,7 @@ import java.util.Objects;
 
 
 /**
- * 接口限流注解，示例见 com.xsz.common.controller.TestController
+ * 接口限流注解，示例见 com.xsz.common.controller.TestLimiterController
  */
 @Aspect
 @Component

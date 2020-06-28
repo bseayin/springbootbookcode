@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>模板管理</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>模板管理</h2>
+    <!-- 按钮：用于打开模态框 -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        新建模板
+    </button>
+    <form class="form-inline"  style="margin-top:10px">
+        <label >模板名字:</label>
+        <input type="text" class="form-control" id="byName">
+        <label >&nbsp&nbsp类型:</label>
+        <select class="form-control" id="byType">
+            <option value="0">Word</option>
+            <option value="1">PDF</option>
+
+        </select>
+
+        &nbsp&nbsp<a  class="btn btn-primary" id="searchbtn">搜索</a>
+    </form>
+    <div class="table-responsive" style="margin-top:10px">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>名字</th>
+                <th>类型</th>
+                <th>创建日期</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="databody">
+
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <ul class="pagination">
+
+            </ul>
+
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+</div>
+
+
+
+<!-- 模态框 -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">新建模板</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <form id="formId" action="/report/templteUpload"  method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label >模板名字:</label>
+                        <input type="text" class="form-control" name="mname">
+                    </div>
+                    <div class="form-group">
+                        <label >模板类型:</label>
+                        <select class="form-control" name="mtype">
+                            <option value="0">Word</option>
+                            <option value="1">PDF</option>
+
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label >模板文件:</label>
+                        <input type="file" class="form-control" name="file">
+                    </div>
+
+
+                </form>
+
+            </div>
+
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="uploadsubmitbtn">提交</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- 模态框 -->
+<div class="modal fade" id="deleteModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">模态框头部</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                确认删除吗？
+            </div>
+
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="/report/js/template.js">
+</script>
+
+</body>
+</html>
