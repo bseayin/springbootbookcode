@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-4  offset-5">
+			<h2>申请职位</h2>
+		</div>
+	</div>
+	<div class="dropdown-divider"></div>
+	<div class="row">
+		<div class="col-4">
+			<form>
+				<div class="form-group">
+					<label>职位类别:</label>
+					<select class="form-control" id="positionType">
+						<option name='position'>选择职位类别</option>
+					</select>
+				</div>
+			</form>
+		</div>
+		<div class="col-4">
+			<form>
+				<div class="form-group">
+					<label>职位:</label>
+					<select class="form-control" id="position">
+						<option name='position'>选择职位</option>
+					</select>
+				</div>
+			</form>
+		</div>
+		<div class="col-4">
+			<button class="btn btn-primary" style=" margin-top:30px" id="query">查询</button>&nbsp;&nbsp;
+		</div>
+	</div>
+
+	<table class="table table-striped">
+		<thead><tr><th>职位名</th><th>最小工资</th><th>最大工资</th><th>工作城市</th><th>工作详细地址</th><th>工作经验要求</th><th>学历要求</th><th>技能要求</th><th>招聘人数</th><th>工作详细描述</th><th>操作</th></tr></thead>
+		<tbody id="positionTable"></tbody>
+	</table>
+
+
+
+
+	<div class="modal fade" id="detailModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title">工作详细描述</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+						<div class="form-group">
+							<textarea class="form-control" rows="5" id="detail2"></textarea>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="skillModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h4 class="modal-title">技能要求</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+
+			<div class="modal-body">
+				<div class="form-group">
+					<ul class="list-group" id="skill2">
+
+					</ul>
+				</div>
+				</form>
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+	<div class="modal fade" id="resumeModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title">申请职位</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+					<table class="table table-striped">
+						<thead><tr><th>简历号</th></tr></thead>
+						<tbody id="resumeTbody"></tbody>
+					</table>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="resumeConfirm">确认</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+</div>
+
+</body>
+<script>
+    $(function(){
+
+         pType();
+         var pid;
+
+         //查询所有职位类型
+        function pType(){
+            //请求
+            $.ajax({
+                url : "positionType/showAll",
+				type : "get",
+				dataType : "json",
+				success : function(data){
+				    $(data.data).each(function(){
+				           $("#positionType").append(" <option name='positionType' value='"+this.id+"'>"+this.name+"</option>")
+				           $("#pid").append(" <option name='pid' value='"+this.id+"'>"+this.name+"</option>")
+				           $("#pid2").append(" <option name='pid' value='"+this.id+"'>"+this.name+"</option>")
+
+				    })
+                }
+            })
+            //请求end
+        }
+        //职位类型查询end
+
+
+        //职位名称查询
+         $("#positionType").on("change", function(){
+         	//清空下拉框
+			$("#position").empty();
+			 //请求
+            $.ajax({
+                url : "position/showByTid/" + $(this).val(),
+				type : "get",
+				dataType : "json",
+				success : function(data){
+				    $(data.data).each(function(){
+				         $("#position").append(" <option name='position' value='"+this+"'>"+this+"</option>")
+				    })
+                }
+            })
+            //请求end
+         })
+		//职位名称查询end
+
+        //相关职业查询
+        $("#query").on("click", function(){
+            let type = $("option[name='positionType']:selected").val()
+            let positionName = $("option[name='position']:selected").val()
+             //请求
+             $("#positionTable").empty()
+            $.ajax({
+                url : "position/showByNameAndTid/" + positionName + "/" + type,
+				type : "get",
+				dataType : "json",
+				success : function(data){
+				    $(data.data).each(function(){
+				     let skills = "1";
+				    	$(this.skillSet).each(function(){
+							skills += "_" + this.name;
+				    	})
+                       $("#positionTable").append(" <tr><td>"
+                        +this.name+"</td><td>"
+                       	+this.minSales+"</td><td>"
+                       	+this.maxSales+"</td><td>"
+                       	+this.city+"</td><td>"
+                       	+this.address+"</td><td>"
+                       	+this.workedyears+"</td><td>"
+                       	+this.education+"</td><td><button type='button' class='btn btn-info' name='skill' value='"
+                       	+skills+"'>详情</button></td><td>"
+                       	+this.requiredNum+"</td><td><button type='button' class='btn btn-info' name='detail' value='"
+                       	+this.detail+"'>详情</button></td><td><button type='button' class='btn btn-info' name='resume' value='"
+                       	+this.id+"'>投递简历</button></td>"
+                       	)
+				    })
+                }
+            })
+            //请求end
+        })
+        //相关职业查询end
+
+
+		//查看工作详细描述
+		$("body").on("click", "button[name='detail']", function(){
+			$("#detail2").val($(this).val());
+			$("#detailModal").modal("show");
+		})
+		//查看工作详细描述end
+
+		//查看技能要求
+		$("body").on("click", "button[name='skill']", function(){
+			$("#skill2").empty()
+			let skillArr = $(this).val().split("_");
+
+			$(skillArr).each(function(i, skill){
+				if(i != 0){
+					$("#skill2").append("<li class='list-group-item'>"+skill+"</li>")
+					$("#skillModal").modal("show");
+				}
+			})
+		})
+		//查看技能要求end
+
+		//查询用户所有简历
+		$("body").on("click", "button[name='resume']", function(){
+			pid = $(this).val();
+			$("#resumeTbody").empty()
+			//请求
+			$.ajax({
+				url : "resume/showAll/",
+				type : "get",
+				dataType : "json",
+				success : function(data){
+					$(data.data).each(function(){
+						$("#resumeTbody").append(" <tr><td>"+ "<div class='radio'><label><input type='radio' name='resume' value='"
+								+this.id+"'>"
+								+this.id+"</label></div>"+"</td></tr>")
+					})
+				}
+			})
+			//请求end
+			$("#resumeModal").modal("show");
+
+		})
+		//查询用户所有简历end
+
+
+		//简历投递确认
+		$("#resumeConfirm").on("click", function(){
+			let rid = $("input[name='resume']:checked").val()
+			let position = {"id":pid, "resumeSet":new Array({"id":rid})}
+
+			//请求
+			$.ajax({
+				url : "position/addResume/",
+				contentType : 'application/json',
+				dataType : 'json',
+				data :JSON.stringify(position),
+				type : "post",
+				success : function(data){
+					alert(data);
+				}
+			})
+			//请求end
+
+		})
+
+
+    })
+
+
+
+</script>
+</html>

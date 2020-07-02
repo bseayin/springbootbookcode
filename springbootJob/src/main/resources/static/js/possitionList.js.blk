@@ -1,0 +1,30 @@
+$(document).ready(function(){
+$("#leftdiv").load("/job/leftmenu.html");
+$("#wrapper").load("/job/topul.html");
+ var data =  {"address" :$("#addressinput").val(),"startTime" : $("#starttimeinut").val(),"tile" :$("#titleinput").val()}
+        $.ajax({
+            url : "/job/position/showAll",
+            async : false,
+            type : "GET",
+            contentType : 'application/json',
+            dataType : 'json',
+
+            success : function(json) {
+                console.log(data);
+                let contentdata=json.data;
+                 $("#databody").empty();
+                		       for(var i=0;i<contentdata.length;i++){
+                		    	   $("#databody").append("  <tr class='odd gradeX'>");
+                						$("#databody").append(" <td>"+contentdata[i].name+"</td>");
+                						$("#databody").append(" <td>"+contentdata[i].city+"</td>");
+                						$("#databody").append(" <td>"+contentdata[i].minSalary+"-"+contentdata[i].maxSalary+"</td>");
+                						$("#databody").append(" <td>"+contentdata[i].education+"</td>");
+
+                						$("#databody").append(" <td><button type='button' class='btn btn-primary'>查看详情</button>&nbsp&nbsp&nbsp<button  type='button' name='trdelete' class='btn btn-danger' id='deletebtn"+contentdata[i].id+"'>申请</button></td>");
+                		    	   $("#databody").append(" </tr>");
+                		       }
+
+            }
+        });
+
+  });

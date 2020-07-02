@@ -7,23 +7,50 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="voteWeb" />
-        <module name="ssm" />
-        <module name="blogWeb" />
+        <module name="springcloudUserService" />
+        <module name="springcloudEureka" />
+        <module name="orderWeb" />
+        <module name="productWeb" />
+        <module name="dictionaryWeb" />
         <module name="reportWeb" />
+        <module name="homeWorkWeb" />
+        <module name="voteWeb" />
+        <module name="userWeb" />
+        <module name="springbootJob" />
+        <module name="springbootDocService" />
+        <module name="blogWeb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="blogWeb" target="1.5" />
+      <module name="blogWeb" target="1.8" />
+      <module name="dictionaryWeb" target="1.8" />
+      <module name="homeWorkWeb" target="1.8" />
+      <module name="orderWeb" target="1.8" />
+      <module name="productWeb" target="1.8" />
       <module name="reportWeb" target="1.8" />
+      <module name="springbootDocService" target="1.8" />
+      <module name="springbootJob" target="1.8" />
+      <module name="springcloudEureka" target="1.8" />
+      <module name="springcloudUserService" target="1.8" />
       <module name="ssm" target="1.8" />
+      <module name="userWeb" target="1.8" />
       <module name="voteWeb" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="blogWeb" options="-parameters" />
+      <module name="dictionaryWeb" options="-parameters" />
+      <module name="homeWorkWeb" options="-parameters" />
+      <module name="orderWeb" options="-parameters" />
+      <module name="productWeb" options="-parameters" />
       <module name="reportWeb" options="-parameters" />
+      <module name="springbootDocService" options="-parameters" />
+      <module name="springbootJob" options="-parameters" />
+      <module name="springcloudEureka" options="-parameters" />
+      <module name="springcloudUserService" options="-parameters" />
       <module name="ssm" options="-parameters" />
+      <module name="userWeb" options="-parameters" />
       <module name="voteWeb" options="-parameters -parameters" />
     </option>
   </component>

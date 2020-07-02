@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Track Material Design Bootstrap Admin Template</title>
+
+    <link rel="stylesheet" href="/job/admin1/assets/materialize/css/materialize.min.css" media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="/job/admin1/assets/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="/job/admin1/assets/css/font-awesome.css" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+    <link href="/job/admin1/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="/job/admin1/assets/css/custom-styles.css" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link rel="stylesheet" href="/job/admin1/assets/js/Lightweight-Chart/cssCharts.css">
+</head>
+<body>
+<div id="wrapper">
+
+
+    <!-- Dropdown Structure -->
+</div>
+<!--/. NAV TOP  -->
+<!--/. NAV TOP  -->
+<nav class="navbar-default navbar-side" role="navigation" id="leftdiv">
+
+
+</nav>
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            简历管理
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/job/admin1/#">Home</a></li>
+            <li><a href="/job/admin1/#">Tables</a></li>
+            <li class="active">Data</li>
+        </ol>
+
+    </div>
+
+    <div id="page-inner">
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="card">
+
+                    <div class="card-action">
+                        简历信息表
+                    </div>
+
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resumeAddModal">添加简历</button>
+
+                    <div class="card-content">
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead><tr><th>简历号</th><th>详情</th><th>操作</th></tr></thead>
+                                <tbody id="resumeTbody"></tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End Advanced Tables -->
+            </div>
+        </div>
+    </div>
+    <!-- /. PAGE INNER  -->
+
+
+    <!--/. resumeDetailModal  -->
+    <div class="modal fade" tabindex="-1" aria-hidden="true" id="resumeDetailModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">简历详情</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <input type="hidden" class="form-control" name="id" id="id">
+                        <div class="form-group">
+                            <label>姓名</label>
+                            <input type="text" class="form-control" name="name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label>性别</label>
+                            <input type="text" class="form-control" name="sex" id="sex">
+                        </div>
+                        <div class="form-group">
+                            <label>学历</label>
+                            <input type="text" class="form-control" name="education" id="education">
+                        </div>
+                        <div class="form-group">
+                            <label>手机号:</label>
+                            <input type="text" class="form-control" name="mobile" id="mobile">
+                        </div>
+                        <div class="form-group">
+                            <label>自我评价</label>
+                            <textarea class="form-control" rows="3" name="assessment" id="assessment"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>证书</label>
+                            <textarea class="form-control" rows="2" name="certificate" id="certificate"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>工作经历</label>
+                            <textarea class="form-control" rows="4" name="workedyears" id="workedyears"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>项目经历</label>
+                            <textarea class="form-control" rows="4" name="projectExp" id="projectExp"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>培训经历</label>
+                            <textarea class="form-control" rows="4" name="trainExp" id="trainExp"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-warning" id="resumeEdit">修改</button>&nbsp;&nbsp;
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--End resumeDetailModal -->
+
+    <!--/. resumeAddModal  -->
+    <div class="modal fade" id="resumeAddModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">添加简历</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="resumeAddFrm" action="resume/addResume" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" class="form-control" name="createBy" id="createBy">
+                        <div class="form-group">
+                            <label>头像</label>
+                            <input type="file" name="image"/>
+                        </div>
+                        <div class="form-group">
+                            <label>姓名</label>
+                            <input type="text" class="form-control" name="name" id="name2">
+                        </div>
+                        <div class="form-group">
+                            <label>性别</label>
+                            <input type="text" class="form-control" name="sex" id="sex2">
+                        </div>
+                        <div class="form-group">
+                            <label>学历</label>
+                            <input type="text" class="form-control" name="education" id="education2">
+                        </div>
+                        <div class="form-group">
+                            <label>手机号:</label>
+                            <input type="text" class="form-control" name="mobile" id="mobile2">
+                        </div>
+                        <div class="form-group">
+                            <label>自我评价</label>
+                            <textarea class="form-control" rows="3" name="assessment" id="assessment2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>证书</label>
+                            <textarea class="form-control" rows="2" name="certificate" id="certificate2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>工作经历</label>
+                            <textarea class="form-control" rows="4" name="workedyears" id="workedyears2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>项目经历</label>
+                            <textarea class="form-control" rows="4" name="projectExp" id="projectExp2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>培训经历</label>
+                            <textarea class="form-control" rows="4" name="trainExp" id="trainExp2"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="resumeAdd">提交</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--End resumeAddModal  -->
+
+</div>
+<!-- /. PAGE WRAPPER  -->
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+
+
+<!-- jQuery Js -->
+<script src="/job/admin1/assets/js/jquery-1.10.2.js"></script>
+
+<!-- Bootstrap Js -->
+<script src="/job/admin1/assets/js/bootstrap.min.js"></script>
+
+<!--<script src="/job/admin1/assets/materialize/js/materialize.min.js"></script>-->
+
+<!-- Metis Menu Js -->
+<script src="/job/admin1/assets/js/jquery.metisMenu.js"></script>
+
+
+<script src="/job/admin1/assets/js/easypiechart.js"></script>
+<script src="/job/admin1/assets/js/easypiechart-data.js"></script>
+
+<script src="/job/admin1/assets/js/Lightweight-Chart/jquery.chart.js"></script>
+<!-- DATA TABLE SCRIPTS -->
+<script src="/job/admin1/assets/js/dataTables/jquery.dataTables.js"></script>
+<script src="/job/admin1/assets/js/dataTables/dataTables.bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#dataTables-example').dataTable();
+    });
+</script>
+<script src="/job/js/resumeList.js"></script>
+<!-- Custom Js -->
+<script src="/job/admin1/assets/js/custom-scripts.js"></script>
+
+
+</body>
+
+</html>

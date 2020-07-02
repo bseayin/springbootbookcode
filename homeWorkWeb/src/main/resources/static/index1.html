@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/homework/wareadmin/https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="/homework/wareadmin/https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/homework/wareadmin/https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="/homework/wareadmin/https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>基础表格</h2>
+  <p id="info"></p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script type="text/javascript">
+$.post("/r/getlogin",
+        function(data){
+        console.log(data); //  2pm
+        var loginname=data.name;
+        $("#info").text(loginname);
+        }, "json");
+
+</script>
+</body>
+</html>

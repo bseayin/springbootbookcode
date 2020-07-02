@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Target Material Design Bootstrap Admin Template</title>
+
+    <link rel="stylesheet" href="/job/admin1/assets/materialize/css/materialize.min.css" media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="/job/admin1/assets/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FontAwesome Styles-->
+    <link href="/job/admin1/assets/css/font-awesome.css" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+    <link href="/job/admin1/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="/job/admin1/assets/css/custom-styles.css" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link rel="stylesheet" href="/job/admin1/assets/js/Lightweight-Chart/cssCharts.css">
+</head>
+<body>
+<div id="wrapper">
+</div>
+<nav class="navbar-default navbar-side" role="navigation" id="leftdiv">
+
+</nav>
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            个人信息管理
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/job/index.html">首页</a></li>
+            <li><a href="/job/myProfile.html">个人中心</a></li>
+            <li class="active">个人信息</li>
+        </ol>
+
+    </div>
+
+    <div id="page-inner">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-action">
+                        我的信息
+                    </div>
+                    <div class="card-content">
+                        <form class="col s12" id="userInfoFrm">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input disabled id="name" type="text" class="validate">
+                                    <label for="name">姓名</label>
+                                </div>
+                                <div class="input-field col s3">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input disabled id="sex" type="text" class="validate">
+                                    <label for="sex">性别</label>
+                                </div>
+                                <div class="input-field col s3">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input disabled id="age" type="text" class="validate">
+                                    <label for="age">年龄</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input disabled id="mobile" type="text" class="validate">
+                                    <label for="mobile">手机</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input disabled id="email" type="email" class="validate">
+                                    <label for="email">邮箱</label>
+                                </div>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button
+                                type="button" class="btn btn-warning" id="userInfoEditBtn">修改
+                        </button>
+                            &nbsp;&nbsp;&nbsp;<button disabled type="button" class="btn btn-primary"
+                                                      id="userInfoEditConfirmBtn">确认
+                        </button>
+
+                        </form>
+                        <div class="clearBoth"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-action">
+                        密码修改
+                    </div>
+                    <div class="card-content">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input id="oldPwd" type="text" class="validate">
+                                    <label for="oldPwd">原始密码</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input id="newPwd" type="text" class="validate">
+                                    <label for="newPwd">新密码</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input id="newPwd2" type="text" class="validate">
+                                    <label for="newPwd">确认密码</label>
+                                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <button type="button" class="btn btn-warning" id="pwdModifyBtn">修改</button>
+                        </form>
+                        <div class="clearBoth"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+
+    <!-- jQuery Js -->
+    <script src="/job/admin1/assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="/job/admin1/assets/js/bootstrap.min.js"></script>
+
+    <script src="/job/js/myProfile.js"></script>
+
+    <script src="/job/admin1/assets/materialize/js/materialize.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="/job/admin1/assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="/job/admin1/assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="/job/admin1/assets/js/morris/morris.js"></script>
+
+
+    <script src="/job/admin1/assets/js/easypiechart.js"></script>
+    <script src="/job/admin1/assets/js/easypiechart-data.js"></script>
+
+    <script src="/job/admin1/assets/js/Lightweight-Chart/jquery.chart.js"></script>
+
+    <!-- Custom Js -->
+    <script src="/job/admin1/assets/js/custom-scripts.js"></script>
+
+
+</body>
+
+</html>

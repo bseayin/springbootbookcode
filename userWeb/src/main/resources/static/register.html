@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/usercenter/wareadmin/https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="/usercenter/wareadmin/https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/usercenter/wareadmin/https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="/usercenter/wareadmin/https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>堆叠表单</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" name='rememberMe' type="checkbox"> Remember me
+      </label>
+    </div>
+    <button type="button" id="subtn" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<script type="text/javascript">
+
+$("#subtn").click(function(){
+
+	$.post("/r/user/register", { "name": $("#email").val(),"pwd": $("#pwd").val()},
+	        function(data){
+	        console.log(data); //  
+	        window.location.href="/usercenter/wareadmin/index1.html";
+	        }, "json");
+});
+
+
+</script>
+</body>
+</html>

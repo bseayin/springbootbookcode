@@ -1,0 +1,16 @@
+package com.zz.product.service;
+
+import com.zz.product.entity.TestPic;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+/**
+ * <p>
+ * 图片管理 服务类
+ * </p>
+ *
+ * @author Bsea
+ * @since 2020-01-23
+ */
+public interface TestPicService extends IService<TestPic> {
+
+}

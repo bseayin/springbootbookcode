@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/blogWeb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dictionaryWeb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/homeWorkWeb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/orderWeb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/productWeb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/reportWeb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootDocService" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootJob" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloudEureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloudUserService" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ssm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/userWeb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/voteWeb" charset="UTF-8" />
   </component>
 </project>

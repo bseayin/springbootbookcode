@@ -4,9 +4,17 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/voteWeb/pom.xml" />
-        <option value="$PROJECT_DIR$/ssm/pom.xml" />
         <option value="$PROJECT_DIR$/reportWeb/pom.xml" />
         <option value="$PROJECT_DIR$/blogWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloudEureka/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloudUserService/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootDocService/pom.xml" />
+        <option value="$PROJECT_DIR$/springbootJob/pom.xml" />
+        <option value="$PROJECT_DIR$/homeWorkWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/orderWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/productWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/userWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/dictionaryWeb/pom.xml" />
       </list>
     </option>
   </component>

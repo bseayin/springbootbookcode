@@ -1,0 +1,16 @@
+package com.zz.product.service;
+
+import com.zz.product.entity.GenTable;
+import com.baomidou.mybatisplus.extension.service.IService;
+
+/**
+ * <p>
+ * 业务表 服务类
+ * </p>
+ *
+ * @author Bsea
+ * @since 2020-01-25
+ */
+public interface GenTableService extends IService<GenTable> {
+
+}

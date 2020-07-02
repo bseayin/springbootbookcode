@@ -1,0 +1,456 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ela Admin - HTML5 Admin Template</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/job/admin2/assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="/job/admin2/assets/css/style.css">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet"/>
+
+    <style>
+        #weatherWidget .currentDesc {
+            color: #ffffff !important;
+        }
+
+        .traffic-chart {
+            min-height: 335px;
+        }
+
+        #flotPie1 {
+            height: 150px;
+        }
+
+        #flotPie1 td {
+            padding: 3px;
+        }
+
+        #flotPie1 table {
+            top: 20px !important;
+            right: -10px !important;
+        }
+
+        .chart-container {
+            display: table;
+            min-width: 270px;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #flotLine5 {
+            height: 105px;
+        }
+
+        #flotBarChart {
+            height: 150px;
+        }
+
+        #cellPaiChart {
+            height: 160px;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Left Panel -->
+<div id="leftdiv"></div>
+<!-- /#left-panel -->
+
+<!-- Right Panel -->
+<div id="right-panel" class="right-panel">
+
+    <!-- Header-->
+    <header id="header" class="header">
+    </header>
+    <!-- /#header -->
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Animated -->
+        <div class="animated fadeIn">
+            <div>
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                        data-target="#positionAddModal"
+                ">
+                <i class="fa fa-plus"></i>&nbsp; 添加职位</button>
+            </div>
+            <!-- Orders -->
+            <div class="orders">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+
+                            <div class="card-header">
+                                <strong>已发布职位表</strong>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="table-stats order-table ov-h">
+                                    <table class="table ">
+
+                                        <thead>
+                                        <tr>
+                                            <th class="serial">#</th>
+                                            <th>名称</th>
+                                            <th>工作城市</th>
+                                            <th>新资范围</th>
+                                            <th>学历要求</th>
+                                            <th>详情</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody id="positionTbody"></tbody>
+
+                                    </table>
+
+                                </div> <!-- /.table-stats -->
+
+                            </div><!-- /.card-stats -->
+                            <ul class="pagination" id="pagination2"></ul>
+                        </div> <!-- /.card-body -->
+                    </div>  <!-- /.col-xl-12 -->
+                </div>  <!-- /.row -->
+            </div><!-- /.orders -->
+        </div><!-- .animated -->
+    </div><!-- /.content -->
+</div>
+<!-- /. right-panel  -->
+
+<!--positionAddModal  -->
+<div class="modal fade" id="positionAddModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">添加职位</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="positionFrm">
+                    <div class="form-group row">
+                        <div class="col col-md-2"><label>职位类别:</label></div>
+                        <div class="col-12 col-md-4">
+                            <select class="form-control" id="pid"></select>
+                        </div>
+
+                        <div class="col col-md-2"><label>职位名</label></div>
+                        <div class="col-12 col-md-4">
+                            <input type="text" class="form-control" name="name" id="name">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col col-md-2"><label>最小工资</label></div>
+                        <div class="col-12 col-md-4">
+                            <input value="3000" min="0" max="9999999" step="100" type="number" class="form-control"
+                                   name="minSales" id="minSales">
+                        </div>
+
+                        <div class="col col-md-2"><label>最大工资</label></div>
+                        <div class="col-12 col-md-4">
+                            <input value="10000" min="0" max="9999999" step="100" type="number" class="form-control"
+                                   name="maxSales" id="maxSales">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col col-md-2"><label>工作城市</label></div>
+                        <div class="col-12 col-md-4">
+                            <input type="text" class="form-control" name="city" id="city">
+                        </div>
+
+                        <div class="col col-md-2"><label>招聘人数</label></div>
+                        <div class="col-12 col-md-4">
+                            <input value="1" min="0" max="9999999" step="1" type="number" class="form-control"
+                                   name="requiredNum" id="requiredNum">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col col-md-2"><label>学历要求</label></div>
+                        <div class="col-12 col-md-4">
+                            <input type="text" class="form-control" name="education" id="education">
+                        </div>
+
+                        <div class="col col-md-2"><label>技能要求</label></div>
+                        <div class="col-12 col-md-4">
+                            <button type="button" class="btn btn-outline-primary btn-sm" name="skillAddBtn">
+                                <i class="fa fa-plus-circle"></i>&nbsp; 添加技能
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>工作详细地址</label>
+                        <textarea class="form-control" rows="2" name="address" id="address"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>工作经验要求</label>
+                        <textarea class="form-control" rows="3" name="workedyears" id="workedyears"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>工作详细描述:</label>
+                        <textarea class="form-control" rows="5" name="detail" id="detail"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="positionAdd">提交</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--/. positionAddModal  -->
+
+<!--positionEditModal  -->
+<div class="modal fade" id="positionEditModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">修改职位</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+
+                <form id="positionFrm3">
+                    <input type="hidden" class="form-control" name="id3" id="id3">
+                    <div class="form-group row">
+                        <div class="col col-md-2"><label>职位类别:</label></div>
+                        <div class="col-12 col-md-4">
+                            <select class="form-control" id="pid2"></select>
+                        </div>
+
+                        <div class="col col-md-2"><label>职位名</label></div>
+                        <div class="col-12 col-md-4">
+                            <input type="text" class="form-control" name="name3" id="name3">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col col-md-2"><label>最小工资</label></div>
+                        <div class="col-12 col-md-4">
+                            <input value="3000" min="0" max="9999999" step="100" type="number" class="form-control"
+                                   name="minSales3" id="minSales3">
+                        </div>
+
+                        <div class="col col-md-2"><label>最大工资</label></div>
+                        <div class="col-12 col-md-4">
+                            <input value="10000" min="0" max="9999999" step="100" type="number" class="form-control"
+                                   name="maxSales3" id="maxSales3">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col col-md-2"><label>工作城市</label></div>
+                        <div class="col-12 col-md-4">
+                            <input type="text" class="form-control" name="city3" id="city3">
+                        </div>
+
+                        <div class="col col-md-2"><label>招聘人数</label></div>
+                        <div class="col-12 col-md-4">
+                            <input value="1" min="0" max="9999999" step="1" type="number" class="form-control"
+                                   name="requiredNum3" id="requiredNum3">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col col-md-2"><label>学历要求</label></div>
+                        <div class="col-12 col-md-4">
+                            <input type="text" class="form-control" name="education3" id="education3">
+                        </div>
+
+                        <div class="col col-md-2"><label>技能要求</label></div>
+                        <div class="col-12 col-md-4">
+                            <button type="button" class="btn btn-outline-primary btn-sm" name="skillAddBtn">
+                                <i class="fa fa-plus-circle"></i>&nbsp; 添加技能
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>工作详细地址</label>
+                        <textarea class="form-control" rows="2" name="address" id="address3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>工作经验要求</label>
+                        <textarea class="form-control" rows="3" name="workedyears" id="workedyears3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>工作详细描述:</label>
+                        <textarea class="form-control" rows="5" name="detail" id="detail3"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="positionAdd2">提交</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!--/. positionEditModal  -->
+
+<!--skillAddModal  -->
+<div class="modal fade" id="skillAddModal">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">添加技能</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="table-stats order-table ov-h">
+                    <table class="table ">
+                        <thead>
+                        <tr style="display:block;">
+                            <th style="width:20%">选择</th>
+                            <th style="width:20%">编号</th>
+                            <th style="width:20%">名称</th>
+                        </tr>
+                        </thead>
+
+                        <tbody id="skillTbody" style="height:200px;display:block;overflow:auto"></tbody>
+                    </table>
+                </div>
+
+                <ul class="pagination" id="pagination1"></ul>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="skillModalBtn">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--/. skillAddModal  -->
+
+
+<!--/. positionDetailModal  -->
+<div class="modal fade" id="positionDetailModal" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">职位详情</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form id="positionFrm2">
+                    <div class="form-group">
+                        <label>工作详细地址</label>
+                        <textarea class="form-control" rows="2" name="address" id="address2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>工作详细描述:</label>
+                        <textarea class="form-control" rows="5" name="detail" id="detail2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>工作经验要求</label>
+                        <textarea class="form-control" rows="3" name="workedyears2"
+                                  id="workedyears2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>技能要求</label>
+                        <div id="skillSet">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>招聘人数</label>
+                        <input type="text" class="form-control" name="requiredNum2" id="requiredNum2">
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--positionDetailModal  -->
+
+
+<!-- Footer -->
+
+<!-- /.site-footer -->
+
+</div>
+<!-- /#right-panel -->
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+<script src="/job/admin2/assets/js/main.js"></script>
+
+<!--  Chart js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
+
+<!--Chartist Chart-->
+<script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
+<script src="/job/admin2/assets/js/init/weather-init.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+<script src="/job/admin2/assets/js/init/fullcalendar-init.js"></script>
+
+
+<script src="/job/js/possitionList2.js"></script>
+<script src="/job/js/commonUser.js"></script>
+</body>
+</html>

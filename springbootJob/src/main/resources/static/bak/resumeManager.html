@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-4  offset-5">
+			<h2>简历管理</h2>
+		</div>
+	</div>
+	<div class="dropdown-divider"></div>
+
+
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resumeAddModal">添加简历</button>
+	<table class="table table-striped">
+		<thead><tr><th>id</th><th>姓名</th><th>性别</th><th>手机</th><th>自我评价</th><th>证书</th><th>工作/项目/培训经历</th><th>学历</th><th>专业</th><th>技能</th><th>操作</th></tr></thead>
+		<tbody id="resumeTable"></tbody>
+
+	</table>
+
+	<ul class="pagination"></ul>
+
+
+
+	<div class="modal fade" id="resumeAddModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title">添加简历</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+
+					<form id="resumeFrm">
+						<div class="form-group">
+							<label>姓名:</label>
+							<input type="text" class="form-control" name="name" id="name">
+						</div>
+						<div class="form-group">
+							<label>性别</label>
+							<input type="text" class="form-control" name="sex" id="sex">
+						</div>
+						<div class="form-group">
+							<label>手机</label>
+							<input type="text" class="form-control" name="mobile" id="mobile">
+						</div>
+						<div class="form-group">
+							<label>学历</label>
+							<input type="text" class="form-control" name="education" id="education">
+						</div>
+						<div class="form-group">
+							<label>专业</label>
+							<input type="text" class="form-control" name="major" id="major">
+						</div>
+						<div class="form-group">
+							<label>技能</label>
+							<div class="form-check" name="skillFrmCheck"></div>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="resumeAdd">Submit</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="resumeEditModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title">修改简历</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+
+					<form id="resumeFrm2">
+						<input type="hidden" class="form-control" name="id2" id="id2">
+						<div class="form-group">
+							<label>姓名:</label>
+							<input type="text" class="form-control" name="name" id="name2">
+						</div>
+						<div class="form-group">
+							<label>性别</label>
+							<input type="text" class="form-control" name="sex" id="sex2">
+						</div>
+						<div class="form-group">
+							<label>手机</label>
+							<input type="text" class="form-control" name="mobile" id="mobile2">
+						</div>
+						<div class="form-group">
+							<label>学历</label>
+							<input type="text" class="form-control" name="education" id="education2">
+						</div>
+						<div class="form-group">
+							<label>专业</label>
+							<input type="text" class="form-control" name="major" id="major2">
+						</div>
+						<div class="form-group">
+							<label>技能</label>
+							<div class="form-check" name="skillFrmCheck"></div>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="resumeEdit2">Submit</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+</body>
+<script>
+    $(function(){
+
+    var currentPage = 0;
+    var limit = 5;
+    var totalPages = 0;
+	showAll();
+	skill();
+
+    //当前用户简历查询
+    function showAll(){
+
+        $("#resumeTable").empty()
+		//请求
+		$.ajax({
+			url : "resume/showById/",
+			type : "get",
+			dataType : "json",
+			success : function(data){
+				$(data.data).each(function(){
+			   		$("#resumeTable").append("<tr><td>"
+			   		+this.id+"</td><td>"
+			   		+this.name+"</td><td>"
+			   		+this.sex+"</td><td>"
+			   		+this.mobile+"</td><td><button type='button' class='btn btn-info' name='assessment' id='"
+			   		+this.assessment+"'>详情</button></td><td><button type='button' class='btn btn-info' name='certificate' id='"
+			   		+this.certificate+"'>详情</button></td><td><button type='button' class='btn btn-info' name='experience' id='"
+			   		+this.workedyears+"_"+this.projectExp+"_"+this.trainExp+"'>详情</button></td><td>"
+			   		+this.education+"</td><td>"
+			   		+this.major+"</td><td><button type='button' class='btn btn-info' name='assessment' id='"
+			   		+this.skillSet+"'>详情</button></td><td><button type='button' class='btn btn-warning' name='resumeEdit' id='"
+                       	+this.id+"_"+this.name+"_"+this.sex+"_"+this.mobile+"_"+this.education+"_"+this.major+"_"+this.skillSet+"'>修改</button>&nbsp;&nbsp;<button type='button' class='btn btn-danger' name='resumeDelete' id='"
+                       	+this.id+"'>删除</button></td></tr>");
+				})
+				//添加分页
+				//totalPages = data.data.totalPages;
+				$(".pagination").empty();
+				$(".pagination").append("<li class='page-item'><a class='page-link' href='#' id='previous'>Previous</a></li>")
+
+				//for(var i = 0; i < totalPages; i++){
+				//   $(".pagination").append(' <li class="page-item" id="pageNo'+i+'"><a class="page-link" href="#">'+(i+1)+'</a></li>');
+				//}
+
+				$(".pagination").append("<li class='page-item'><a class='page-link' href='#' id='next'>Next</a></li>")
+
+				$(".page-item").removeClass("active");
+				$("#pageNo"+currentPage).addClass("active");
+				//添加分页end
+
+			}
+		})
+		//请求end
+	}
+	//当前用户简历查询end
+
+	 //查询所有技能
+        function skill(){
+            //请求
+            $.ajax({
+                url : "skill/showAll",
+				type : "get",
+				dataType : "json",
+				success : function(data){
+				    $(data.data).each(function(){
+				           $("div[name='skillFrmCheck']").append("<label class='.form-check-inline'><input type='checkbox' class='form-control' name='skillSet' value='"
+				           +this.id+"'>"+this.name+"</label>")
+				    })
+                }
+            })
+            //请求end
+        }
+        //技能查询end
+
+
+		//添加简历
+        $("#resumeAdd").on("click", function(){
+        	function Skill(id){this.id = id};
+        	var skillList = new Array();
+			$("input[name='skillSet']:checked").each(function(){
+				skillList.push(new Skill($(this).val()))
+			})
+
+			var Data = {"name":$("#name").val(), "sex":$("#sex").val(), "mobile":$("#mobile").val(),
+			"education":$("#education").val(), "major":$("#major").val(),"skillSet":skillList}
+			//请求
+            $.ajax({
+                url : "resume/addResume",
+                data : JSON.stringify(Data),
+				type : "post",
+				contentType: 'application/json;charset=utf-8',
+				dataType : "json",
+				success : function(data){
+				    alert("成功")
+				    $("#positionAddModal").modal("hide")
+                }
+            })
+            //请求end
+        })
+		//添加简历end
+
+
+		//修改简历模态框赋值
+		$("body").on("click", "button[name='resumeEdit']", function(){
+			var dataArr = $(this).attr("id").split("_")
+			$("#id2").val(dataArr[0])
+			$("#name2").val(dataArr[1])
+			$("#sex2").val(dataArr[2])
+			$("#mobile2").val(dataArr[3])
+			$("#education2").val(dataArr[4])
+			$("#major2").val(dataArr[5])
+
+			$("#resumeEditModal").modal("show")
+		})
+		//修改简历模态框赋值end
+
+		//修改简历
+		$("#resumeEdit2").on("click", function(){
+			function Skill(id){this.id = id};
+        	var skillList = new Array();
+			$("input[name='skillSet']:checked").each(function(){
+				skillList.push(new Skill($(this).val()))
+			})
+			var Data = {"id":$("#id2").val(), "name":$("#name2").val(), "sex":$("#sex2").val(), "mobile":$("#mobile2").val(),
+			"education":$("#education2").val(), "major":$("#major2").val(),"skillSet":skillList}
+			//请求
+            $.ajax({
+                url : "resume/editResume",
+                data : JSON.stringify(Data),
+				type : "post",
+				contentType: 'application/json;charset=utf-8',
+				dataType : "json",
+				success : function(data){
+				    alert("成功")
+				    $("#positionEditModal").modal("hide")
+                }
+            })
+            //请求end
+        })
+        //修改简历end
+
+		//删除简历
+		$("body").on("click", "button[name='resumeDelete']", function(){
+			var $id = $(this).attr("id");
+
+            if (confirm("确认删除吗？")){
+				//请求
+				$.ajax({
+					url : "resume/deleteResume/" + $id,
+					type : "post",
+					dataType : "json",
+					success : function(data){
+						$(location).attr("href", "/job/resumeManager.html");
+					}
+				})
+				//请求end
+            }
+
+		})
+		//删除简历end
+
+    })
+
+
+
+</script>
+</html>

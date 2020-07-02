@@ -26,11 +26,11 @@ public class Follower implements Serializable {
 	
 	@Column(length=30)
 	/**明星用户Id(被关注用户)**/
-	private String startId;
+	private String starId;
 	
 	@Column(length=30)
 	/**粉丝用户Id(关注用户)**/
-	private String fololowerId;
+	private String followerId;
 
 	public String getId() {
 		return id;
@@ -41,19 +41,19 @@ public class Follower implements Serializable {
 	}
 
 	public String getStartId() {
-		return startId;
+		return starId;
 	}
 
 	public void setStartId(String startId) {
-		this.startId = startId;
+		this.starId = startId;
 	}
 
 	public String getFololowerId() {
-		return fololowerId;
+		return followerId;
 	}
 
 	public void setFololowerId(String fololowerId) {
-		this.fololowerId = fololowerId;
+		this.followerId = fololowerId;
 	}
 
 }

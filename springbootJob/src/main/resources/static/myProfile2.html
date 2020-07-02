@@ -1,0 +1,275 @@
+﻿<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ela Admin - HTML5 Admin Template</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="/job/admin2/assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="/job/admin2/assets/css/style.css">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jqvmap@1.5.1/dist/jqvmap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/weathericons@2.1.0/css/weather-icons.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet"/>
+
+    <style>
+        #weatherWidget .currentDesc {
+            color: #ffffff !important;
+        }
+
+        .traffic-chart {
+            min-height: 335px;
+        }
+
+        #flotPie1 {
+            height: 150px;
+        }
+
+        #flotPie1 td {
+            padding: 3px;
+        }
+
+        #flotPie1 table {
+            top: 20px !important;
+            right: -10px !important;
+        }
+
+        .chart-container {
+            display: table;
+            min-width: 270px;
+            text-align: left;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #flotLine5 {
+            height: 105px;
+        }
+
+        #flotBarChart {
+            height: 150px;
+        }
+
+        #cellPaiChart {
+            height: 160px;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Left Panel -->
+<div id="leftdiv"></div>
+<!-- /#left-panel -->
+
+<!-- Right Panel -->
+<div id="right-panel" class="right-panel">
+
+    <!-- Header-->
+    <header id="header" class="header">
+    </header>
+    <!-- /#header -->
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Animated -->
+        <div class="animated fadeIn">
+
+            <!-- Orders -->
+            <div class="orders">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+
+                            <div class="card-header">
+                                <strong>个人信息</strong>
+                            </div>
+
+                            <div class="card-body card-block">
+                                <div class="col-md-12">
+                                    <aside class="profile-nav alt">
+                                        <section class="card">
+                                            <div class="card-header user-header alt bg-dark">
+                                                <div class="media">
+                                                    <label for="imageFile">
+                                                        <img id="imagePath"title="点击修改头像" class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="admin2/images/admin.jpg">
+                                                        <form id="imageModifyFrm" action="/job/user/modifyImage" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                                            <input style="display: none" type="file" id="imageFile" name="imageFile">
+                                                        </form>
+                                                    </label>
+                                                    <div class="media-body">
+                                                        <h2 class="text-light display-6" id="userName"></h2>
+                                                        <p id="userRole"></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <form action="#" method="post" id="userInfoFrm" style="margin-top: 20px">
+                                                <div class="form-group row">
+                                                    <div class="input-group col-12 col-md-6">
+                                                        <div class="input-group-addon">姓名</div>
+                                                        <input disabled type="text" id="name" name="name" class="form-control">
+                                                        <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                                    </div>
+                                                    <div class="input-group col-12 col-md-6">
+                                                        <div class="input-group-addon">性别</div>
+                                                        <select disabled id="sex" class="form-control">
+                                                            <option>男</option>
+                                                            <option>女</option>
+                                                        </select>
+                                                        <div class="input-group-addon"><i class="fa fa-adn"></i></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+
+                                                    <div class="input-group col-12 col-md-12">
+                                                        <div class="input-group-addon">年龄</div>
+                                                        <input disabled type="text" id="age" name="age" class="form-control">
+                                                        <div class="input-group-addon"><i class="fa fa-heart"></i></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">手机</div>
+                                                        <input disabled type="text" id="mobile" name="mobile" class="form-control">
+                                                        <div class="input-group-addon"><i class="fa ti-mobile"></i></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">Email</div>
+                                                        <input disabled type="email" id="email" name="email" class="form-control">
+                                                        <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-actions form-group">
+                                                    <button type="button" class="btn btn-outline-warning" id="userInfoEditBtn"><i class="fa fa-edit (alias)"></i>&nbsp; 修改</button>
+                                                    <button disabled type="button" class="btn btn-outline-primary" id="userInfoEditConfirmBtn"><i class="fa fa-check-square-o"></i>&nbsp; 确认</button>
+                                                    </button>
+                                                </div>
+                                            </form>
+
+
+                                        </section>
+                                    </aside>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-6">
+
+                        <div class="card">
+
+                            <div class="card-header">
+                                <strong>密码修改</strong>
+                            </div>
+                            <div class="card-body card-block">
+                                <div class="form-group" style="margin-top:20px">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Password</div>
+                                        <input placeholder="原始密码" type="password" id="oldPwd" name="oldPwd" class="form-control">
+                                        <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-top:20px">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Password</div>
+                                        <input placeholder="新密码" type="password" id="newPwd" name="newPwd" class="form-control">
+                                        <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-top:20px">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Password</div>
+                                        <input placeholder="确认密码" type="password" id="newPwd2" name="newPwd2" class="form-control">
+                                        <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
+                                    </div>
+                                </div>
+                                <div class="form-actions form-group">
+                                    <button type="button" class="btn btn-outline-warning" id="pwdModifyBtn"><i class="fa fa-edit (alias)"></i>&nbsp; 修改</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  <!-- /.row -->
+            </div>
+            <!-- /.orders -->
+
+        </div>
+        <!-- .animated -->
+
+    </div>
+    <!-- /.content -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner bg-white">
+            <div class="row">
+                <div class="col-sm-6">
+                    Copyright &copy; 2020 ◢◤AVICII FOREVER(๑￫ܫ￩) (｡・`ω´･) (・(ｪ)・) (σ｀・д･)σ (oﾟωﾟo) 
+                </div>
+                <div class="col-sm-6 text-right">
+                    More Templates <a href="#" target="_blank" title="(゜-゜)つロ 干杯~-">(゜-゜)つロ 干杯~-◢◤AVICII FOREVER</a>
+                    - Collect from <a href="#" title="(゜-゜)つロ 干杯~-" target="_blank">◢◤AVICII FOREVER</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.site-footer -->
+
+</div>
+<!-- /#right-panel -->
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
+<script src="/job/admin2/assets/js/main.js"></script>
+
+<!--  Chart js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.bundle.min.js"></script>
+
+<!--Chartist Chart-->
+<script src="https://cdn.jsdelivr.net/npm/chartist@0.11.0/dist/chartist.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartist-plugin-legend@0.6.2/chartist-plugin-legend.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.flot@0.8.3/jquery.flot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flot-pie@1.0.0/src/jquery.flot.pie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flot-spline@0.0.1/js/jquery.flot.spline.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/simpleweather@3.1.0/jquery.simpleWeather.min.js"></script>
+<script src="/job/admin2/assets/js/init/weather-init.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.js"></script>
+<script src="/job/admin2/assets/js/init/fullcalendar-init.js"></script>
+
+
+<script src="/job/js/myProfile2.js"></script>
+<script src="/job/js/commonUser.js"></script>
+</body>
+</html>

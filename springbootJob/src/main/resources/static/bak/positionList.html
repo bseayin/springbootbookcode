@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Track Material Design Bootstrap Admin Template</title>
+
+    <link rel="stylesheet" href="/job/admin1/assets/materialize/css/materialize.min.css" media="screen,projection"/>
+    <!-- Bootstrap Styles-->
+    <link href="/job/admin1/assets/css/bootstrap.css" rel="stylesheet"/>
+
+    <!-- FontAwesome Styles-->
+    <link href="/job/admin1/assets/css/font-awesome.css" rel="stylesheet"/>
+    <!-- Morris Chart Styles-->
+    <link href="/job/admin1/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet"/>
+    <!-- Custom Styles-->
+    <link href="/job/admin1/assets/css/custom-styles.css" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link rel="stylesheet" href="/job/admin1/assets/js/Lightweight-Chart/cssCharts.css">
+</head>
+<body>
+
+<div id="wrapper">
+
+</div>
+<!--/. NAV TOP  -->
+<!--/. NAV TOP  -->
+<nav class="navbar-default navbar-side" role="navigation" id="leftdiv">
+
+</nav>
+<!-- /. NAV SIDE  -->
+<div id="page-wrapper">
+    <div class="header">
+        <h1 class="page-header">
+            职位信息
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/job/admin1/#">首页</a></li>
+            <li><a href="/job/admin1/#">职位中心</a></li>
+            <li class="active">职位信息</li>
+        </ol>
+
+    </div>
+    <div id="page-inner">
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Advanced Tables -->
+                <div class="card">
+
+                    <div class="card-action">
+                        职位信息表
+                    </div>
+
+                    <div class="card-content">
+                        <form>
+                            <div class="row">
+                                <div class=" col s5">
+                                    <select class="form-control" id="positionType">
+                                        <option name='position'>选择职位类别</option>
+                                    </select>
+                                </div>
+                                <div class=" col s5">
+                                    <select class="form-control" id="position">
+                                        <option name='position'>选择职位</option>
+                                    </select>
+                                </div>
+                                <div class=" col s2">
+                                    <button type="button" class="btn btn-primary" id="query">查询</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>工作城市</th>
+                                    <th>薪资范围</th>
+                                    <th>学历要求</th>
+                                    <th>详情</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody id="positionTbody"></tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+                <!--End Advanced Tables -->
+            </div>
+        </div>
+    </div>
+    <!-- /. PAGE INNER  -->
+
+
+
+    <!--/. resumeSelectModal  -->
+    <div class="modal fade" id="resumeSelectModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">选择简历</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead><tr><th>简历号</th><th>详情</th></tr></thead>
+                        <tbody id="resumeTbody"></tbody>
+                    </table>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="resumeConfirmBtn">确认</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--End resumeSelectModal -->
+
+    <!--/. resumeDetailModal  -->
+    <div class="modal fade" tabindex="-1" aria-hidden="true" id="resumeDetailModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">简历详情</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>姓名</label>
+                            <input disabled type="text" class="form-control" name="name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label>性别</label>
+                            <input disabled type="text" class="form-control" name="sex" id="sex">
+                        </div>
+                        <div class="form-group">
+                            <label>学历</label>
+                            <input disabled type="text" class="form-control" name="education" id="education">
+                        </div>
+                        <div class="form-group">
+                            <label>手机号:</label>
+                            <input disabled type="text" class="form-control" name="mobile" id="mobile">
+                        </div>
+                        <div class="form-group">
+                            <label>自我评价</label>
+                            <textarea disabled class="form-control" rows="3" name="assessment" id="assessment"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>证书</label>
+                            <textarea disabled class="form-control" rows="2" name="certificate" id="certificate"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>工作经历</label>
+                            <textarea disabled class="form-control" rows="4" name="workedyears2" id="workedyears2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>项目经历</label>
+                            <textarea disabled class="form-control" rows="4" name="projectExp" id="projectExp"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>培训经历</label>
+                            <textarea disabled class="form-control" rows="4" name="trainExp" id="trainExp"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--End resumeDetailModal -->
+
+</div>
+<!-- /. PAGE WRAPPER  -->
+<!-- /. WRAPPER  -->
+<!-- JS Scripts-->
+<!--/. positionDetailModal  -->
+<div class="modal fade" tabindex="-1" aria-hidden="true" id="positionDetailModal" style="overflow-y:hidden" scroll="no">
+    <div class="modal-dialog" style="overflow-y:hidden">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">职位详情</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form id="positionFrm2">
+                    <div class="form-group">
+                        <label>工作详细地址</label>
+                        <textarea disabled class="form-control" rows="2" name="address" id="address"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>工作详细描述:</label>
+                        <textarea disabled class="form-control" rows="5" name="detail" id="detail"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>工作经验要求</label>
+                        <textarea disabled class="form-control" rows="3" name="workedyears"
+                                  id="workedyears"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>技能要求</label>
+                        <div class="form-check">
+                            <ul class="list-group" id="skillSet"></ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>招聘人数</label>
+                        <input disabled type="text" class="form-control" name="requiredNum" id="requiredNum">
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--End positionDetailModal -->
+<!-- jQuery Js -->
+<script src="/job/admin1/assets/js/jquery-1.10.2.js"></script>
+
+<!-- Bootstrap Js -->
+<script src="/job/admin1/assets/js/bootstrap.min.js"></script>
+
+<!--<script src="/job/admin1/assets/materialize/js/materialize.min.js"></script>-->
+
+<!-- Metis Menu Js -->
+<script src="/job/admin1/assets/js/jquery.metisMenu.js"></script>
+
+
+<script src="/job/admin1/assets/js/easypiechart.js"></script>
+<script src="/job/admin1/assets/js/easypiechart-data.js"></script>
+
+<script src="/job/admin1/assets/js/Lightweight-Chart/jquery.chart.js"></script>
+<!-- DATA TABLE SCRIPTS -->
+<script src="/job/admin1/assets/js/dataTables/jquery.dataTables.js"></script>
+<script src="/job/admin1/assets/js/dataTables/dataTables.bootstrap.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#dataTables-example').dataTable();
+    });
+</script>
+<script src="/job/js/possitionList.js"></script>
+<!-- Custom Js -->
+<script src="/job/admin1/assets/js/custom-scripts.js"></script>
+
+
+</body>
+
+</html>

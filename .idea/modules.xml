@@ -3,8 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/blogWeb/blogWeb.iml" filepath="$PROJECT_DIR$/blogWeb/blogWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dictionaryWeb/dictionaryWeb.iml" filepath="$PROJECT_DIR$/dictionaryWeb/dictionaryWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/homeWorkWeb/homeWorkWeb.iml" filepath="$PROJECT_DIR$/homeWorkWeb/homeWorkWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/orderWeb/orderWeb.iml" filepath="$PROJECT_DIR$/orderWeb/orderWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/productWeb/productWeb.iml" filepath="$PROJECT_DIR$/productWeb/productWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/reportWeb/reportWeb.iml" filepath="$PROJECT_DIR$/reportWeb/reportWeb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ssm/ssm.iml" filepath="$PROJECT_DIR$/ssm/ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootDocService/springbootDocService.iml" filepath="$PROJECT_DIR$/springbootDocService/springbootDocService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootJob/springbootJob.iml" filepath="$PROJECT_DIR$/springbootJob/springbootJob.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloudEureka/springcloudEureka.iml" filepath="$PROJECT_DIR$/springcloudEureka/springcloudEureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloudUserService/springcloudUserService.iml" filepath="$PROJECT_DIR$/springcloudUserService/springcloudUserService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/userWeb/userWeb.iml" filepath="$PROJECT_DIR$/userWeb/userWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/voteWeb/voteWeb.iml" filepath="$PROJECT_DIR$/voteWeb/voteWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/wp2.iml" filepath="$PROJECT_DIR$/.idea/wp2.iml" />
     </modules>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>登录</title>
+	<link rel="stylesheet" href="/job/login2/css/auth.css">
+
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="lowin lowin-blue">
+		<div class="lowin-brand">
+			<img src="/job/login2/img/kodinger.jpg" alt="logo">
+		</div>
+		<div class="lowin-wrapper">
+			<div class="lowin-box lowin-login">
+				<div class="lowin-box-inner">
+					<form>
+						<p>登录</p>
+
+
+								<div class="lowin-group">
+									<label>用户名 <a href="/job/login2/#" class="login-back-link">登录</a></label>
+									<input type="text"  id="mobileinput" class="lowin-input">
+								</div>
+								<div class="lowin-group password-group">
+									<label>密码 <a href="/job/login2/#" class="forgot-link">忘记密码?</a></label>
+									<input type="password" id="passwordinput" class="lowin-input">
+								</div>
+								<a  id="loginsubmit" class="lowin-btn login-btn">
+									登录
+								</a>
+
+								<div class="text-foot">
+									没有账户? <a href="/job/login2/" class="register-link">注册</a>
+								</div>
+
+					</form>
+				</div>
+			</div>
+
+			<div class="lowin-box lowin-register">
+				<div class="lowin-box-inner">
+					<form>
+						<p>让我们创建您的帐户</p>
+
+								<div class="lowin-group" 	>
+									<label>用户名</label>
+									<input type="text" id="registerunameinput"  class="lowin-input">
+								</div>
+								<div class="lowin-group" 	>
+									<label>姓名</label>
+									<input type="text" id="registernameinput"  class="lowin-input">
+								</div>
+								<div class="lowin-group" >
+									<label>电话号码</label>
+									<input type="text" id="registermobileinput"  class="lowin-input">
+								</div>
+								<div class="lowin-group" >
+									<label>年龄</label>
+									<input type="text" id="registerageinput"  class="lowin-input">
+								</div>
+								<div class="lowin-group" >
+									<label>性别</label>
+									<select  id="registersexinput"  class="lowin-input">
+										<option value="男">男</option>
+										<option value="女">女</option>
+									</select>
+								</div>
+								<div class="lowin-group" >
+									<label>邮箱</label>
+									<input type="email" id="registeremailinput" autocomplete="email" name="email" class="lowin-input">
+								</div>
+								<div class="lowin-group" >
+									<label>密码</label>
+									<input type="password" id="registerpasswordinput" name="password" autocomplete="current-password" class="lowin-input">
+								</div>
+								<div class="lowin-group" >
+									<label>再次输入密码</label>
+									<input type="password" id="registerpasswordinput2" name="password" autocomplete="current-password" class="lowin-input">
+								</div>
+						
+						<a  id="registersubmit" class="lowin-btn">
+							提交
+						</a>
+
+						<div class="text-foot">
+							已有账户? <a href="" class="login-link">登录</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	
+		<footer class="lowin-footer">
+
+		</footer>
+	</div>
+
+	<script src="/job/login2/js/auth.js"></script>
+
+	<script src="/job/js/login.js"></script>
+	<script>
+		Auth.init({
+			login_url: '#login',
+			forgot_url: '#forgot'
+		});
+	</script>
+</body>
+</html>

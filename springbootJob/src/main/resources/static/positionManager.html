@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>Insert title here</title>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-4  offset-5">
+			<h2>职位管理</h2>
+		</div>
+	</div>
+	<div class="dropdown-divider"></div>
+	<div class="row">
+		<div class="col-4">
+			<form>
+				<div class="form-group">
+					<label>职位类别:</label>
+					<select class="form-control" id="positionType">
+						<option name='position'>选择职位类别</option>
+					</select>
+				</div>
+			</form>
+		</div>
+		<div class="col-4">
+			<form>
+				<div class="form-group">
+					<label>职位:</label>
+					<select class="form-control" id="position">
+						<option name='position'>选择职位</option>
+					</select>
+				</div>
+			</form>
+		</div>
+		<div class="col-4">
+			<button class="btn btn-primary" style=" margin-top:30px" id="query">查询</button>&nbsp;&nbsp;
+		</div>
+	</div>
+
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#positionAddModal">添加职位</button>
+	<table class="table table-striped">
+		<thead><tr><th>id</th><th>职位名</th><th>最小工资</th><th>最大工资</th><th>工作城市</th><th>工作详细地址</th><th>工作经验要求</th><th>学历要求</th><th>招聘人数</th><th>工作详细描述</th><th>操作</th></tr></thead>
+		<tbody id="positionTable"></tbody>
+	</table>
+
+
+	<div class="modal fade" id="positionAddModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title">添加职位</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+
+					<form id="positionFrm">
+						<div class="form-group">
+							<label>职位类别:</label>
+							<select class="form-control" id="pid"></select>
+						</div>
+						<div class="form-group">
+							<label>职位名</label>
+							<input type="text" class="form-control" name="name" id="name">
+						</div>
+						<div class="form-group">
+							<label>最小工资</label>
+							<input type="text" class="form-control" name="minSales" id="minSales">
+						</div>
+						<div class="form-group">
+							<label>最大工资</label>
+							<input type="text" class="form-control" name="maxSales" id="maxSales">
+						</div>
+						<div class="form-group">
+							<label>工作城市</label>
+							<input type="text" class="form-control" name="city" id="city">
+						</div>
+						<div class="form-group">
+							<label>工作详细地址</label>
+							<input type="text" class="form-control" name="address" id="address">
+						</div>
+						<div class="form-group">
+							<label>工作经验要求</label>
+							<input type="text" class="form-control" name="workedyears" id="workedyears">
+						</div>
+						<div class="form-group">
+							<label>学历要求</label>
+							<input type="text" class="form-control" name="education" id="education">
+						</div>
+						<div class="form-group">
+
+							<label>技能要求</label>
+							<div class="form-check" id="skillFrmCheck"></div>
+						</div>
+						<div class="form-group">
+							<label>招聘人数</label>
+							<input type="text" class="form-control" name="requiredNum" id="requiredNum">
+						</div>
+						<div class="form-group">
+							<label>工作详细描述:</label>
+							<textarea class="form-control" rows="5" name="detail" id="detail"></textarea>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="positionAdd">Submit</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="modal fade" id="positionEditModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title">修改职位</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+					<form id="positionFrm2">
+						<input type="hidden" class="form-control" name="id2" id="id2">
+						<div class="form-group">
+							<label>职位类别:</label>
+							<select class="form-control" id="pid2"></select>
+						</div>
+						<div class="form-group">
+							<label>职位名</label>
+							<input type="text" class="form-control" name="name" id="name2">
+						</div>
+						<div class="form-group">
+							<label>最小工资</label>
+							<input type="text" class="form-control" name="minSales" id="minSales2">
+						</div>
+						<div class="form-group">
+							<label>最大工资</label>
+							<input type="text" class="form-control" name="maxSales" id="maxSales2">
+						</div>
+						<div class="form-group">
+							<label>工作城市</label>
+							<input type="text" class="form-control" name="city" id="city2">
+						</div>
+						<div class="form-group">
+							<label>工作详细地址</label>
+							<input type="text" class="form-control" name="address" id="address2">
+						</div>
+						<div class="form-group">
+							<label>工作经验要求</label>
+							<input type="text" class="form-control" name="workedyears" id="workedyears2">
+						</div>
+						<div class="form-group">
+							<label>学历要求</label>
+							<input type="text" class="form-control" name="education" id="education2">
+						</div>
+						<div class="form-group">
+							<label>招聘人数</label>
+							<input type="text" class="form-control" name="requiredNum" id="requiredNum2">
+						</div>
+						<div class="form-group">
+							<label>工作详细描述:</label>
+							<textarea class="form-control" rows="5" name="detail" id="detail3"></textarea>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="positionAdd2">Submit</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="modal fade" id="detailModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h4 class="modal-title">工作详细描述</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+						<div class="form-group">
+							<textarea class="form-control" rows="5" id="detail2"></textarea>
+						</div>
+					</form>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+</div>
+
+</body>
+<script>
+    $(function(){
+
+         pType();
+         skill()
+
+         //查询所有职位类型
+        function pType(){
+            //请求
+            $.ajax({
+                url : "positionType/showAll",
+				type : "get",
+				dataType : "json",
+				success : function(data){
+				    $(data.data).each(function(){
+				           $("#positionType").append(" <option name='positionType' value='"+this.id+"'>"+this.name+"</option>")
+				           $("#pid").append(" <option name='pid' value='"+this.id+"'>"+this.name+"</option>")
+				           $("#pid2").append(" <option name='pid' value='"+this.id+"'>"+this.name+"</option>")
+
+				    })
+                }
+            })
+            //请求end
+        }
+        //职位类型查询end
+
+         //查询所有技能
+        function skill(){
+            //请求
+            $.ajax({
+                url : "skill/showAll",
+				type : "get",
+				dataType : "json",
+				success : function(data){
+				    $(data.data).each(function(){
+				           $("#skillFrmCheck").append("<label class='.form-check-inline'><input type='checkbox' class='form-control' name='skillSet' value='"
+				           +this.id+"'>"+this.name+"</label>")
+				    })
+                }
+            })
+            //请求end
+        }
+        //技能查询end
+
+        //职位名称查询
+         $("#positionType").on("change", function(){
+         	//清空下拉框
+			$("#position").empty();
+			 //请求
+            $.ajax({
+                url : "position/showByTid/" + $(this).val(),
+				type : "get",
+				dataType : "json",
+				success : function(data){
+				    $(data.data).each(function(){
+				         $("#position").append(" <option name='position' value='"+this+"'>"+this+"</option>")
+				    })
+                }
+            })
+            //请求end
+         })
+		//职位名称查询end
+
+        //相关职业求职者查询
+        $("#query").on("click", function(){
+            var type = $("option[name='positionType']:selected").val()
+            var positionName = $("option[name='position']:selected").val()
+             //请求
+             $("#positionTable").empty()
+            $.ajax({
+                url : "position/showByNameAndTid/" + positionName + "/" + type,
+				type : "get",
+				dataType : "json",
+				success : function(data){
+				    $(data.data).each(function(){
+                       $("#positionTable").append(" <tr><td>"+this.id
+                       	+"</td><td>"+this.name+"</td><td>"
+                       	+this.minSales+"</td><td>"
+                       	+this.maxSales+"</td><td>"
+                       	+this.city+"</td><td>"
+                       	+this.address+"</td><td>"
+                       	+this.workedyears+"</td><td>"
+                       	+this.education+"</td><td>"
+                       	+this.requiredNum+"</td><td><button type='button' class='btn btn-info' name='detail' value='"
+                       	+this.detail+"'>详情</button></td><td><button type='button' class='btn btn-warning' name='positionEdit' id='"
+                       	+this.id+"_"+this.name+"_"+this.minSales+"_"+this.maxSales+"_"+this.city+"_"+this.address+"_"+this.workedyears+"_"+this.education+"_"+this.requiredNum+"_"+this.detail+"'>修改</button>&nbsp;&nbsp;<button type='button' class='btn btn-danger' name='positionDelete' id='"
+                       	+this.id+"'>删除</button></td></tr>"
+                       	)
+				    })
+                }
+            })
+            //请求end
+        })
+        //相关职业求职者查询end
+
+        //添加职位
+        $("#positionAdd").on("click", function(){
+        	function Skill(id){this.id = id};
+        	var skillList = new Array();
+			$("input[name='skillSet']:checked").each(function(){
+				skillList.push(new Skill($(this).val()))
+			})
+
+			var Data = {"name":$("#name").val(), "minSales":$("#minSales").val(), "maxSales":$("#maxSales").val(),
+			"city":$("#city").val(), "address":$("#address").val(), "pid":$("#pid").val(),
+			"workedyears":$("#workedyears").val(), "education":$("#education").val(),
+			"requiredNum":$("#requiredNum").val(),"detail":$("#detail").val(),"skillSet":skillList}
+			//请求
+            $.ajax({
+                url : "position/addPosition",
+                data : JSON.stringify(Data),
+				type : "post",
+				contentType: 'application/json;charset=utf-8',
+				dataType : "json",
+				success : function(data){
+				    alert("成功")
+				    $("#positionAddModal").modal("hide")
+                }
+            })
+            //请求end
+        })
+		//添加职位end
+
+		//查看工作详细描述
+		$("body").on("click", "button[name='detail']", function(){
+			$("#detail2").val($(this).val());
+			$("#detailModal").modal("show");
+		})
+		//查看工作详细描述end
+
+		//修改职位模态框赋值
+		$("body").on("click", "button[name='positionEdit']", function(){
+			var dataArr = $(this).attr("id").split("_")
+			$("#id2").val(dataArr[0])
+			$("#name2").val(dataArr[1])
+			$("#minSales2").val(dataArr[2])
+			$("#maxSales2").val(dataArr[3])
+			$("#city2").val(dataArr[4])
+			$("#address2").val(dataArr[5])
+			$("#workedyears2").val(dataArr[6])
+			$("#education2").val(dataArr[7])
+			$("#requiredNum2").val(dataArr[8])
+			$("#detail3").val(dataArr[9])
+
+			$("#positionEditModal").modal("show")
+		})
+		//修改职位模态框赋值end
+
+		//修改职业
+		$("#positionAdd2").on("click", function(){
+			var Data = {"id":$("#id2").val(), "name":$("#name2").val(), "minSales":$("#minSales2").val(), "maxSales":$("#maxSales2").val(),
+			"city":$("#city2").val(), "address":$("#address2").val(), "pid":$("#pid2").val(),
+			"workedyears":$("#workedyears2").val(), "education":$("#education2").val(),
+			"requiredNum":$("#requiredNum2").val(),"detail":$("#detail3").val()}
+			//请求
+            $.ajax({
+                url : "position/editPosition",
+                data : JSON.stringify(Data),
+				type : "post",
+				contentType: 'application/json;charset=utf-8',
+				dataType : "json",
+				success : function(data){
+				    alert("成功")
+				    $("#positionEditModal").modal("hide")
+                }
+            })
+            //请求end
+        })
+        //修改职业end
+
+		//删除职位
+		$("body").on("click", "button[name='positionDelete']", function(){
+			var $id = $(this).attr("id");
+
+            if (confirm("确认删除吗？")){
+				//请求
+				$.ajax({
+					url : "position/deletePosition/" + $id,
+					type : "post",
+					dataType : "json",
+					success : function(data){
+						$(location).attr("href", "/recruitment/list.html");
+					}
+				})
+				//请求end
+            }
+
+		})
+		//删除职位end
+
+    })
+
+
+
+</script>
+</html>
