@@ -1,19 +1,29 @@
 # springbootbookcode
 
 #### 介绍
-{**以下是码云平台说明，您可以替换此简介**
-码云是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
-
-#### 软件架构
-软件架构说明
+《Spring Boot实战案例》的10个项目源码
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+
+#### 章节对应的源码中项目名称
+
+第1章SSM&Thymeleaf在线投票系统实战源码中项目名称是voteWeb
+第2章SSM集成Shiro用户管理系统实战源码中项目名称是userWeb
+第3章SSM & Bootstrap商品管理系统实战源码中项目名称是productWeb
+第4章Spring Boot集成Redis博客系统实战源码中项目名称是blogWeb
+第5章Spring Boot集成 JPA英语字典翻译实战源码中项目名称是dictionaryWeb
+第6章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
+第二章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
+第二章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
+第一章SSM&Thymeleaf在线投票系统实战源码中项目名称是voteWeb
+第二章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
+第二章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
+第二章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
+第一章SSM&Thymeleaf在线投票系统实战源码中项目名称是voteWeb
+第二章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
+第二章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
+第二章SSM集成Shiro用户管理系统实战源码中项目名称是voteWeb
 
 #### 使用说明
 
