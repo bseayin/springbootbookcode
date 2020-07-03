@@ -13,6 +13,7 @@
         <module name="productWeb" />
         <module name="dictionaryWeb" />
         <module name="reportWeb" />
+        <module name="memberMg" />
         <module name="homeWorkWeb" />
         <module name="voteWeb" />
         <module name="userWeb" />
@@ -25,6 +26,7 @@
       <module name="blogWeb" target="1.8" />
       <module name="dictionaryWeb" target="1.8" />
       <module name="homeWorkWeb" target="1.8" />
+      <module name="memberMg" target="1.8" />
       <module name="orderWeb" target="1.8" />
       <module name="productWeb" target="1.8" />
       <module name="reportWeb" target="1.8" />
@@ -42,6 +44,7 @@
       <module name="blogWeb" options="-parameters" />
       <module name="dictionaryWeb" options="-parameters" />
       <module name="homeWorkWeb" options="-parameters" />
+      <module name="memberMg" options="-parameters" />
       <module name="orderWeb" options="-parameters" />
       <module name="productWeb" options="-parameters" />
       <module name="reportWeb" options="-parameters" />

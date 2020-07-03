@@ -1,11 +1,6 @@
 # springbootbookcode
-
 #### 介绍
 《Spring Boot实战案例》的10个项目源码
-
-
-
-
 #### 章节对应的源码中项目名称
 
 -  第1章SSM&Thymeleaf在线投票系统实战源码中项目名称是voteWeb
@@ -20,9 +15,6 @@
 -  第10章SSH & SpringCloud猎聘系统实战是一个微服务项目，里面包含了4个微服务项目。源码中项目名称是
 springbootJob，springcloudEureka
  springcloudUserService，springbootDocService
-
-
-
 #### 使用说明
 
 1.  SSM项目，大家需要先导入sql文件到自己的数据库，再运行项目。

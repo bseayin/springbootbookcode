@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/productWeb/pom.xml" />
         <option value="$PROJECT_DIR$/userWeb/pom.xml" />
         <option value="$PROJECT_DIR$/dictionaryWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/memberMg/pom.xml" />
       </list>
     </option>
   </component>

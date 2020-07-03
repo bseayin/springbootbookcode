@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/blogWeb/blogWeb.iml" filepath="$PROJECT_DIR$/blogWeb/blogWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/dictionaryWeb/dictionaryWeb.iml" filepath="$PROJECT_DIR$/dictionaryWeb/dictionaryWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/homeWorkWeb/homeWorkWeb.iml" filepath="$PROJECT_DIR$/homeWorkWeb/homeWorkWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/memberMg/memberMg.iml" filepath="$PROJECT_DIR$/memberMg/memberMg.iml" />
       <module fileurl="file://$PROJECT_DIR$/orderWeb/orderWeb.iml" filepath="$PROJECT_DIR$/orderWeb/orderWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/productWeb/productWeb.iml" filepath="$PROJECT_DIR$/productWeb/productWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/reportWeb/reportWeb.iml" filepath="$PROJECT_DIR$/reportWeb/reportWeb.iml" />
