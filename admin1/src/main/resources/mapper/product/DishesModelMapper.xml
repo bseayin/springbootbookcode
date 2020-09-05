@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xsz.product.dao.DishesModelMapper">
+    <resultMap id="BaseResultMap" type="com.xsz.product.domain.DishesModel">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="model_id" jdbcType="BIGINT" property="modelId"/>
+        <result column="dishes_id" jdbcType="BIGINT" property="dishesId"/>
+        <result column="dishes_model" jdbcType="VARCHAR" property="dishesModel"/>
+        <result column="dishes_model_en" jdbcType="VARCHAR" property="dishesModelEn"/>
+        <result column="dishes_price" jdbcType="DECIMAL" property="dishesPrice"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+    model_id, dishes_id,dishes_model,dishes_model_en,dishes_price
+  </sql>
+
+</mapper>

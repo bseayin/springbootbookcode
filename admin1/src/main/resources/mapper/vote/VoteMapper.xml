@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xsz.vote.dao.VoteMapper" >
+  <resultMap id="BaseResultMap" type="com.xsz.vote.domain.Vote" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="TITLE" property="title" jdbcType="VARCHAR" />
+    <result column="DEADLINETIME" property="deadlinetime" jdbcType="DATE" />
+    <result column="ISALL" property="isall" jdbcType="TINYINT" />
+    <result column="HEADCONTENT" property="headcontent" jdbcType="VARCHAR" />
+    <result column="FOOTERCONTENT" property="footercontent" jdbcType="VARCHAR" />
+    <result column="ALLOWSHOWRESULT" property="allowshowresult" jdbcType="TINYINT" />
+    <result column="ALLOWANONYMAT" property="allowanonymat" jdbcType="TINYINT" />
+    <result column="FROMUSERID" property="fromuserid" jdbcType="INTEGER" />
+    <result column="STATUS" property="status" jdbcType="TINYINT" />
+    <result column="REMARKS" property="remarks" jdbcType="VARCHAR" />
+    <result column="DELMARK" property="delmark" jdbcType="TINYINT" />
+    <result column="CREATETIME" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="MODIFYTIME" property="modifytime" jdbcType="TIMESTAMP" />
+    <result column="CREATEUSERID" property="createuserid" jdbcType="INTEGER" />
+    <result column="MODIFYUSERID" property="modifyuserid" jdbcType="INTEGER" />
+    <result column="TO_USER" property="toUser" jdbcType="VARCHAR" />
+    <result column="TO_PARTY" property="toParty" jdbcType="VARCHAR" />
+    <result column="TO_TAG" property="toTag" jdbcType="VARCHAR" />
+    <result column="PIC_URL" property="picUrl" jdbcType="VARCHAR" />
+    <result column="VOTEURL" property="voteurl" jdbcType="VARCHAR" />
+    <result column="VOTECOUNT" property="votecount" jdbcType="INTEGER" />
+  </resultMap>
+
+  <select id="findVoteVOs" resultType="com.xsz.vote.vo.VoteVO" parameterType="java.lang.Integer">
+    select
+    a.title as voteName,
+    b.title as topicName,
+    c.`OPTIONS` as 'option',
+    b.`KINDS` as kinds,
+    a.`STATUS` as status,
+    a.`CREATETIME` as createtime,
+    a.`ID` as voteId,
+    b.`ID` as voteTopicId,
+    c.`ID` as optionId
+    from
+    tb_d_vote a
+    left join tb_d_vote_topic b on (a.`ID`=b.`VOTEID`)
+    left join tb_d_vote_topic_options c on (c.`TOPICID`=b.id)
+    where a.`STATUS`=#{status,jdbcType=INTEGER}
+  </select>
+
+
+  <select id="findResultVoteVOs" resultType="com.xsz.vote.vo.VoteVO" >
+    select count(*) as voteoptioncount ,c.`OPTIONS` as 'option', a.`OPTIONID` as optionId ,b.`TITLE` as topicName,d.`TITLE` as voteName from db_vote.tb_d_vote_result a
+    left join tb_d_vote_topic_options c on (a.`OPTIONID`=c.id)
+    left join tb_d_vote_topic b on (b.`ID`=c.`TOPICID`)
+    left join tb_d_vote d on (d.`ID`=b.`VOTEID`)
+    group by  c.`OPTIONS` ,a.`OPTIONID`
+  </select>
+</mapper>

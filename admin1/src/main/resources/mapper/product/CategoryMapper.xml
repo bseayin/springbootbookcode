@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xsz.product.dao.CategoryMapper">
+    <resultMap id="BaseResultMap" type="com.xsz.product.domain.Category">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="category_id" jdbcType="BIGINT" property="categoryId"/>
+        <result column="category_name" jdbcType="VARCHAR" property="categoryName"/>
+        <result column="category_companyid" jdbcType="BIGINT" property="categoryCompanyid"/>
+        <result column="category_name_en" jdbcType="VARCHAR" property="categoryNameEn"/>
+        <result column="createtime" jdbcType="TIMESTAMP" property="createtime"/>
+        <result column="updatetime" jdbcType="TIMESTAMP" property="updatetime"/>
+        <result column="createman" jdbcType="BIGINT" property="createman"/>
+        <result column="updateman" jdbcType="BIGINT" property="updateman"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    category_id, category_name,category_companyid,category_name_en
+  </sql>
+
+    <select id="getCategoryByCompanyId" resultType="com.xsz.product.domain.Category"
+            parameterType="com.xsz.product.domain.Category">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_category
+        where 1=1
+        <if test="categoryCompanyid != null and categoryCompanyid != ''">
+            AND category_companyid = #{categoryCompanyid}
+        </if>
+    </select>
+
+    <select id="findCategoryList" resultType="com.xsz.product.dto.CategoryDTO"
+            parameterType="com.xsz.product.dto.CategoryDTO">
+        select
+        tc.category_id categoryId,tc.category_name categoryName,tc.category_companyid
+        categoryCompanyid,tc.category_name_en categoryNameEn
+        from tb_category tc
+        where 1=1
+        <if test="categoryCompanyid != null and categoryCompanyid != ''">
+            AND tc.category_companyid = #{categoryCompanyid}
+        </if>
+    </select>
+
+    <select id="findCategoryListByDishes" resultType="com.xsz.product.dto.CategoryDTO"
+            parameterType="java.lang.Long">
+    select
+    tc.category_id categoryId,tc.category_name categoryName,tc.category_companyid categoryCompanyid,tc.category_name_en categoryNameEn
+    from tb_category tc right join tb_category_dishes as cd on (tc.category_id = cd.category_id)
+    where cd.spare_id = #{dishesId}
+  </select>
+</mapper>

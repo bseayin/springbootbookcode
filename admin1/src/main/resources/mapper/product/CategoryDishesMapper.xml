@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xsz.product.dao.CategoryDishesMapper">
+  <resultMap id="BaseResultMap" type="com.xsz.product.domain.CategoryDishes">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="spare_id" jdbcType="BIGINT" property="spareId" />
+  </resultMap>
+
+  <select id="getDishesIdByCategory" resultType="java.lang.String">
+  	select cd.spare_id from tb_category_dishes as cd
+	where cd.tb_category = #{categoryId}
+  </select>
+</mapper>
