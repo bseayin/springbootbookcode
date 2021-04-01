@@ -1,88 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f6b3b0af-1a52-4625-aa67-3c3df3819768" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_10_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_2_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/memberMg.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/config/ControllerExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/config/DataValidationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/controller/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/entity/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/form/MemberForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/repository/MemberRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/service/MemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/util/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/util/FormUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/util/KeyUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/util/ResultVOUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/vo/ResultVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/resources/static/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/memberMg/src/main/resources/static/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/error.2021-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/error/error.2021-03-28.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/info/info.2021-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/info/info.2021-03-28.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_transaction_javax_transaction_api_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_4_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_3_10_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_23_2_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_5_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wp2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wp2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dictionaryWeb/dictionaryWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dictionaryWeb/dictionaryWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderWeb/orderWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/orderWeb/orderWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productWeb/src/main/java/com/zz/product/entity/ActHiDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/java/com/zz/product/entity/ActHiDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productWeb/src/main/java/com/zz/product/entity/ActHiVarinst.java" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/java/com/zz/product/entity/ActHiVarinst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/productWeb/src/main/java/com/zz/product/entity/ActRuVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/java/com/zz/product/entity/ActRuVariable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springbootDocService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springbootDocService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springbootJob/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springbootJob/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springbootJob/springbootJob.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springbootJob/springbootJob.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloudUserService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloudUserService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloudUserService/springcloudUserService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloudUserService/springcloudUserService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/main/java/com/zz/MysqlGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/main/java/com/zz/MysqlGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/main/java/com/zz/product/entity/ActHiDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/main/java/com/zz/product/entity/ActHiDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/main/java/com/zz/product/entity/ActHiVarinst.java" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/main/java/com/zz/product/entity/ActHiVarinst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/main/java/com/zz/product/entity/ActRuVariable.java" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/main/java/com/zz/product/entity/ActRuVariable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userWeb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/userWeb/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/sql/dump-vote_db-202006142219.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/util/MD5Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/src/main/java/com/xsz/common/util/MD5Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/controller/CommonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/controller/CommonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/controller/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/AddressUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/AddressUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/MD5Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/MD5Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/GifCaptcha.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/GifCaptcha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/SpecCaptcha.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/common/util/vcode/SpecCaptcha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/util/ScheduleJob.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/job/util/ScheduleJob.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/DishesModelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/voteWeb/target/classes/com/xsz/product/controller/DishesModelController.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,50 +103,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1dlvwmSBSu4NqD3VWSzY7xV1RWY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xsz.App" />
-      <module name="blogWeb" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xsz.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.UserApplication">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xsz.Application" />
       <module name="voteWeb" />
@@ -148,9 +134,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.xsz.ReportApp" />
-      <module name="reportWeb" />
+    <configuration name="JobApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xsz.JobApp" />
+      <module name="springbootJob" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.xsz.*" />
@@ -161,14 +147,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MD5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xsz.common.util.MD5Utils" />
+      <module name="voteWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xsz.common.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zz.ProductApplication" />
+      <module name="productWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zz.UserApplication" />
+      <module name="userWeb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.ReportApp" />
+        <item itemvalue="Application.UserApplication" />
+        <item itemvalue="Application.MD5Utils" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="Application.ProductApplication" />
+        <item itemvalue="Application.JobApp" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -215,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593737007803</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="vote pwd">
+      <created>1616851343971</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616851343971</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,17 +258,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="vote" />
-    <option name="LAST_COMMIT_MESSAGE" value="vote" />
+    <MESSAGE value="vote pwd" />
+    <option name="LAST_COMMIT_MESSAGE" value="vote pwd" />
   </component>
 </project>

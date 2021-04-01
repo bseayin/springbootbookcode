@@ -25,7 +25,7 @@ public class MD5Utils {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(encrypt("admin","123456"));
+		System.out.println(encrypt("voteAdmin","123456"));
 	}
 
 }

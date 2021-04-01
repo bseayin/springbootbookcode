@@ -50,11 +50,11 @@ public class ActHiVarinst implements Serializable {
     @TableField("BYTEARRAY_ID_")
     private String bytearrayId;
 
-    @TableField("DOUBLE_")
-    private Double double;
-
-    @TableField("LONG_")
-    private Long long;
+//    @TableField("DOUBLE_")
+//    private Double double;
+//
+//    @TableField("LONG_")
+//    private Long long;
 
     @TableField("TEXT_")
     private String text;

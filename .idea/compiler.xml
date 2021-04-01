@@ -7,19 +7,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloudUserService" />
         <module name="springcloudEureka" />
-        <module name="orderWeb" />
-        <module name="productWeb" />
-        <module name="dictionaryWeb" />
+        <module name="blogWeb" />
+        <module name="springbootDocService" />
         <module name="reportWeb" />
-        <module name="memberMg" />
-        <module name="homeWorkWeb" />
+        <module name="springcloudUserService" />
         <module name="voteWeb" />
         <module name="userWeb" />
+        <module name="dictionaryWeb" />
         <module name="springbootJob" />
-        <module name="springbootDocService" />
-        <module name="blogWeb" />
+        <module name="orderWeb" />
+        <module name="wp2" />
+        <module name="productWeb" />
+        <module name="memberMg" />
+        <module name="homeWorkWeb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -37,6 +38,7 @@
       <module name="ssm" target="1.8" />
       <module name="userWeb" target="1.8" />
       <module name="voteWeb" target="1.8" />
+      <module name="wp2" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
