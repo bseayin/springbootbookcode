@@ -57,6 +57,6 @@ public class Member {
     /**
      * 电话
      */
-    private int phone;
+    private String phone;
 
 }

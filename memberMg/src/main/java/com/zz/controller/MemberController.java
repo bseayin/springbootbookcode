@@ -42,7 +42,7 @@ public class MemberController {
     })
     @GetMapping("showall/{page}/{size}")
     public Page<Member>  showAll(@PathVariable("page") int page, @PathVariable("size") int size){
-        FormUtil.filterBean();
+//        FormUtil.filterBean();
         return memberService.showall(page,size);
     }
 

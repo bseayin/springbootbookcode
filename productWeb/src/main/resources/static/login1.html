@@ -4,10 +4,10 @@
   <title>Bootstrap 实例</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/usercenter/wareadmin/https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
-  <script src="/usercenter/wareadmin/https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/usercenter/wareadmin/https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
-  <script src="/usercenter/wareadmin/https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/productcore/wareadmin/https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="/productcore/wareadmin/https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/productcore/wareadmin/https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="/productcore/wareadmin/https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -37,7 +37,7 @@ $("#subtn").click(function(){
 	$.post("/r/login", { "username": $("#email").val(),"password": $("#pwd").val(),"rememberMe": rememberMe },
 	        function(data){
 	        console.log(data); //  
-	        window.location.href="/usercenter/wareadmin/index1.html";
+	        window.location.href="/productcore/wareadmin/index1.html";
 	        }, "json");
 });
 

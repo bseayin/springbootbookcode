@@ -1,11 +1,13 @@
 package com.zz.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class User {
 	@Id
+	@Column(length=20)
 	private String id;
 	private String name;
 	private String pwd;

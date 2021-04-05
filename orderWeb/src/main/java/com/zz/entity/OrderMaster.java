@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.DynamicUpdate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -30,6 +31,7 @@ public class OrderMaster {
 
     /** 订单id. */
     @Id
+    @Column(length=30)
     private String orderId;
 
     /** 买家名字. */

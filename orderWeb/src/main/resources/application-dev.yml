@@ -1,11 +1,13 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    username: xsz2019
-    password: xsz2019PWD
-    url: jdbc:mysql://47.92.0.22:3306/bookdemo?useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: XSZ202006a
+    url: jdbc:mysql://localhost/db_order?useSSL=false&serverTimezone=Asia/Shanghai
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
   jackson:
     default-property-inclusion: non_null
   redis:

@@ -4,7 +4,7 @@
 $(document).ready(function(){
 
 
-$.get("/usercenter/user/list/0/10",  function(data){
+$.get("/productcore/user/list/0/10",  function(data){
  	        console.log(data);
  //	        alert(data.msg);
  	        if(data.body){
@@ -22,8 +22,8 @@ $.get("/usercenter/user/list/0/10",  function(data){
 
 
  $("#saveuserbtn").click(function(){
- 	$.post("/usercenter/user/register", { "username": $("#uname").val(),"password": $("#upwd").val()},
- 	//$.post("/usercenter/user/save", { "role": $("#rname").val(),"description": $("#rdescription").val(),"rid": $("#exampleInputrid").val(),"available": islocked },
+ 	$.post("/productcore/user/register", { "username": $("#uname").val(),"password": $("#upwd").val()},
+ 	//$.post("/productcore/user/save", { "role": $("#rname").val(),"description": $("#rdescription").val(),"rid": $("#exampleInputrid").val(),"available": islocked },
  	        function(data){
  	        console.log(data);
  //	        alert(data.msg);
@@ -38,7 +38,7 @@ $.get("/usercenter/user/list/0/10",  function(data){
 
 
    $("#saverolepermissionbtn").click(function(){
-   	$.post("/usercenter/usersroles/save", { "roleId": $("#rid").val(),"permissionId": $("#pid").val() },
+   	$.post("/productcore/usersroles/save", { "roleId": $("#rid").val(),"permissionId": $("#pid").val() },
    	        function(data){
    	        console.log(data);
    //	        alert(data.msg);

@@ -2,6 +2,7 @@ package com.zz.entity;
 
 import lombok.Data;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -14,6 +15,7 @@ import javax.persistence.Id;
 public class SellerInfo {
 
     @Id
+    @Column(length=30)
     private String sellerId;
 
     private String username;

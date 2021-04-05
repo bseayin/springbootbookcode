@@ -6,6 +6,7 @@ import com.zz.utils.EnumUtil;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.io.Serializable;
@@ -25,6 +26,7 @@ public class ProductInfo implements Serializable {
     private static final long serialVersionUID = 6399186181668983148L;
 
     @Id
+    @Column(length=30)
     private String productId;
 
     /** 名字. */

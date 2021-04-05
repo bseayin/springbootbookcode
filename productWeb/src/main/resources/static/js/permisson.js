@@ -4,7 +4,7 @@
 $(document).ready(function(){
 
 
-$.get("/usercenter/permissions/list/0/10",  function(data){
+$.get("/productcore/permissions/list/0/10",  function(data){
  	        console.log(data);
  //	        alert(data.msg);
  	        if(data.body){
@@ -23,7 +23,7 @@ $.get("/usercenter/permissions/list/0/10",  function(data){
 
  $("#savepermisionbtn").click(function(){
  	var islocked =$("input[name='islocked']").is(':checked');
- 	$.post("/usercenter/permissions/save", { "permission": $("#pname").val(),"description": $("#pdescription").val(),"rid": $("#exampleInputrid").val(),"available": islocked },
+ 	$.post("/productcore/permissions/save", { "permission": $("#pname").val(),"description": $("#pdescription").val(),"rid": $("#exampleInputrid").val(),"available": islocked },
  	        function(data){
  	        console.log(data);
  //	        alert(data.msg);

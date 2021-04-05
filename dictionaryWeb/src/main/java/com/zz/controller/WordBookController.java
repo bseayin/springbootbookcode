@@ -22,7 +22,7 @@ public class WordBookController {
     WordBookService wordBookService;
 
     @ApiOperation(value = "查看单词本", notes = "根据单词id查自己的单词本")
-    @ApiImplicitParam(name = "id", value = "单词id", required = true, dataType = "String",paramType = "path")
+    @ApiImplicitParam(name = "id", value = "用户id", required = true, dataType = "String",paramType = "path")
     @GetMapping("show/{id}")
     public ResultVO getByUserId(@PathVariable("id") String id){
         return ResultVOUtil.success(wordBookService.getByUser(id));
@@ -30,7 +30,7 @@ public class WordBookController {
 
 
     @ApiOperation(value = "新增单词", notes = "根据单词实体创建单词")
-    @ApiImplicitParam(name = "word", value = "单词实体", required = true, dataType = "WordBook")
+//    @ApiImplicitParam(name = "word", value = "单词实体", required = true, dataType = "WordBook")
     @PostMapping("/add")
     public ResultVO addWord(@RequestBody WordBook wordBook) {
 

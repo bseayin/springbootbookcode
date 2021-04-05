@@ -4,7 +4,7 @@
 $(document).ready(function(){
 
 
-$.get("/usercenter/roles/list/0/10",  function(data){
+$.get("/productcore/roles/list/0/10",  function(data){
  	        console.log(data);
  //	        alert(data.msg);
  	        if(data.body){
@@ -23,7 +23,7 @@ $.get("/usercenter/roles/list/0/10",  function(data){
 
  $("#saverolebtn").click(function(){
  	var islocked =$("input[name='islocked']").is(':checked');
- 	$.post("/usercenter/roles/save", { "role": $("#rname").val(),"description": $("#rdescription").val(),"rid": $("#exampleInputrid").val(),"available": islocked },
+ 	$.post("/productcore/roles/save", { "role": $("#rname").val(),"description": $("#rdescription").val(),"rid": $("#exampleInputrid").val(),"available": islocked },
  	        function(data){
  	        console.log(data);
  //	        alert(data.msg);
@@ -38,7 +38,7 @@ $.get("/usercenter/roles/list/0/10",  function(data){
 
 
   $("#saverolepermissionbtn").click(function(){
-  	$.post("/usercenter/rolespermissions/save", { "roleId": $("#rid").val(),"permissionId": $("#pid").val() },
+  	$.post("/productcore/rolespermissions/save", { "roleId": $("#rid").val(),"permissionId": $("#pid").val() },
   	        function(data){
   	        console.log(data);
   //	        alert(data.msg);
