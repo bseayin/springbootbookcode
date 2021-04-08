@@ -5,80 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6b3b0af-1a52-4625-aa67-3c3df3819768" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/dataobject/ProductCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/dataobject/mapper/ProductCategoryMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogWeb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/blogWeb/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dictionaryWeb/dictionaryWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dictionaryWeb/dictionaryWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dictionaryWeb/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dictionaryWeb/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dictionaryWeb/src/main/java/com/zz/controller/WordBookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dictionaryWeb/src/main/java/com/zz/controller/WordBookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dictionaryWeb/src/main/java/com/zz/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/dictionaryWeb/src/main/java/com/zz/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dictionaryWeb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dictionaryWeb/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/form/MemberForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/memberMg/src/main/java/com/zz/form/MemberForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memberMg/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/memberMg/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memberMg/src/main/resources/static/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/memberMg/src/main/resources/static/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/entity/OrderDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/entity/OrderDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/entity/OrderMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/entity/OrderMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/entity/ProductInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/entity/ProductInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/entity/SellerInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/orderWeb/src/main/java/com/zz/entity/SellerInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orderWeb/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/orderWeb/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/accordion.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/accordion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/alert.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/badge.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/badge.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/basic-table.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/basic-table.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/cards.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/carousel.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/carousel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/chartjs.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/chartjs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/charts-flot.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/charts-flot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/charts-morris.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/charts-morris.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/chat-app.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/chat-app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/dropdown.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/dropdown.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/email-compose.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/email-compose.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/email-read.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/email-read.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/email.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/faq.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/fontawesome-icons.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/fontawesome-icons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/form-elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/form-elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/form-layouts.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/form-layouts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/form-validation.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/form-validation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/google-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/google-map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/invoice.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/invoice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/js/permisson.js" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/js/permisson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/js/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/js/role.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/js/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/js/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/line-icons.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/line-icons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/lists.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/lists.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/login1.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/login1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/material-icons.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/material-icons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/modals.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/modals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/notifications.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/notifications.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/permissionmanager.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/permissionmanager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/popover.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/popover.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/roleList.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/roleList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/sign-up.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/sign-up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/slider-progress.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/slider-progress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/tabs.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/tabs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/tooltips.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/tooltips.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/typography.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/userList.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/userList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/usermanager.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/usermanager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/productWeb/src/main/resources/static/vector-map.html" beforeDir="false" afterPath="$PROJECT_DIR$/productWeb/src/main/resources/static/vector-map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homeWorkWeb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/homeWorkWeb/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orderWeb/src/doc/open.md" beforeDir="false" afterPath="$PROJECT_DIR$/orderWeb/src/doc/open.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reportWeb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/reportWeb/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springbootJob/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springbootJob/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloudUserService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springcloudUserService/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,10 +52,10 @@
     <property name="project.structure.side.proportion" value="0.26467848" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="Application.OrderApplication">
-    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.UserServiceProviderApp">
+    <configuration name="App (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zz.App" />
-      <module name="dictionaryWeb" />
+      <module name="homeWorkWeb" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.zz.*" />
@@ -134,22 +66,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zz.App" />
-      <module name="memberMg" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zz.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="App (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xsz.App" />
-      <module name="blogWeb" />
+      <module name="springcloudEureka" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.xsz.*" />
@@ -160,12 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zz.OrderApplication" />
-      <module name="orderWeb" />
+    <configuration name="DocProviderApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xsz.DocProviderApp" />
+      <module name="springbootDocService" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zz.*" />
+          <option name="PATTERN" value="com.xsz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -173,12 +92,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zz.ProductApplication" />
-      <module name="productWeb" />
+    <configuration name="JobApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xsz.JobApp" />
+      <module name="springbootJob" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zz.*" />
+          <option name="PATTERN" value="com.xsz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceProviderApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xsz.UserServiceProviderApp" />
+      <module name="springcloudUserService" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xsz.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -188,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OrderApplication" />
-        <item itemvalue="Application.App (2)" />
-        <item itemvalue="Application.App (1)" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.ProductApplication" />
+        <item itemvalue="Application.UserServiceProviderApp" />
+        <item itemvalue="Application.DocProviderApp" />
+        <item itemvalue="Application.JobApp" />
+        <item itemvalue="Application.App (4)" />
+        <item itemvalue="Application.App (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616851343971</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="vote">
+      <created>1617620471730</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617620471730</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,8 +206,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="vote" />
     <MESSAGE value="vote pwd" />
-    <option name="LAST_COMMIT_MESSAGE" value="vote pwd" />
+    <MESSAGE value="vote" />
+    <option name="LAST_COMMIT_MESSAGE" value="vote" />
   </component>
 </project>
