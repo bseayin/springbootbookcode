@@ -19,7 +19,14 @@ springbootJob，springcloudEureka
 
 1.  SSM项目，大家需要先导入sql文件到自己的数据库，再运行项目。
 2.  SSH项目，大家只需要创建数据库，项目启动的时候会自动创建表和列。
-#### 项目入口
+#### 视频说明
+
+链接：https://pan.baidu.com/s/1jO5pk3mxXTE8iKF2dWj36A
+提取码：u74a 
+
+#### 更多学习资料 请关注微信公众号
+
+![个人学习微信公众号](https://images.gitee.com/uploads/images/2020/1127/113142_f6ab57bb_768204.jpeg "qrcode_for_gh_caf4624e6df8_258.jpg")
 
 
 
