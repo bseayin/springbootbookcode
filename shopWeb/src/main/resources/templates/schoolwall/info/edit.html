@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	   xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<link href="/static/css/layui.css" rel="stylesheet">
+<link rel="stylesheet"  href="/static/js/plugins/viewer/viewer.min.css">
+<head th:include="include :: header"></head>
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content">
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-body">
+					<div class="fixed-table-toolbar">
+						<div class="columns pull-left">
+<!--							<button class="btn btn-success" onclick="reLoad()">查询</button>-->
+							<input type="hidden" id="id" th:value="${id}">
+							<a  class="btn btn-primary " onclick="doChange(this,'info')" >
+								墙话详情
+							</a>
+							<a  class="btn btn-primary " onclick="doChange(this,'comment')" >
+								相关评论
+							</a>
+							<a  class="btn btn-primary " onclick="doChange(this,'like')">
+								相关点赞
+							</a>
+						</div>
+					</div>
+					<div  class="tab-content" style="height:80vh">
+						<iframe id='wall-view'  th:src="@{'/schoolwall/edit/info/'+${id}}" width="100%" height="100%" style="border: none;"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script src="/js/layui_2.5.6.js"></script>
+	<script src="/js/plugins/viewer/viewer.min.js"></script>
+	<script type="text/javascript" src="/js/appjs/schoolwall/info/edit.js">
+	</script>
+
+</body>
+</html>

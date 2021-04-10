@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-body">
+					<div class="fixed-table-toolbar col-sm-12  nopadding">
+						<div class="columns pull-left col-sm-4 nopadding">
+							<button  id="batchTransport" type="button" class="btn  btn-primary" disabled="disabled"
+								onclick="batchTransport()">
+								<i class="fa fa-plane" aria-hidden="true"></i> 批量发货
+							</button>
+						</div>
+						<div class="columns pull-right">
+							<button class="btn btn-success" onclick="doReset()">重置</button>
+						</div>
+
+
+						<div class="columns pull-right col-md-2 nopadding">
+							<input type="text"   class="form-control doreset" id="searchDatetimeEnd" placeholder="查询截至时间">
+						</div>
+						<div class="columns pull-right col-md-2 nopadding">
+							<input type="text"   class="form-control doreset" id="searchDatetimeStart" placeholder="查询开始时间">
+						</div>
+						<div class="columns pull-right col-md-1 ">
+							<select onchange="reLoad()" id="searchStatus"  class="form-control doreset">
+								<option value="">订单状态</option>
+								<option value="1">生成中</option>
+								<option value="2">已确认</option>
+								<option value="3">付款中</option>
+								<option value="4">已付款</option>
+								<option value="5">配送中</option>
+								<option value="6">已完成</option>
+							</select>
+						</div>
+						<div class="columns pull-right col-md-2 ">
+							<input onchange="reLoad()" id="searchOrdersetid" name="ordersetid" type="text" class="form-control doreset"
+								   placeholder="订单号">
+						</div>
+
+					</div>
+					<div id="exampleTableClass">
+					<table id="exampleTable" data-mobile-responsive="true">
+					</table>
+					</div>
+					<div id="productTableClass" class="col-sm-4" style="display: none">
+						<input type="hidden" id="ordersetid">
+					<table id="productTable" data-mobile-responsive="true" >
+					</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--	<div>
+		<script type="text/javascript">
+			var s_edit_h = 'hidden';
+		</script>
+	</div>
+	<div shiro:hasPermission="shop:product:edit">
+		<script type="text/javascript">
+			s_edit_h = '';
+		</script>
+	</div>-->
+	</div>
+	<div th:include="include :: footer"></div>
+	<script src="/js/plugins/layer/laydate/laydate.js"></script>
+	<script type="text/javascript" src="/js/appjs/shop/shopProductorder/shopProductorder.js"></script>
+</body>
+</html>

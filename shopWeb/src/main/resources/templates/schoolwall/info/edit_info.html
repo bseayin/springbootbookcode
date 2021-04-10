@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	   xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<link href="/static/css/layui.css" rel="stylesheet">
+<link rel="stylesheet"  href="/static/js/plugins/viewer/viewer.min.css">
+<head th:include="include :: header"></head>
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<div class="col-sm-12">
+							<h4>发布墙话</h4>
+						</div>
+						<form class="form-horizontal m-t" id="signupForm" th:object="${schoolWallDO}">
+							<input id="wallId" name="wallId" type="hidden"
+								   th:value="*{wallId}">
+							<div class="form-group">
+								  <label class="col-sm-1 control-label">内容：</label>
+								<div class="col-sm-11">
+									<textarea rows="5"  maxlength="200" class="form-control" style="width:100%"
+											  th:text="*{wallContent}"
+											  id="wallContent" name="wallContent"  ></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-1 control-label">类型：</label>
+								<div class="col-sm-11" >
+									<label class="radio-inline">
+										<input type="radio"  th:field="*{wallType}" name="wallType"  value="0" /> 表白 </label>
+									<label class="radio-inline">
+										<input type="radio"  th:field="*{wallType}" name="wallType" value="1" /> 树洞 </label>
+									<label class="radio-inline">
+										<input type="radio"  th:field="*{wallType}" name="wallType" value="2" /> 心愿</label>
+									<label class="radio-inline">
+										<input type="radio"  th:field="*{wallType}" name="wallType" value="3" /> 知乎</label>
+								</div>
+							</div>
+							<!--<div class="form-group">
+								<label class="col-sm-1 control-label">当前媒体文件：</label>
+								<div class="col-sm-11">
+									<div class="file-box" style="position:relative">
+									<div class="file">
+										<div style="position:absolute;top:0px;z-index:9999" >
+											<a style="display:none" class="btn btn-danger myupload_remove" >删除</a>
+											<a style="display:none" class="btn btn-success myupload_show" >预览</a>
+										</div>
+										<div class="image image_120">
+											<img alt="image" class="img-responsive" src="">
+										</div>
+									</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-1 control-label">媒体文件：</label>
+								<div class="col-sm-11">
+									<div class="layui-upload">
+										<button type="button" class="layui-btn layui-btn-normal" id="uploadList">选择多文件</button>
+										<div class="layui-upload-list">
+											<div class="row">
+												<div class="col-sm-12" id="uploadShowList">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>-->
+							<div class="form-group">
+								<label class="col-sm-1 control-label">开启评论：</label>
+								<div class="switch onoffswitch col-sm-1">
+									<div class="onoffswitch">
+										<input id="wallAllowcomment" name="wallAllowcomment"
+											type="checkbox" th:checked="*{wallAllowcomment==1}"
+											   value="1"     class="onoffswitch-checkbox"
+											> <label class="onoffswitch-label" 	for="wallAllowcomment">
+												<span class="onoffswitch-inner"></span>
+												<span class="onoffswitch-switch"></span>
+											</label>
+									</div>
+								</div>
+
+								<label class="col-sm-1 control-label">匿名发布：</label>
+								<div class="switch onoffswitch col-sm-2">
+									<div class="onoffswitch">
+										<input id="wallIsanonymous" name="wallIsanonymous" type="checkbox"
+											   value="1"   th:checked="*{wallIsanonymous==1}"   class="onoffswitch-checkbox" >
+										<label class="onoffswitch-label" for="wallIsanonymous">
+											<span class="onoffswitch-inner"></span>
+											<span class="onoffswitch-switch"></span>
+										</label>
+									</div>
+								</div>
+								<input id="status" name="status" type="hidden">
+							</div>
+							<div class="text-right form-group">
+								<a class="btn btn-default waves-effect waves-light"
+									onclick="returnList()">返回列表</a>
+								<button
+									class="btn btn-primary waves-effect waves-light" type="submit">保存墙话</button>
+								<!--<a
+									class="btn btn-warning waves-effect waves-light"
+									onclick="save(0)">存为草稿</a>-->
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script src="/js/layui_2.5.6.js"></script>
+	<script src="/js/plugins/viewer/viewer.min.js"></script>
+	<script type="text/javascript" src="/js/appjs/schoolwall/info/edit_info.js">
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.shop.dao.ShopUserProductFavoriteDao">
+    <resultMap id="BaseResultMap" type="com.zz.shop.domain.ShopUserProductFavoriteDO">
+        <id column="userId" jdbcType="VARCHAR" property="userId" />
+        <id column="productId" jdbcType="VARCHAR" property="productId" />
+        <result column="category" jdbcType="VARCHAR" property="category" />
+        <result column="isFavorite" jdbcType="TINYINT" property="isFavorite" />
+        <result column="isActive" jdbcType="TINYINT" property="isActive" />
+        <result column="createdTime" jdbcType="TIMESTAMP" property="createdTime" />
+        <result column="createdBy" jdbcType="VARCHAR" property="createdBy" />
+        <result column="updatedTime" jdbcType="TIMESTAMP" property="updatedTime" />
+        <result column="updatedBy" jdbcType="VARCHAR" property="updatedBy" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        userId, productId, category, isFavorite, isActive, createdTime, createdBy, updatedTime, updatedBy
+    </sql>
+
+    <insert id="add_favorite_product">
+        <selectKey keyProperty="count" resultType="int" order="BEFORE">
+            select count(*) from shop_UserProductFavorite where productId = #{productId, jdbcType=VARCHAR} and userId = #{userId, jdbcType=VARCHAR}
+        </selectKey>
+        <if test="count > 0">
+            update shop_UserProductFavorite
+            <set>
+                isFavorite = true
+            </set>
+            <where>
+                productId = #{productId, jdbcType=VARCHAR} and userId = #{userId, jdbcType=VARCHAR}
+            </where>
+        </if>
+        <if test="count==0">
+            insert into shop_UserProductFavorite(userId, productId) values (#{userId, jdbcType=VARCHAR}, #{productId, jdbcType=VARCHAR})
+        </if>
+    </insert>
+    <update id="un_favorite_product">
+        update shop_UserProductFavorite
+        <set>
+            isFavorite = false
+        </set>
+        <where>
+            productId = #{productId} and userId = #{userId}
+        </where>
+    </update>
+    <select id="get_user_product_favorite" resultType="int">
+        select count(*) from shop_UserProductFavorite where productId = #{productId} and userId = #{userId} and isFavorite = true
+    </select>
+</mapper>

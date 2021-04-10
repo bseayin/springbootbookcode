@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm">
+                        <input id="id" name="id" th:value="${productimage.id}" type="hidden">
+                        <input id="productId" name="productId" th:value="${productimage.productId}" type="hidden">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                    <!--            <input id="imageSrc" name="imageSrc" th:value="${productimage.imageSrc}"
+                                       class="form-control" type="text">-->
+								<img width="100%"  alt="image" th:src="${productimage.imageSrc}"></img>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">图片描述：</label>
+                            <div class="col-sm-10">
+                                <input id="description" name="description" th:value="${productimage.description}"
+                                       class="form-control" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">是否激活：</label>
+                            <div class="col-sm-10">
+								<div class="switch onoffswitch col-sm-1">
+								<div class="onoffswitch">
+									<input id="isactive" name="isactive"
+										   type="checkbox" th:checked="*{productimage.active}"
+										   value="1"     class="onoffswitch-checkbox"
+									> <label class="onoffswitch-label" 	for="isactive">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+								</div>
+							</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<script type="text/javascript" src="/js/appjs/shop/productimage/edit.js">
+</script>
+</body>
+</html>

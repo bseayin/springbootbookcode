@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+						<input id="id" name="id" th:value="${shopProductorder.id}"  type="hidden">
+							<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="ordersetid" name="ordersetid" th:value="${shopProductorder.ordersetid}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="userid" name="userid" th:value="${shopProductorder.userid}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="productid" name="productid" th:value="${shopProductorder.productid}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="mount" name="mount" th:value="${shopProductorder.mount}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="productepisodeid" name="productepisodeid" th:value="${shopProductorder.productepisodeid}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">订单金额：</label>
+								<div class="col-sm-8">
+									<input id="price" name="price" th:value="${shopProductorder.price}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">运费：</label>
+								<div class="col-sm-8">
+									<input id="transportprice" name="transportprice" th:value="${shopProductorder.transportprice}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">订单状态 1 created/2 confirmed/3 paid/4 payRecived/5 transport/6 completed：</label>
+								<div class="col-sm-8">
+									<input id="status" name="status" th:value="${shopProductorder.status}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">订单备注：</label>
+								<div class="col-sm-8">
+									<input id="comments" name="comments" th:value="${shopProductorder.comments}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">是否active：</label>
+								<div class="col-sm-8">
+									<input id="isactive" name="isactive" th:value="${shopProductorder.isactive}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">创建时间：</label>
+								<div class="col-sm-8">
+									<input id="createdtime" name="createdtime" th:value="${shopProductorder.createdtime}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="createdby" name="createdby" th:value="${shopProductorder.createdby}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">更新时间：</label>
+								<div class="col-sm-8">
+									<input id="updatedtime" name="updatedtime" th:value="${shopProductorder.updatedtime}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="updatedby" name="updatedby" th:value="${shopProductorder.updatedby}" class="form-control" type="text">
+								</div>
+							</div>
+																					<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/shopAdmin/shopProductorder/edit.js">
+	</script>
+</body>
+</html>

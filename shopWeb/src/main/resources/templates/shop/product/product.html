@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<link href="/css/layui.css" rel="stylesheet">
+<style>
+	.secondIframeClass{
+		width:100%;
+		height:85vh;
+		border:0px;
+	}
+	.menuClass{
+		height:85vh;
+		border: solid 0.5px #999999;
+	}
+</style>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-body">
+					<div class="fixed-table-toolbar">
+						<div class="columns pull-left">
+							<button shiro:hasPermission="shop:product:add" type="button" class="btn  btn-primary" onclick="add()">
+								<i class="fa fa-plus" aria-hidden="true"></i>添加
+							</button>
+						<!--	<button shiro:hasPermission="shop:product:batchRemove" type="button" class="btn  btn-danger"
+								onclick="batchRemove()">
+								<i class="fa fa-trash" aria-hidden="true"></i>删除
+							</button>-->
+						</div>
+						<div class="columns pull-right">
+							<button class="btn btn-success" onclick="reLoad()">查询</button>
+						</div>
+						<div class="columns pull-right col-md-2 nopadding">
+							<input id="searchName" type="text" class="form-control"
+								placeholder="商品标题">
+							<input id="searchCategoryId" type="hidden">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-body">
+					<div class="fixed-table-toolbar">
+						<div id="menuTree" class="menuClass col-sm-2" >
+						</div>
+						<div id="exampleTableClass" class="col-sm-10" >
+							<table id="exampleTable" data-mobile-responsive="true">
+							</table>
+						</div>
+						<div  class="col-sm-9 secondTableClass" style="display: none" >
+							<div class="edit_ edit_info" style="padding:1px 20px">
+								<a class="btn btn-primary" onclick="doSave()" >保存 <i class="fa fa-file"></i></a>
+								<a class="btn btn-success" onclick="editPicture()" >修改图片 <i class="fa fa-file-image-o"></i></a>
+								<a class="btn btn-success" onclick="doBack()" >返回 <i class="fa fa-arrow-circle-left"></i></a>
+							</div>
+							<div class="edit_ edit_pic" style="padding:1px 20px">
+								<a shiro:hasPermission="shop:productimage:add" id="uploadBtn" type="button" class="btn  btn-primary" >
+									上传图片 <i class="fa fa-file"></i>
+								</a>
+								<a class="btn btn-success" onclick="editInfo()" >编辑详情 <i class="fa fa-info"></i></a>
+								<a class="btn btn-success" onclick="doBack()" >返回 <i class="fa  fa-arrow-circle-left"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--shiro控制bootstraptable行内按钮看见性 来自bootdo的创新方案 -->
+		<div>
+			<script type="text/javascript">
+				var s_edit_h = 'hidden';
+				var s_remove_h = 'hidden';
+			</script>
+		</div>
+		<div shiro:hasPermission="shop:product:edit">
+			<script type="text/javascript">
+				s_edit_h = '';
+			</script>
+		</div>
+		<div shiro:hasPermission="shop:product:remove">
+			<script type="text/javascript">
+				var s_remove_h = '';
+			</script>
+		</div>
+	</div>
+	<div th:include="include :: footer"></div>
+	<script src="/js/layui.js"></script>
+	<script type="text/javascript" src="/js/appjs/shop/product/product.js"></script>
+	<script type="text/javascript" src="/js/appjs/shop/product/product_categoryTreeselect.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 
 -  第1章SSM&Thymeleaf在线投票系统实战源码中项目名称是voteWeb
 -  第2章SSM集成Shiro用户管理系统实战源码中项目名称是userWeb
--  第3章SSM & Bootstrap商品管理系统实战源码中项目名称是productWeb
+-  第3章SSM商品管理系统实战源码中项目名称是shopWeb
 -  第4章Spring Boot集成Redis博客系统实战源码中项目名称是blogWeb
 -  第5章Spring Boot集成 JPA英语字典翻译实战源码中项目名称是dictionaryWeb
 -  第6章SSH&Swagger会员管理系统实战源码中项目名称是memberMg

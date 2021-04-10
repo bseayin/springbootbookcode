@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/orderWeb/orderWeb.iml" filepath="$PROJECT_DIR$/orderWeb/orderWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/productWeb/productWeb.iml" filepath="$PROJECT_DIR$/productWeb/productWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/reportWeb/reportWeb.iml" filepath="$PROJECT_DIR$/reportWeb/reportWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopWeb/shopWeb.iml" filepath="$PROJECT_DIR$/shopWeb/shopWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootDocService/springbootDocService.iml" filepath="$PROJECT_DIR$/springbootDocService/springbootDocService.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootJob/springbootJob.iml" filepath="$PROJECT_DIR$/springbootJob/springbootJob.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloudEureka/springcloudEureka.iml" filepath="$PROJECT_DIR$/springcloudEureka/springcloudEureka.iml" />

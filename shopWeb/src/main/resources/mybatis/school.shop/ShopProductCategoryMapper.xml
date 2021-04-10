@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.shop.dao.ShopProductCategoryDao">
+    <resultMap id="BaseResultMap" type="com.zz.shop.domain.ShopProductCategoryDO">
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="pid" jdbcType="VARCHAR" property="pid" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="picture" jdbcType="VARCHAR" property="picture" />
+        <result column="icon" jdbcType="VARCHAR" property="icon" />
+        <result column="isOnMainPage" jdbcType="TINYINT" property="isOnMainPage" />
+        <result column="isActive" jdbcType="TINYINT" property="isActive" />
+        <result column="createdTime" jdbcType="TIMESTAMP" property="createdTime" />
+        <result column="createdBy" jdbcType="VARCHAR" property="createdBy" />
+        <result column="updatedTime" jdbcType="TIMESTAMP" property="updatedTime" />
+        <result column="updatedBy" jdbcType="VARCHAR" property="updatedBy" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, pid, name, picture, icon, isOnMainPage, isActive, createdTime, createdBy, updatedTime, updatedBy
+    </sql>
+    <select id="get_main_page_category" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from shop_ProductCategory
+        where isOnMainPage = true and isActive = true and pid is not null LIMIT 5
+    </select>
+    <select id="get_child_category_list" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from shop_ProductCategory
+        where isActive = true and pid is not null LIMIT #{count,jdbcType=INTEGER}
+    </select>
+    <select id="get_all_category_list" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from shop_ProductCategory
+        where isActive = true
+    </select>
+    <select id="get_top_level_category_list" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from shop_ProductCategory
+        where pid is null and isActive = true
+    </select>
+</mapper>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zz.shopAdmin.dao.AdminShopProductDao">
+
+	<select id="get" resultType="com.zz.shop.domain.ShopProductDO">
+		select `id`,`shopId`,`titleShort`,`titleLong`,`price`,`sales`,`service`,`totalStock`,`productDetail`,`isActive`,`createdTime`,`createdBy`,`updatedTime`,`updatedBy` from shop_product where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.zz.shop.domain.ShopProductDO">
+		select `id`,`shopId`,`titleShort`,`titleLong`,`price`,`sales`,`service`,`totalStock`,`productDetail`,`isActive`,`createdTime`,`createdBy`,`updatedTime`,`updatedBy` from shop_product
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="shopId != null and shopId != ''"> and shopId = #{shopId} </if>
+		  		  <if test="titleShort != null and titleShort != ''"> and titleShort = #{titleShort} </if>
+		  		  <if test="titleLong != null and titleLong != ''"> and titleLong = #{titleLong} </if>
+		  		  <if test="price != null and price != ''"> and price = #{price} </if>
+		  		  <if test="sales != null and sales != ''"> and sales = #{sales} </if>
+		  		  <if test="service != null and service != ''"> and service = #{service} </if>
+		  		  <if test="totalStock != null and totalStock != ''"> and totalStock = #{totalStock} </if>
+		  		  <if test="productDetail != null and productDetail != ''"> and productDetail = #{productDetail} </if>
+		  		  <if test="isactive != null and isactive != ''"> and isActive = #{isactive} </if>
+		  		  <if test="createdTime != null and createdTime != ''"> and createdTime = #{createdTime} </if>
+		  		  <if test="createdBy != null and createdBy != ''"> and createdBy = #{createdBy} </if>
+		  		  <if test="updatedTime != null and updatedTime != ''"> and updatedTime = #{updatedTime} </if>
+		  		  <if test="updatedBy != null and updatedBy != ''"> and updatedBy = #{updatedBy} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by updatedTime desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	<select id="listSimple" resultType="com.zz.shopAdmin.domain.ShopProductDTO">
+		select `id`,`shopId`,`titleShort`,`titleLong`,`price`,`sales`,`totalStock`,`isActive`
+		from shop_product
+        <where>
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="shopId != null and shopId != ''"> and shopId = #{shopId} </if>
+		  		  <if test="titleShort != null and titleShort != ''"> and titleShort = #{titleShort} </if>
+		  		  <if test="titleLong != null and titleLong != ''"> and titleLong = #{titleLong} </if>
+		  		  <if test="price != null and price != ''"> and price = #{price} </if>
+		  		  <if test="sales != null and sales != ''"> and sales = #{sales} </if>
+		  		  <if test="service != null and service != ''"> and service = #{service} </if>
+		  		  <if test="totalStock != null and totalStock != ''"> and totalStock = #{totalStock} </if>
+		  		  <if test="productDetail != null and productDetail != ''"> and productDetail = #{productDetail} </if>
+		  		  <if test="isActive != null and isActive != ''"> and isActive = #{isActive} </if>
+		  		  <if test="createdTime != null and createdTime != ''"> and createdTime = #{createdTime} </if>
+		  		  <if test="createdBy != null and createdBy != ''"> and createdBy = #{createdBy} </if>
+		  		  <if test="updatedTime != null and updatedTime != ''"> and updatedTime = #{updatedTime} </if>
+		  		  <if test="updatedBy != null and updatedBy != ''"> and updatedBy = #{updatedBy} </if>
+		  		  <if test="searchName != null and searchName != ''">
+		  		   and (LOCATE( #{searchName},titleShort) >0 or LOCATE( #{searchName},titleLong) >0)
+				  </if>
+		  		  <if test="searchCategoryId != null and searchCategoryId != ''">
+				   and id IN (SELECT t.productId FROM `shop_productinproductcategory` t WHERE t.productCategoryId=#{searchCategoryId})
+				  </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by updatedTime desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from shop_product
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="shopId != null and shopId != ''"> and shopId = #{shopId} </if>
+		  		  <if test="titleShort != null and titleShort != ''"> and titleShort = #{titleShort} </if>
+		  		  <if test="titleLong != null and titleLong != ''"> and titleLong = #{titleLong} </if>
+		  		  <if test="price != null and price != ''"> and price = #{price} </if>
+		  		  <if test="sales != null and sales != ''"> and sales = #{sales} </if>
+		  		  <if test="service != null and service != ''"> and service = #{service} </if>
+		  		  <if test="totalStock != null and totalStock != ''"> and totalStock = #{totalStock} </if>
+		  		  <if test="productDetail != null and productDetail != ''"> and productDetail = #{productDetail} </if>
+		  		  <if test="isActive != null and isActive != ''"> and isActive = #{isActive} </if>
+		  		  <if test="createdTime != null and createdTime != ''"> and createdTime = #{createdTime} </if>
+		  		  <if test="createdBy != null and createdBy != ''"> and createdBy = #{createdBy} </if>
+		  		  <if test="updatedTime != null and updatedTime != ''"> and updatedTime = #{updatedTime} </if>
+		  		  <if test="updatedBy != null and updatedBy != ''"> and updatedBy = #{updatedBy} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.zz.shop.domain.ShopProductDO">
+		insert into shop_product
+		(
+			`id`, 
+			`shopId`, 
+			`titleShort`, 
+			`titleLong`, 
+			`price`, 
+			`sales`, 
+			`service`, 
+			`totalStock`, 
+			`productDetail`, 
+			`isActive`, 
+			`createdBy`,
+			`updatedBy`,
+			`updatedTime`
+		)
+		values
+		(
+			#{id}, 
+			#{shopId}, 
+			#{titleShort}, 
+			#{titleLong}, 
+			#{price}, 
+			#{sales}, 
+			#{service}, 
+			#{totalStock}, 
+			#{productDetail}, 
+			#{isActive},
+			#{createdBy},
+			#{updatedBy},
+			#{updatedTime}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.zz.shop.domain.ShopProductDO">
+		update shop_product 
+		<set>
+			<if test="shopId != null">`shopId` = #{shopId}, </if>
+			<if test="titleShort != null">`titleShort` = #{titleShort}, </if>
+			<if test="titleLong != null">`titleLong` = #{titleLong}, </if>
+			<if test="price != null">`price` = #{price}, </if>
+			<if test="sales != null">`sales` = #{sales}, </if>
+			<if test="service != null">`service` = #{service}, </if>
+			<if test="totalStock != null">`totalStock` = #{totalStock}, </if>
+			<if test="productDetail != null">`productDetail` = #{productDetail}, </if>
+			<if test="isActive != null">`isActive` = #{isActive}, </if>
+			<if test="createdTime != null">`createdTime` = #{createdTime}, </if>
+			<if test="createdBy != null">`createdBy` = #{createdBy}, </if>
+			<if test="updatedTime != null">`updatedTime` = #{updatedTime}, </if>
+			<if test="updatedBy != null">`updatedBy` = #{updatedBy}</if>
+		</set>
+		where id = #{id}
+	</update>
+	<update id="updateActive" parameterType="com.zz.shop.domain.ShopProductDO">
+		update shop_product
+		<set>
+			 `isActive` = #{isActive},
+			 `updatedBy` = #{updatedBy}
+		</set>
+		where id = #{id}
+	</update>
+
+	<delete id="remove">
+		delete from shop_product where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from shop_product where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

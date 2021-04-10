@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.shop.dao.ShopProductCommentDao">
+    <resultMap id="BaseResultMap" type="com.zz.shop.domain.ShopProductCommentDO">
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="userId" jdbcType="VARCHAR" property="userId" />
+        <result column="productId" jdbcType="VARCHAR" property="productId" />
+        <result column="content" jdbcType="VARCHAR" property="content" />
+        <result column="rate" jdbcType="INTEGER" property="rate" />
+        <result column="category" jdbcType="VARCHAR" property="category" />
+        <result column="isActive" jdbcType="TINYINT" property="isActive" />
+        <result column="createdTime" jdbcType="TIMESTAMP" property="createdTime" />
+        <result column="createdBy" jdbcType="VARCHAR" property="createdBy" />
+        <result column="updatedTime" jdbcType="TIMESTAMP" property="updatedTime" />
+        <result column="updatedBy" jdbcType="VARCHAR" property="updatedBy" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, userId, productId, content, rate, category, isActive, createdTime, createdBy, updatedTime, updatedBy
+    </sql>
+    <select id="get_product_comment" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from shop_ProductComment
+        where isActive = true and category = 'product'
+        and
+        productId = #{productId,jdbcType=VARCHAR}
+        order by updatedTime desc
+        LIMIT #{count,jdbcType=INTEGER}
+    </select>
+    <select id="get_product_comment_count" resultType="int">
+        select
+        count(*)
+        from shop_ProductComment
+        where isActive = true and category = 'product'
+    </select>
+    <select id="get_product_good_comment_count" resultType="int">
+        select
+        count(*)
+        from shop_ProductComment
+        where isActive = true and category = 'product'
+        and rate > 5
+    </select>
+</mapper>

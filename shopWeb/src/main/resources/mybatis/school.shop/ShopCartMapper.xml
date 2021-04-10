@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.shop.dao.ShopCartDao">
+    <resultMap id="BaseResultMap" type="com.zz.shop.domain.ShopCartDO">
+        <id column="userId" jdbcType="VARCHAR" property="userId" />
+        <id column="productId" jdbcType="VARCHAR" property="productId" />
+        <result column="cartId" jdbcType="VARCHAR" property="cartId" />
+        <result column="mount" jdbcType="INTEGER" property="mount" />
+        <result column="productEpisodeId" jdbcType="VARCHAR" property="productEpisodeId" />
+        <result column="isActive" jdbcType="TINYINT" property="isActive" />
+        <result column="createdTime" jdbcType="TIMESTAMP" property="createdTime" />
+        <result column="createdBy" jdbcType="VARCHAR" property="createdBy" />
+        <result column="updatedTime" jdbcType="TIMESTAMP" property="updatedTime" />
+        <result column="updatedBy" jdbcType="VARCHAR" property="updatedBy" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        cartId, userId, productId, mount, productEpisodeId, isActive, createdTime, createdBy, updatedTime, updatedBy
+    </sql>
+    <select id="get_user_cart_list" resultType="com.zz.shop.domain.ShopCartWithProductInfo">
+        select productInfo.*, productImage.imageSrc from
+        (
+            select
+                shop_cart.*,
+                shop_product.shopId,
+                shop_product.titleShort,
+                shop_product.titleLong,
+                shop_product.price,
+                shop_product.sales,
+                shop_product.service,
+                shop_product.totalStock
+            from
+                shop_cart, shop_product
+            where
+                shop_cart.productId = shop_product.id
+                and shop_cart.isActive = true and shop_product.isActive = true
+                and userId=#{userId,jdbcType=VARCHAR}
+        ) productInfo
+        left join
+        (
+            select * from shop_productimage
+            where shop_productimage.isActive=true and shop_productimage.category = 'main' LIMIT 1
+        )
+        as productImage on productInfo.productId = productImage.productId
+    </select>
+
+    <select id="get_user_product_count" parameterType="com.zz.shop.domain.ShopCartDO" resultType="int">
+        select count(*) from shop_cart
+        where
+        userId=#{userId,jdbcType=VARCHAR}
+        and
+        productId=#{productId,jdbcType=VARCHAR}
+    </select>
+
+    <insert id="add_product_to_cart" parameterType="com.zz.shop.domain.ShopCartDO">
+        insert into shop_cart
+        (
+        `cartId`,
+        `userId`,
+        `productId`,
+        `mount`,
+        `isActive`,
+        `createdBy`,
+        `updatedBy`
+        )
+        values
+        (
+        uuid(),
+        #{userId,jdbcType=VARCHAR},
+        #{productId,jdbcType=VARCHAR},
+        #{mount,jdbcType=INTEGER},
+        true,
+        #{userId,jdbcType=VARCHAR},
+        #{userId,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <update id="set_cart_item_mount">
+        update shop_cart set `mount` = #{mount,jdbcType=INTEGER} where
+        `userId` = #{userId,jdbcType=VARCHAR}
+        and
+        `productId` = #{productId,jdbcType=VARCHAR}
+    </update>
+    <update id="add_cart_item_mount" parameterType="com.zz.shop.domain.ShopCartDO">
+        update shop_cart set `mount` = `mount` + 1 where
+        `userId` = #{userId,jdbcType=VARCHAR}
+        and
+        `productId` = #{productId,jdbcType=VARCHAR}
+    </update>
+    <delete id="delete_user_product_cart" parameterType="com.zz.shop.domain.ShopCartDO">
+        delete from shop_cart where userId = #{userId,jdbcType=VARCHAR} and productId = #{productId,jdbcType=VARCHAR}
+    </delete>
+</mapper>

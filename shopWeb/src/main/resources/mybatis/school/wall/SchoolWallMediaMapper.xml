@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.schoolwall.dao.SchoolWallMediaDao">
+  <resultMap id="BaseResultMap" type="com.zz.schoolwall.domain.SchoolWallMediaDO">
+    <id column="media_id" jdbcType="BIGINT" property="mediaId" />
+    <result column="wall_id" jdbcType="BIGINT" property="wallId" />
+    <result column="media_type" jdbcType="VARCHAR" property="mediaType" />
+    <result column="media_path" jdbcType="VARCHAR" property="mediaPath" />
+    <result column="media_url" jdbcType="VARCHAR" property="mediaUrl" />
+    <result column="media_createman" jdbcType="VARCHAR" property="mediaCreateman" />
+    <result column="media_createtime" jdbcType="TIMESTAMP" property="mediaCreatetime" />
+    <result column="sys_file_id" jdbcType="BIGINT" property="sysFileId" />
+  </resultMap>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    media_id, wall_id, media_type, media_path, media_url, media_createman, media_createtime,sys_file_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from school_wall_media
+    where media_id = #{mediaId,jdbcType=BIGINT}
+  </select>
+  <select id="list" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from school_wall_media
+    <where>
+      <if test="wallId != null">
+        and wall_id = #{wallId,jdbcType=BIGINT}
+      </if>
+      <if test="mediaType != null">
+        and media_type = #{mediaType,jdbcType=VARCHAR}
+      </if>
+      <if test="mediaPath != null">
+        and media_path = #{mediaPath,jdbcType=VARCHAR}
+      </if>
+      <if test="mediaUrl != null">
+        and media_url = #{mediaUrl,jdbcType=VARCHAR}
+      </if>
+      <if test="mediaCreateman != null">
+        and media_createman = #{mediaCreateman,jdbcType=VARCHAR}
+      </if>
+      <if test="mediaCreatetime != null">
+        and media_createtime = #{mediaCreatetime,jdbcType=TIMESTAMP}
+      </if>
+    </where>
+    <choose>
+      <when test="sort != null and sort.trim() != ''">
+        order by ${sort} ${order}
+      </when>
+      <otherwise>
+        order by media_createman desc
+      </otherwise>
+    </choose>
+    <if test="offset != null and limit != null">
+      limit #{offset}, #{limit}
+    </if>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from school_wall_media
+    where media_id = #{mediaId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.zz.schoolwall.domain.SchoolWallMediaDO">
+    insert into school_wall_media (media_id, wall_id, media_type, 
+      media_path, media_url, media_createman, 
+      media_createtime)
+    values (#{mediaId,jdbcType=VARCHAR}, #{wallId,jdbcType=VARCHAR}, #{mediaType,jdbcType=VARCHAR}, 
+      #{mediaPath,jdbcType=VARCHAR}, #{mediaUrl,jdbcType=VARCHAR}, #{mediaCreateman,jdbcType=VARCHAR}, 
+      #{mediaCreatetime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zz.schoolwall.domain.SchoolWallMediaDO">
+    insert into school_wall_media
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="mediaId != null">
+        media_id,
+      </if>
+      <if test="wallId != null">
+        wall_id,
+      </if>
+      <if test="mediaType != null">
+        media_type,
+      </if>
+      <if test="mediaPath != null">
+        media_path,
+      </if>
+      <if test="mediaUrl != null">
+        media_url,
+      </if>
+      <if test="mediaCreateman != null">
+        media_createman,
+      </if>
+      <if test="mediaCreatetime != null">
+        media_createtime,
+      </if>
+      <if test="sysFileId != null">
+        sys_file_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="mediaId != null">
+        #{mediaId,jdbcType=BIGINT},
+      </if>
+      <if test="wallId != null">
+        #{wallId,jdbcType=BIGINT},
+      </if>
+      <if test="mediaType != null">
+        #{mediaType,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaPath != null">
+        #{mediaPath,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaUrl != null">
+        #{mediaUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaCreateman != null">
+        #{mediaCreateman,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaCreatetime != null">
+        #{mediaCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysFileId != null">
+        #{sysFileId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zz.schoolwall.domain.SchoolWallMediaDO">
+    update school_wall_media
+    <set>
+      <if test="wallId != null">
+        wall_id = #{wallId,jdbcType=BIGINT},
+      </if>
+      <if test="mediaType != null">
+        media_type = #{mediaType,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaPath != null">
+        media_path = #{mediaPath,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaUrl != null">
+        media_url = #{mediaUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaCreateman != null">
+        media_createman = #{mediaCreateman,jdbcType=VARCHAR},
+      </if>
+      <if test="mediaCreatetime != null">
+        media_createtime = #{mediaCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="sysFileId != null">
+        sys_file_id = #{sysFileId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where media_id = #{mediaId,jdbcType=BIGINT}
+  </update>
+</mapper>

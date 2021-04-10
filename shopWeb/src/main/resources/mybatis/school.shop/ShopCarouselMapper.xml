@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.shop.dao.ShopCarouselDao">
+    <resultMap id="BaseResultMap" type="com.zz.shop.domain.ShopCarouselDO">
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="src" jdbcType="VARCHAR" property="src" />
+        <result column="background" jdbcType="VARCHAR" property="background" />
+        <result column="category" jdbcType="VARCHAR" property="category" />
+        <result column="isActive" jdbcType="TINYINT" property="isActive" />
+        <result column="createdTime" jdbcType="TIMESTAMP" property="createdTime" />
+        <result column="createdBy" jdbcType="VARCHAR" property="createdBy" />
+        <result column="updatedTime" jdbcType="TIMESTAMP" property="updatedTime" />
+        <result column="updatedBy" jdbcType="VARCHAR" property="updatedBy" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, src, background, isActive, createdTime, createdBy, updatedTime, updatedBy
+    </sql>
+    <select id="get_homepage_carousel" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from shop_carousel
+        where isActive = true and category = 'homepage'
+    </select>
+</mapper>

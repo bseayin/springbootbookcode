@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.shop.dao.ShopOrderDao">
+    <resultMap id="BaseResultMap" type="com.zz.shop.domain.ShopOrderDO">
+        <id column="id" jdbcType="VARCHAR" property="userId" />
+        <result column="orderSetId" jdbcType="VARCHAR" property="orderSetId" />
+        <result column="userId" jdbcType="VARCHAR" property="id" />
+        <result column="productId" jdbcType="VARCHAR" property="productId" />
+        <result column="mount" jdbcType="INTEGER" property="mount" />
+        <result column="productEpisodeId" jdbcType="VARCHAR" property="productEpisodeId" />
+        <result column="price" jdbcType="FLOAT" property="price" />
+        <result column="transportPrice" jdbcType="FLOAT" property="transportPrice" />
+        <result column="status" jdbcType="VARCHAR" property="status" />
+        <result column="comments" jdbcType="VARCHAR" property="comments" />
+        <result column="isActive" jdbcType="TINYINT" property="isActive" />
+        <result column="createdTime" jdbcType="TIMESTAMP" property="createdTime" />
+        <result column="createdBy" jdbcType="VARCHAR" property="createdBy" />
+        <result column="updatedTime" jdbcType="TIMESTAMP" property="updatedTime" />
+        <result column="updatedBy" jdbcType="VARCHAR" property="updatedBy" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, userId, productId, mount, productEpisodeId, price, transportPrice, status, comments, isActive, createdTime, createdBy, updatedTime, updatedBy
+    </sql>
+    <select id="get_user_order_list" resultType="com.zz.shop.domain.ShopOrderWithProductInfo">
+        select productInfo.*, productImage.imageSrc from
+        (
+            select
+                shop_ProductOrder.*,
+                shop_product.shopId,
+                shop_product.titleShort,
+                shop_product.titleLong,
+                shop_product.price,
+                shop_product.sales,
+                shop_product.service,
+                shop_product.totalStock
+            from
+                shop_ProductOrder, shop_product
+            where
+                shop_ProductOrder.productId = shop_product.id
+                and shop_ProductOrder.isActive = true and shop_product.isActive = true
+                and userId=#{userId,jdbcType=VARCHAR}
+        ) productInfo
+        left join
+        (
+            select * from shop_productimage
+            where shop_productimage.isActive=true and shop_productimage.category = 'main' LIMIT 1
+        )
+        as productImage on productInfo.productId = productImage.productId
+    </select>
+    <select id="get_user_order_list_by_order_setid" resultType="com.zz.shop.domain.ShopOrderWithProductInfo">
+        select productInfo.*, productImage.imageSrc from
+        (
+            select
+                shop_ProductOrder.orderSetId,
+                shop_ProductOrder.id,
+                shop_ProductOrder.userId,
+                shop_ProductOrder.productId,
+                shop_ProductOrder.mount,
+                shop_ProductOrder.productEpisodeId,
+                shop_ProductOrder.status,
+                shop_ProductOrder.comments,
+                shop_ProductOrder.createdTime,
+                shop_ProductOrder.updatedTime,
+                shop_product.shopId,
+                shop_product.titleShort,
+                shop_product.titleLong,
+                shop_product.price,
+                shop_product.sales,
+                shop_product.service,
+                shop_product.totalStock
+            from
+                shop_ProductOrder, shop_product
+            where
+                shop_ProductOrder.productId = shop_product.id
+                and shop_ProductOrder.isActive = true and shop_product.isActive = true
+                and userId=#{userId,jdbcType=VARCHAR}
+                and shop_ProductOrder.orderSetId=#{orderSetId,jdbcType=VARCHAR}
+        ) productInfo
+        left join
+        (
+        select * from shop_productimage
+        where shop_productimage.isActive=true and shop_productimage.category = 'main' LIMIT 1
+        )
+        as productImage on productInfo.productId = productImage.productId
+    </select>
+    <select id="get_user_orderSets" resultType="string">
+        select orderSetId as orderSetIdList from db_dust.shop_productorder
+        where
+        userId = #{userId,jdbcType=VARCHAR}
+        and status = #{status, jdbcType=INTEGER}
+        and isActive is True
+        group by orderSetId order by updatedTime, id
+        <if test="from > 0 and pageSize > 0">
+            LIMIT #{from,jdbcType=INTEGER}, #{pageSize,jdbcType=INTEGER}
+        </if>
+    </select>
+    <insert id="add_product_to_order" parameterType="com.zz.shop.domain.ShopOrderDO">
+        insert into shop_ProductOrder
+        (
+            `id`,
+            `orderSetId`,
+            `userId`,
+            `productId`,
+            `mount`,
+            `price`,
+            `transportPrice`,
+            `status`,
+            `comments`,
+            `isActive`,
+            `createdBy`,
+            `updatedBy`
+        )
+        values
+        (
+            uuid(),
+            #{orderSetId,jdbcType=VARCHAR},
+            #{userId,jdbcType=VARCHAR},
+            #{productId,jdbcType=VARCHAR},
+            #{mount,jdbcType=INTEGER},
+            #{price,jdbcType=FLOAT},
+            #{transportPrice,jdbcType=FLOAT},
+            #{status,jdbcType=INTEGER},
+            #{comments,jdbcType=VARCHAR},
+            true,
+            #{userId,jdbcType=VARCHAR},
+            #{userId,jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <insert id="add_product_from_cart">
+        insert into shop_ProductOrder
+        (
+            `id`,
+            `orderSetId`,
+            `userId`,
+            `productId`,
+            `mount`,
+            `status`,
+            `comments`,
+            `isActive`,
+            `createdBy`,
+            `updatedBy`
+        )
+        select
+            uuid() as id,
+            #{orderSetId,jdbcType=VARCHAR} as orderSetId,
+            shop_cart.userId,
+            shop_cart.productId,
+            shop_cart.mount,
+            1 as status,
+            #{comments,jdbcType=VARCHAR},
+            true as isActive,
+            #{userId,jdbcType=VARCHAR},
+            #{userId,jdbcType=VARCHAR}
+        from shop_cart where
+        cartId in
+        <foreach collection="cartIdList" item="cartId" index="index"
+                 open="(" close=")" separator=",">
+            #{cartId}
+        </foreach>
+    </insert>
+    <update id="change_orderset_status">
+        update shop_ProductOrder
+        <set>
+            status = #{status, jdbcType=INTEGER}
+            <if test="comments">
+                , comments = #{comments, jdbcType=VARCHAR}
+            </if>
+        </set>
+        <where>
+            orderSetId = #{orderSetId} and status = #{fromStatus, jdbcType=INTEGER}
+        </where>
+    </update>
+
+</mapper>

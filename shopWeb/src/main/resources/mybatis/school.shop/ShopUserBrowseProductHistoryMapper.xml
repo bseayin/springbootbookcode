@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.shop.dao.ShopUserBrowseProductHistoryDao">
+    <resultMap id="BaseResultMap" type="com.zz.shop.domain.ShopUserBrowseProductHistoryDO">
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="userId" jdbcType="VARCHAR" property="src" />
+        <result column="productId" jdbcType="VARCHAR" property="background" />
+        <result column="category" jdbcType="VARCHAR" property="category" />
+        <result column="isActive" jdbcType="TINYINT" property="isActive" />
+        <result column="createdTime" jdbcType="TIMESTAMP" property="createdTime" />
+        <result column="createdBy" jdbcType="VARCHAR" property="createdBy" />
+        <result column="updatedTime" jdbcType="TIMESTAMP" property="updatedTime" />
+        <result column="updatedBy" jdbcType="VARCHAR" property="updatedBy" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, userId, productId, category, isActive, createdTime, createdBy, updatedTime, updatedBy
+    </sql>
+    <select id="get_product_browse_count" resultType="int">
+        select
+        count(*)
+        from shop_userbrowseproducthistory
+        where isActive = true
+        and
+        category = 'product'
+        and
+        productId = #{productId,jdbcType=VARCHAR}
+    </select>
+</mapper>

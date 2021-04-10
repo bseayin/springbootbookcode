@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zz.info.dao.LikeDao">
+
+
+	<select id="list" resultType="com.zz.info.domain.LikeDO">
+		select `user_id`,`gtm_create`,`info_type`,`info_id` from info_like
+        <where>  
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="gtmCreate != null and gtmCreate != ''"> and gtm_create = #{gtmCreate} </if>
+		  		  <if test="infoType != null and infoType != ''"> and info_type = #{infoType} </if>
+		  		  <if test="infoId != null and infoId != ''"> and info_id = #{infoId} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by user_id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from info_like
+		 <where>  
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="gtmCreate != null and gtmCreate != ''"> and gtm_create = #{gtmCreate} </if>
+		  		  <if test="infoType != null and infoType != ''"> and info_type = #{infoType} </if>
+		  		  <if test="infoId != null and infoId != ''"> and info_id = #{infoId} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.zz.info.domain.LikeDO">
+		insert into info_like
+		(
+			`user_id`, 
+			`info_type`,
+			`info_id`
+		)
+		values
+		(
+			#{userId}, 
+			#{infoType},
+			#{infoId}
+		)
+	</insert>
+	 
+
+	<delete id="remove">
+		delete from info_like
+		where
+			info_id=#{infoId} and
+			user_id = #{userId} and
+			info_type=#{infoType}
+	</delete>
+	
+
+</mapper>

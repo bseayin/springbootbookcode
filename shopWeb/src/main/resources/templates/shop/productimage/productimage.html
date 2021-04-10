@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<link href="/css/layui.css" rel="stylesheet">
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="ibox float-e-margins">
+				<div class="ibox-content">
+					<div class="columns pull-left">
+						<a th:if="${doAdd!='' and doAdd}" shiro:hasPermission="shop:productimage:add" id="uploadBtn" type="button" class="btn  btn-primary" >
+							上传图片
+						</a>
+					</div>
+					<input  type="hidden" id="id" th:value="${id}" />
+					<table id="exampleTable" data-mobile-responsive="true">
+					</table>
+
+
+				<!--	<button shiro:hasPermission="shop:productimage:batchRemove" type="button" class="btn  btn-danger"
+								onclick="batchRemove()">
+								<i class="fa fa-trash" aria-hidden="true"></i>删除
+							</button>-->
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--shiro控制bootstraptable行内按钮看见性 来自bootdo的创新方案 -->
+		<div>
+			<script type="text/javascript">
+				var s_edit_h = 'hidden';
+				var s_remove_h = 'hidden';
+			</script>
+		</div>
+		<div shiro:hasPermission="shop:productimage:edit">
+			<script type="text/javascript">
+				s_edit_h = '';
+			</script>
+		</div>
+		<div shiro:hasPermission="shop:productimage:remove">
+			<script type="text/javascript">
+				var s_remove_h = '';
+			</script>
+		</div>
+	</div>
+	<div th:include="include :: footer"></div>
+	<script src="/js/layui.js"></script>
+	<script type="text/javascript" src="/js/appjs/shop/productimage/productimage.js"></script>
+</body>
+</html>

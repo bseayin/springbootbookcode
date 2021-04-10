@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zz.shopAdmin.dao.AdminProductinproductcategoryDao">
+
+	<select id="get" resultType="com.zz.shopAdmin.domain.ProductinproductcategoryDO">
+		select `productId`,`productCategoryId`,`isActive`,`createdTime`,`createdBy`,`updatedTime`,`updatedBy` from shop_productinproductcategory where productId = #{value}
+	</select>
+
+	<select id="list" resultType="com.zz.shopAdmin.domain.ProductinproductcategoryDO">
+		select a.`productId`,a.`productCategoryId`,a.`isActive`,a.`createdTime`,a.`createdBy`,a.`updatedTime`,a.`updatedBy`,t.name
+		from shop_productinproductcategory a
+		left join shop_productcategory t on t.id=productCategoryId
+        <where>  
+		  		  <if test="productId != null and productId != ''"> and a.productId = #{productId} </if>
+		  		  <if test="productCategoryId != null and productCategoryId != ''"> and a.productCategoryId = #{productCategoryId} </if>
+		  		  <if test="active != null and active != ''"> and a.isActive = #{active} </if>
+		  		  <if test="createdTime != null and createdTime != ''"> and a.createdTime = #{createdTime} </if>
+		  		  <if test="createdBy != null and createdBy != ''"> and a.createdBy = #{createdBy} </if>
+		  		  <if test="updatedTime != null and updatedTime != ''"> and a.updatedTime = #{updatedTime} </if>
+		  		  <if test="updatedBy != null and updatedBy != ''"> and a.updatedBy = #{updatedBy} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by productId desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from shop_productinproductcategory
+		 <where>  
+		  		  <if test="productId != null and productId != ''"> and productId = #{productId} </if>
+		  		  <if test="productCategoryId != null and productCategoryId != ''"> and productCategoryId = #{productCategoryId} </if>
+		  		  <if test="active != null and active != ''"> and isActive = #{active} </if>
+		  		  <if test="createdTime != null and createdTime != ''"> and createdTime = #{createdTime} </if>
+		  		  <if test="createdBy != null and createdBy != ''"> and createdBy = #{createdBy} </if>
+		  		  <if test="updatedTime != null and updatedTime != ''"> and updatedTime = #{updatedTime} </if>
+		  		  <if test="updatedBy != null and updatedBy != ''"> and updatedBy = #{updatedBy} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.zz.shopAdmin.domain.ProductinproductcategoryDO">
+		insert into shop_productinproductcategory
+		(
+			`productId`, 
+			`productCategoryId`, 
+			`createdBy`,
+			`updatedBy`
+		)
+		values
+		(
+			#{productId}, 
+			#{productCategoryId}, 
+			#{createdBy},
+			#{updatedBy}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.zz.shopAdmin.domain.ProductinproductcategoryDO">
+		update shop_productinproductcategory 
+		<set>
+			<if test="productCategoryId != null">`productCategoryId` = #{productCategoryId}, </if>
+			<if test="active != null">`isActive` = #{active}, </if>
+			<if test="createdBy != null">`createdBy` = #{createdBy}, </if>
+			<if test="updatedBy != null">`updatedBy` = #{updatedBy}</if>
+		</set>
+		where productId = #{productId}
+	</update>
+	
+	<delete id="remove">
+		delete from shop_productinproductcategory where productId = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from shop_productinproductcategory where productId in 
+		<foreach item="productId" collection="array" open="(" separator="," close=")">
+			#{productId}
+		</foreach>
+	</delete>
+
+</mapper>

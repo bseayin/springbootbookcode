@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zz.info.dao.UsercollectionDao">
+
+	<select id="get" resultType="com.zz.info.domain.UsercollectionDO">
+		select `cid`,`user_id`,`gtm_create`,`status`,`info_id` from info_usercollection where cid = #{value}
+	</select>
+
+	<select id="listToInfo" resultType="com.zz.info.domain.Info">
+		select   t1.`cid`,t1.`title`,t1.photo_url photoUrl ,t1.`hits`,t1.gtm_create gtmCreate,
+		       (select count(1) from info_comment temp where temp.info_id= t1.`cid` ) commentsNum
+		from info_usercollection t
+		left join info_content t1 on t1.cid=t.info_id
+        <where>  
+		  <if test="cid != null"> and t.cid = #{cid} </if>
+		  <if test="userId != null and userId != ''"> and t.user_id = #{userId} </if>
+		  <if test="gtmCreate != null and gtmCreate != ''"> and t.gtm_create = #{gtmCreate} </if>
+		  <if test="status != null and status != ''"> and t.status = #{status} </if>
+		  <if test="infoId != null and infoId != ''"> and t.info_id = #{infoId} </if>
+		  <if test="content_title != null and content_title != ''"> and locate(#{content_title},t1.title)>0 </if>
+		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by t.user_id, t.gtm_create desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	<select id="countListToInfo" resultType="int">
+		select  count(*)
+		from info_usercollection t
+		left join info_content t1 on t1.cid=t.info_id
+        <where>
+		  <if test="cid != null"> and t.cid = #{cid} </if>
+		  <if test="userId != null and userId != ''"> and t.user_id = #{userId} </if>
+		  <if test="gtmCreate != null and gtmCreate != ''"> and t.gtm_create = #{gtmCreate} </if>
+		  <if test="status != null and status != ''"> and t.status = #{status} </if>
+		  <if test="infoId != null and infoId != ''"> and t.info_id = #{infoId} </if>
+		  <if test="content_title != null and content_title != ''"> and locate(#{content_title},t1.title)>0 </if>
+		</where>
+	</select>
+	<select id="list" resultType="com.zz.info.domain.UsercollectionDO">
+		select  `cid`,`user_id`,`gtm_create`,`status`,`info_id` from info_usercollection
+        <where>
+		  		  <if test="cid != null"> and cid = #{cid} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="gtmCreate != null and gtmCreate != ''"> and gtm_create = #{gtmCreate} </if>
+		  		  <if test="status != null and status != ''"> and status = #{status} </if>
+		  		  <if test="infoId != null and infoId != ''"> and info_id = #{infoId} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by user_id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+
+ 	<select id="count" resultType="int">
+		select count(*) from info_usercollection
+		 <where>
+			 	  <if test="cid != null"> and cid = #{cid} </if>
+		  		  <if test="userId != null and userId != ''"> and user_id = #{userId} </if>
+		  		  <if test="gtmCreate != null and gtmCreate != ''"> and gtm_create = #{gtmCreate} </if>
+		  		  <if test="status != null and status != ''"> and status = #{status} </if>
+		  		  <if test="infoId != null and infoId != ''"> and info_id = #{infoId} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.zz.info.domain.UsercollectionDO">
+		insert into info_usercollection
+		(
+			`user_id`, 
+			`info_id`
+		)
+		values
+		(
+			#{userId}, 
+			#{infoId}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.zz.info.domain.UsercollectionDO">
+		update info_usercollection 
+		<set>
+			<if test="gtmCreate != null">`gtm_create` = #{gtmCreate}, </if>
+			<if test="status != null">`status` = #{status}, </if>
+			<if test="infoId != null">`info_id` = #{infoId}</if>
+		</set>
+		where cid = #{cid}
+	</update>
+	
+	<delete id="remove">
+		delete from info_usercollection where cid = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from info_usercollection where cid in
+		<foreach item="cid" collection="array" open="(" separator="," close=")">
+			#{cid}
+		</foreach>
+	</delete>
+
+</mapper>

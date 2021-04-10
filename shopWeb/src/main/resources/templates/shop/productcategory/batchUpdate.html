@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<link href="/css/layui.css" rel="stylesheet">
+<link rel="stylesheet"  href="/js/plugins/viewer/viewer.min.css">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="col-sm-12">
+			<div class="ibox">
+				<div class="ibox-body">
+					<div class="fixed-table-toolbar">
+						<div class="columns pull-left" style="display: flex">
+							<button shiro:hasPermission="shop:category:add" type="button" class="btn  btn-primary" onclick="add()">
+								<i class="fa fa-plus" aria-hidden="true"></i>添加
+							</button>
+							<button shiro:hasPermission="system:productcategory:batchRemove" type="button" class="btn  btn-danger"
+								onclick="batchRemove()">
+								<i class="fa fa-trash" aria-hidden="true"></i>删除
+							</button>
+							<ul class="breadcrumb" style="margin:0px 4px;padding:4px">
+								<li onclick="crumbRoot(this)"><a href="#">根分类</a></li>
+							</ul>
+						</div>
+						<div class="columns pull-right">
+							<button class="btn btn-success" onclick="reLoad()">查询</button>
+						</div>
+						<div class="columns pull-right col-md-2 nopadding">
+							<input id="searchName" type="text" class="form-control"
+								placeholder="">
+						</div>
+					</div>
+					<input type="hidden" name="pid" id="pid" >
+					<table id="exampleTable" data-mobile-responsive="true"></table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--shiro控制bootstraptable行内按钮看见性 来自bootdo的创新方案 -->
+		<div>
+			<script type="text/javascript">
+				var s_edit_h = 'hidden';
+				var s_remove_h = 'hidden';
+			</script>
+		</div>
+		<div shiro:hasPermission="shop:category:edit">
+			<script type="text/javascript">
+				s_edit_h = '';
+			</script>
+		</div>
+		<div shiro:hasPermission="shop:category:remove">
+			<script type="text/javascript">
+				var s_remove_h = '';
+			</script>
+		</div>
+	<div th:include="include :: footer"></div>
+	<script src="/js/plugins/viewer/viewer.min.js"></script>
+	<script type="text/javascript" src="/js/appjs/shop/productcategory/productcategory_select.js"></script>
+</body>
+</html>

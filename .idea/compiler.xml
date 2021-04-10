@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloudEureka" />
         <module name="blogWeb" />
+        <module name="shopWeb" />
         <module name="springbootDocService" />
         <module name="reportWeb" />
         <module name="springcloudUserService" />
@@ -17,7 +18,6 @@
         <module name="dictionaryWeb" />
         <module name="springbootJob" />
         <module name="orderWeb" />
-        <module name="wp2" />
         <module name="productWeb" />
         <module name="memberMg" />
         <module name="homeWorkWeb" />
@@ -31,6 +31,7 @@
       <module name="orderWeb" target="1.8" />
       <module name="productWeb" target="1.8" />
       <module name="reportWeb" target="1.8" />
+      <module name="shopWeb" target="1.8" />
       <module name="springbootDocService" target="1.8" />
       <module name="springbootJob" target="1.8" />
       <module name="springcloudEureka" target="1.8" />
@@ -50,6 +51,7 @@
       <module name="orderWeb" options="-parameters" />
       <module name="productWeb" options="-parameters" />
       <module name="reportWeb" options="-parameters" />
+      <module name="shopWeb" options="-parameters" />
       <module name="springbootDocService" options="-parameters" />
       <module name="springbootJob" options="-parameters" />
       <module name="springcloudEureka" options="-parameters" />

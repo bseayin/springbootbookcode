@@ -26,8 +26,8 @@ public class MysqlGenerator {
         // 数据库信息
         String driver = "com.mysql.jdbc.Driver";
         String dataBaseUrl = "jdbc:mysql://47.92.0.22:3306/jeeplus_ani_big?useUnicode=true&useSSL=false&characterEncoding=utf8";
-        String userName = "xsz2019";
-        String password = "xsz2019PWD";
+        String userName = "XXXX";
+        String password = "XXXX";
         String tablePrefix = "tb_";// 数据库表前缀 例:tb_user的"tb_" 没有则改为 = null即可
         String parentPackageName = "com.zz";// 父包名
         String moduleName = "product";// 项目模块名

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zz.shopAdmin.dao.AdminUserproductfavoriteDao">
+
+	<!--<select id="get" resultType="com.zz.shop.domain.UserproductfavoriteDO">
+		select `userId`,`productId`,`isFavorite`,`category`,`isActive`,`createdTime`,`createdBy`,`updatedTime`,`updatedBy` from shop_userproductfavorite where userId = #{value}
+	</select>
+
+	<select id="list" resultType="com.zz.shopAdmin.domain.UserproductfavoriteDO">
+		select `userId`,`productId`,`isFavorite`,`category`,`isActive`,`createdTime`,`createdBy`,`updatedTime`,`updatedBy` from shop_userproductfavorite
+        <where>  
+		  		  <if test="userid != null and userid != ''"> and userId = #{userid} </if>
+		  		  <if test="productid != null and productid != ''"> and productId = #{productid} </if>
+		  		  <if test="isfavorite != null and isfavorite != ''"> and isFavorite = #{isfavorite} </if>
+		  		  <if test="category != null and category != ''"> and category = #{category} </if>
+		  		  <if test="isactive != null and isactive != ''"> and isActive = #{isactive} </if>
+		  		  <if test="createdtime != null and createdtime != ''"> and createdTime = #{createdtime} </if>
+		  		  <if test="createdby != null and createdby != ''"> and createdBy = #{createdby} </if>
+		  		  <if test="updatedtime != null and updatedtime != ''"> and updatedTime = #{updatedtime} </if>
+		  		  <if test="updatedby != null and updatedby != ''"> and updatedBy = #{updatedby} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by userId desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	-->
+ 	<select id="count" resultType="int">
+		select count(*) from shop_userproductfavorite
+		 <where>  
+		  		  <if test="userId != null and userId != ''"> and userId = #{userId} </if>
+		  		  <if test="productId != null and productId != ''"> and productId = #{productId} </if>
+		  		  <if test="isFavorite != null and isFavorite != ''"> and isFavorite = #{isFavorite} </if>
+		  		  <if test="category != null and category != ''"> and category = #{category} </if>
+		  		  <if test="active != null and active != ''"> and isActive = #{active} </if>
+		  		</where>
+	</select>
+	 
+	<!--<insert id="save" parameterType="com.zz.shopAdmin.domain.UserproductfavoriteDO">
+		insert into shop_userproductfavorite
+		(
+			`userId`, 
+			`productId`, 
+			`isFavorite`, 
+			`category`, 
+			`isActive`, 
+			`createdTime`, 
+			`createdBy`, 
+			`updatedTime`, 
+			`updatedBy`
+		)
+		values
+		(
+			#{userid}, 
+			#{productid}, 
+			#{isfavorite}, 
+			#{category}, 
+			#{isactive}, 
+			#{createdtime}, 
+			#{createdby}, 
+			#{updatedtime}, 
+			#{updatedby}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.zz.shopAdmin.domain.UserproductfavoriteDO">
+		update shop_userproductfavorite 
+		<set>
+			<if test="productid != null">`productId` = #{productid}, </if>
+			<if test="isfavorite != null">`isFavorite` = #{isfavorite}, </if>
+			<if test="category != null">`category` = #{category}, </if>
+			<if test="isactive != null">`isActive` = #{isactive}, </if>
+			<if test="createdtime != null">`createdTime` = #{createdtime}, </if>
+			<if test="createdby != null">`createdBy` = #{createdby}, </if>
+			<if test="updatedtime != null">`updatedTime` = #{updatedtime}, </if>
+			<if test="updatedby != null">`updatedBy` = #{updatedby}</if>
+		</set>
+		where userId = #{userid}
+	</update>
+	
+	<delete id="remove">
+		delete from shop_userproductfavorite where userId = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from shop_userproductfavorite where userId in 
+		<foreach item="userid" collection="array" open="(" separator="," close=")">
+			#{userid}
+		</foreach>
+	</delete>
+-->
+</mapper>

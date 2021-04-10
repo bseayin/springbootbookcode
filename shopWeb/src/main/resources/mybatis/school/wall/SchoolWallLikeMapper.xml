@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zz.schoolwall.dao.SchoolWallLikeDao">
+  <resultMap id="BaseResultMap" type="com.zz.schoolwall.domain.SchoolWallLikeDO">
+    <id column="like_id" jdbcType="BIGINT" property="likeId" />
+    <result column="like_createman" jdbcType="VARCHAR" property="likeCreateman" />
+    <result column="like_createtime" jdbcType="TIMESTAMP" property="likeCreatetime" />
+    <result column="like_type" jdbcType="VARCHAR" property="likeType" />
+    <result column="like_type_id" jdbcType="BIGINT" property="likeTypeId" />
+  </resultMap>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    like_id, like_createman, like_createtime, like_type, like_type_id
+  </sql>
+  <select id="list"  resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />,u.username,u.name
+    from school_wall_like
+    left join sys_user u on u.user_id=like_createman
+    <where>
+      <if test="likeCreateman != null">
+        and like_createman = #{likeCreateman,jdbcType=VARCHAR}
+      </if>
+      <if test="likeCreatetime != null">
+        and like_createtime = #{likeCreatetime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="likeType != null">
+        and like_type = #{likeType,jdbcType=VARCHAR}
+      </if>
+      <if test="likeTypeId != null">
+        and like_type_id = #{likeTypeId,jdbcType=BIGINT}
+      </if>
+    </where>
+    <choose>
+      <when test="sort != null and sort.trim() != ''">
+        order by ${sort} ${order}
+      </when>
+      <otherwise>
+        order by like_createtime desc
+      </otherwise>
+    </choose>
+    <if test="offset != null and limit != null">
+      limit #{offset}, #{limit}
+    </if>
+  </select>
+  <select id="count"  resultType="int">
+    select
+    count(*)
+    from school_wall_like
+    <where>
+      <if test="likeCreateman != null">
+        and like_createman = #{likeCreateman,jdbcType=VARCHAR}
+      </if>
+      <if test="likeCreatetime != null">
+        and like_createtime = #{likeCreatetime,jdbcType=TIMESTAMP}
+      </if>
+      <if test="likeType != null">
+        and like_type = #{likeType,jdbcType=VARCHAR}
+      </if>
+      <if test="likeTypeId != null">
+        and like_type_id = #{likeTypeId,jdbcType=BIGINT}
+      </if>
+    </where>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from school_wall_like
+    where like_id = #{likeId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from school_wall_like
+    where like_id = #{likeId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.zz.schoolwall.domain.SchoolWallLikeDO">
+    insert into school_wall_like (like_id, like_createman, like_createtime, 
+      like_type, like_type_id)
+    values (#{likeId,jdbcType=VARCHAR}, #{likeCreateman,jdbcType=VARCHAR}, #{likeCreatetime,jdbcType=TIMESTAMP}, 
+      #{likeType,jdbcType=VARCHAR}, #{likeTypeId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zz.schoolwall.domain.SchoolWallLikeDO">
+    insert into school_wall_like
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="likeId != null">
+        like_id,
+      </if>
+      <if test="likeCreateman != null">
+        like_createman,
+      </if>
+      <if test="likeCreatetime != null">
+        like_createtime,
+      </if>
+      <if test="likeType != null">
+        like_type,
+      </if>
+      <if test="likeTypeId != null">
+        like_type_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="likeId != null">
+        #{likeId,jdbcType=BIGINT},
+      </if>
+      <if test="likeCreateman != null">
+        #{likeCreateman,jdbcType=VARCHAR},
+      </if>
+      <if test="likeCreatetime != null">
+        #{likeCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="likeType != null">
+        #{likeType,jdbcType=VARCHAR},
+      </if>
+      <if test="likeTypeId != null">
+        #{likeTypeId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zz.schoolwall.domain.SchoolWallLikeDO">
+    update school_wall_like
+    <set>
+      <if test="likeCreateman != null">
+        like_createman = #{likeCreateman,jdbcType=VARCHAR},
+      </if>
+      <if test="likeCreatetime != null">
+        like_createtime = #{likeCreatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="likeType != null">
+        like_type = #{likeType,jdbcType=VARCHAR},
+      </if>
+      <if test="likeTypeId != null">
+        like_type_id = #{likeTypeId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where like_id = #{likeId,jdbcType=BIGINT}
+  </update>
+</mapper>

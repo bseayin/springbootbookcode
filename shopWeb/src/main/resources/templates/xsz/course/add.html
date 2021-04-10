@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content">
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="ibox float-e-margins">
+				<div class="ibox-content">
+					<form class="form-horizontal m-t" id="signupForm">
+						<input id="parentId" name="parentId" type="hidden"
+							   th:value="${pId}">
+						<div class="form-group">
+							<label class="col-sm-3 control-label">上级课程：</label>
+							<div class="col-sm-8">
+								<input id="" name="" class="form-control" type="text"
+									   th:value="${pName}" readonly>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">课程类型：</label>
+							<div class="col-sm-8">
+								<label class="radio-inline"> <input type="radio"
+																	name="type" value="0" /> Java入门
+								</label> <label class="radio-inline"> <input type="radio"
+																			 name="type" value="1" /> 流行框架
+							</label>
+								<label class="radio-inline"> <input type="radio"  name="type" value="2" /> Java高级</label>
+								<label class="radio-inline"> <input type="radio"  name="type" value="3" /> Java面试</label>
+
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">课程名称：</label>
+							<div class="col-sm-8">
+								<input id="name" name="name" class="form-control" type="text">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-3 control-label">内容序号：</label>
+							<div class="col-sm-8">
+								<input id="url" name="url" class="form-control" type="text">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label class="col-sm-3 control-label">排序号：</label>
+							<div class="col-sm-8">
+								<input id="orderNum" name="orderNum" class="form-control"
+									   type="text">
+							</div>
+						</div>
+
+
+
+						<div class="form-group">
+							<div class="col-sm-8 col-sm-offset-3">
+								<button type="submit" class="btn btn-primary">提交</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div th:include="include::footer"></div>
+
+<script type="text/javascript" src="/js/appjs/xsz/course/add.js"></script>
+</body>
+
+</html>

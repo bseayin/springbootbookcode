@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zz.info.dao.CommentDao">
+
+	<select id="list" resultType="com.zz.info.domain.Comment">
+		select cid, content, info_id, parent_id, open_id, create_time from info_comment
+        <where>  
+		  <if test="cid != null and cid != ''"> and cid = #{cid} </if>
+		  <if test="infoId != null and infoId != ''"> and info_id = #{infoId} </if>
+		  <if test="parentId != null and parentId != ''"> and parent_id = #{parentId} </if>
+		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by cid desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit ${offset}, ${limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from info_comment
+		 <where>  
+  		  <if test="cid != null and cid != ''"> and cid = #{cid} </if>
+  		  <if test="infoId != null and infoId != ''"> and info_id = #{infoId} </if>
+  		  <if test="parentId != null and parentId != ''"> and parent_id = #{parentId} </if>
+  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.zz.info.domain.Comment" useGeneratedKeys="true" keyProperty="cid">
+		insert into info_comment
+		(
+			content,
+			info_id,
+			parent_id,
+			open_id
+		)
+		values
+		(
+			#{content}, 
+			#{infoId},
+			0,
+			#{openId}			
+		)
+	</insert>
+
+</mapper>
