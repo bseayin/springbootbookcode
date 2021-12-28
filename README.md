@@ -1,6 +1,8 @@
 # springbootbookcode
 #### 介绍
 《Java Web项目开发实战案例—Spring Boot+Mybatis+Hibernate+SpringCloud》的10个项目源码
+ 各大电商有售， 书本当当链接：http://product.dangdang.com/29323989.html
+
 #### 章节对应的源码中项目名称
 
 -  第1章SSM&Thymeleaf在线投票系统实战源码中项目名称是voteWeb
